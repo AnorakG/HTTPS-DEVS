@@ -1,0 +1,547 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    line-height: 1;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*fim do reset*/
+*{
+    font-family: 'Zilla Slab', serif;
+}
+.fundo{
+    background: rgb(2, 78, 78);
+}
+.fundo-login{
+    background-color: rgb(91, 178, 189);
+}
+.fundo-home{
+    background-color: rgb(255, 255, 231);
+}
+.fundo-denuncia{
+    position: relative;
+    background: url(fundo-denunciar.jpg);
+    background-repeat: no-repeat;
+    background-size: 125%;
+}
+.fundo-procura{
+    position: relative;
+    background: url(fundo-procurar.jpg);
+    background-repeat: no-repeat;
+    background-size: 125%;
+}
+.nav-lista {
+    position: relative;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    height: 75px;
+    border-bottom: 0.1px solid rgb(179, 179, 179);
+}
+
+.urbana{
+    position: absolute;
+    margin: 0 0 0 5%; 
+    width:10%;
+}
+.nav {
+    position: relative; 
+    text-align: center;
+    margin-left: 10%;
+}
+li , li.dropdown{
+    display: inline-block;
+    margin-left: 10%;
+}
+
+.cabecalho-texto, .btn-dropdown{
+    text-transform: uppercase;
+    font-family: 'Zilla Slab', serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+    transition: 1s;
+    line-height: 75px;
+}
+
+.dropdown-conteudo{
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    height: min-content;   
+    
+
+}
+.dropdown-conteudo a {
+    font-family: 'Zilla Slab', serif;
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    text-align: left;
+    position: relative;
+    height: 10px;
+  }
+nav a:hover ,.btn-dropdown:hover{
+    color:rgb(109, 109, 109);
+}
+.dropdown-conteudo a:hover {
+    background-color: #eeeeee;
+}
+
+.dropdown:hover .dropdown-conteudo {
+    display: block;
+    margin-bottom: 10%;
+  }
+
+main{
+    height: 100%;
+    margin: 7.5% 0;
+}
+
+.container-conteudo{
+    position: relative;
+    height: auto;
+    width: 40%;
+    margin: 0 0 0 28%;
+    padding: 4% 2%;
+    background: rgba(255, 255, 255);
+    border: none;
+    border-radius: 1%;
+}
+.container-conteudo2{
+    position: relative;
+    height: auto;
+    width: 65%;
+    margin: 0 0 0 11.5%;
+    padding: 4% 6%;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+.container-intro{
+    position: relative;
+    width: 65%;
+    height: 500px;
+    margin: 0 0 0 17.5%;
+    background: url(container-intro.jpg);
+    border: none;
+    background-size: 100%;
+    border-radius: 2px;
+}
+.container-intro2{
+    position: relative;
+    width: 65%;
+    height: 500px;
+    margin: 15% 0 15% 17.5%;
+    background-color: whitesmoke;
+    border-radius: 2px;
+}
+
+.container-intro3{
+    position: relative;
+    width: 65%;
+    height: 500px;
+    margin: 0 0 0 17.5%;
+    background: rgba(0, 0, 0, 0.90);
+    border-radius: 2px;
+    text-align: center;
+    padding-top: 6%;
+}
+
+.intro-focus{
+    position: relative;
+    height: 100%;
+    width: 40%;
+    background: rgba(0, 0, 0, 0.80);
+    border: none;
+    text-align: center;
+    padding:  0 5%;
+    border-radius: 2px;
+}
+.intro-focus2{
+    position: relative;
+    height: 100%;
+    width: 40%;
+    margin-left: 50%;
+    background: rgba(0, 0, 0, 0.80);
+    border: none;
+    text-align: center;
+    padding:  0 5%;
+    border-radius: 2px;
+}
+.p-box{
+    position: relative;
+    padding-top: 30%;
+}
+.titulo-secundario{
+    position: relative;
+    font-size: 35px;
+    font-weight: bold;
+    color:white;
+}
+.p-box2{
+    position: relative;
+    padding-top: 20%;
+}
+.p-destaque{
+    position: relative;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 12.5%;
+
+}
+.p-introducao{
+    padding-top: 10%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.btn-home-serv{
+    margin-top: 10%;
+    width: 60%;
+    height: auto;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid rgb(255, 242, 168);;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 10px;
+    transition: 1s;
+}
+.btn-home-serv:hover{
+    border: 3px solid rgb(255, 252, 238);;
+    background-color: rgb(255, 239, 159);
+    color: rgb(0, 0, 0);
+}
+.serviços-box{
+    margin-top: 8%;
+}
+.box-sideR, .box-sideL{
+    display: inline-block;
+    width: 35%;
+    vertical-align: top;
+}
+.box-sideL{
+    margin-right: 10%;
+}
+.titulo-registros{
+    position: relative;
+    font-size: 25px;
+    font-weight: bold;
+    color:white;
+    background-color: rgb(128, 126, 45);
+    border: 3px solid rgb(128, 126, 45);
+    border-radius: 2px;
+}
+.titulo-denuncia{
+    position: relative;
+    font-size: 25px;
+    font-weight: bold;
+    color:white;
+    background-color: rgb(88, 19, 19);
+    border: 3px solid rgb(88, 19, 19);
+    border-radius: 2px;
+}
+.p-serviços{
+    padding-top: 10%;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 26px;
+    display: flex;
+    text-align: justify;
+    color: white;
+}
+.img-notas{
+    margin-top: 25%;
+    width: 75px;
+}
+.img-alarme{
+    margin-top: 35%;
+    width: 75px;
+}
+.titulo-principal{
+    font-size: 45px; 
+    margin: 0 0 8% 4%;
+    color: rgb(0, 0, 0);
+    transition: 400ms;
+    font-style: normal;
+    font-weight: bold;
+}
+.titulo-principal:hover{
+    color: rgba(39, 39, 39, 0.5);
+}
+
+.lbl-padrao{
+    display: block;
+    font-size: 22px;
+    margin: 0 0 10px 8%;
+    transition: 400ms;
+    color: rgb(0, 0, 0);
+}
+.lbl-padrao:hover{
+    color: rgba(39, 39, 39, 0.5);
+}
+.ipt-padrao{
+    display: block;
+    margin: 0 0 3% 6%;
+    padding: 15px;
+    width: 82%;
+    border: 0.5px solid rgba(39, 39, 39, 0.5);
+    border-radius: 2.5px;
+    transition: 1s;
+    cursor: pointer;
+}
+.ipt-padrao:hover{
+    background-color: rgb(223, 251, 255);
+    border: 0.5px solid #000000;
+}
+
+.btn-login{
+    position: relative;
+    margin: 0 0 4% 25%;
+    width: 50%;
+    padding: 20px 0;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 2.5px;
+    transition: 1s all;
+    cursor: pointer;
+    color: rgb(224, 224, 224);
+    border: 1px solid #8c998a;
+    background-color: #879684;
+}
+.btn-criar{
+    position: relative;
+    margin: 0 0 4% 25%;
+    width: 50%;
+    padding: 20px 0;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 2.5px;
+    transition: 1s all;
+    cursor: pointer;
+    color: rgb(224, 224, 224);
+    border: 1px solid #f098c1;
+    background-color: #ffa2e3;
+}
+.check{
+    width: 40%;
+    margin-left: 30%;
+    color:rgb(240, 240, 240);
+    text-align: center;
+}
+
+.ipt-fotos{
+    display: block;
+    margin: 0 0 4% 6%;
+    padding: 10px;
+    width: 82%;
+    border: 0.5px solid #ffffff;
+    border-radius: 2.5px;
+    transition: 1s;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.ipt-fotos:hover{
+    background-color: #ebebebc7;
+    border: 0.5px solid #7a7a7a;
+}
+.ipt-enviar{
+    position: relative;
+    margin: 8% 0 4% 25%;
+    width: 50%;
+    padding: 15px 0;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 2.5px;
+    transition: 1s all;
+    cursor: pointer;
+    color: white;
+    border: 1px solid rgb(4, 99, 99);;
+    background-color: rgb(0, 110, 110);
+}
+.ipt-enviar:hover{
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 122, 122);;
+    background-color: rgb(0, 150, 150);;
+}
+.ipt-apagar{
+    position: relative;
+    margin: 0 0 4% 33%;
+    width: 33%;
+    padding: 15px 0;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 2.5px;
+    transition: 1s all;
+    cursor: pointer;
+    color: white;
+    border: 1px solid #4b0505;
+    background-color: #640808;
+}
+.ipt-apagar:hover{
+    color: white;
+    border: 1px solid #640808;
+    background-color: #8d0303;
+}
+
+
+/* login e cadastro*/
+.textoLogin{
+   margin-bottom: 8%;
+}
+
+.btn-login{
+    position: relative;
+    margin: 8% 0 4% 25%;
+    width: 50%;
+    padding: 15px 0;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 2.5px;
+    transition: 1s all;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(32, 121, 124);
+    background-color: rgb(91, 185, 189);
+}
+.btn-login:hover{
+    color: rgb(40, 0, 0);
+    border: 1px solid rgb(24, 91, 94);
+    background-color: rgb(124, 219, 223);
+}
+.btn-criar{
+    position: relative;
+    margin: 0 0 4% 33%;
+    width: 33%;
+    padding: 15px 0;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 2.5px;
+    transition: 1s all;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(91, 178, 189);
+    background-color: rgb(221, 221, 221);
+}
+.btn-criar:hover{
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(32, 106, 124);
+    background-color: white;
+}
+
+
+#formCadastro{
+    display: none;
+}
+
+#senhaValidez{
+    margin: 0;
+    display: none;
+}
+#anuncioCadastro{
+    margin: 0;
+    display: none;
+}
+#senhaVisivel1, #senhaVisivel2, .lbl-senha{
+    color: rgb(0, 0, 0);
+}
+
+ol, ul {
+	list-style: none;
+}
+.fundo-cadastrar{
+    position: relative;
+    background: url(img-login.jfif);
+    background-repeat: no-repeat;
+    background-size: 175%;
+}
+
+
+
+footer{
+    border-top: 0.1px solid rgb(179, 179, 179);
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: rgba(255, 255, 255);
+    margin: 0;
+    font-family: 'Zilla Slab', serif;
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+    padding: 2.5% 0;
+}
+.footer-padrao{
+    text-align:center;
+    position: relative;
+    width:30%;
+    margin-left: 35%;
+}
+.titulo-footer{
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+
+
+
+
+
+*{
+    font-family: 'Zilla Slab', serif;
+}
+
+

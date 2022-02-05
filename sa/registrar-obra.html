@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
+    <title>Registrar</title>
+</head>
+<body>
+    <div class='fundo'>
+        <ul class='nav-lista'>
+            <img src='css/urbana-logo.png' alt='logo' class="urbana">
+            <div class='nav'>
+                <li><a class='cabecalho-texto' href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a class='btn-dropdown' href="javascript:void(0)">Serviços</a>
+                <div class="dropdown-conteudo">
+                    <a href="registrar-obra.html">Registrar obra</a>
+                    <a href="procurar-obra.html">Procurar obra</a>
+                    <a href="registrar-denuncia.html">Denunciar</a>
+                </div>
+            </li>
+            <li><a class='cabecalho-texto' href="login.html">Login</a></li>
+            </div>
+        </ul>
+        <main>
+            <div class="container-conteudo2">
+                <h1 class="titulo-principal">
+                    Registrar obras
+                </h1>
+                <form class="formulario-padrao">
+                    <label class='lbl-padrao' for='ipt-descricao'>Descreva a obra</label>
+                    <input type='text' id='ipt-descricao' class='ipt-padrao' placeholder="Descreva a obra">
+
+                    <label class='lbl-padrao' for='ipt-endereco'>Endereço </label>
+                    <input type='text' id='ipt-endereco' class='ipt-padrao' placeholder="Endereço">
+
+                    <label class='lbl-padrao' for='ipt-dataInicial'>Data inicial</label>
+                    <input type='date' id='ipt-dataInicial' class='ipt-padrao'>
+                    
+                    <label class='lbl-padrao' for='ipt-dataFinal'>Data de conclusão</label>
+                    <input type='date' id='ipt-dataFinal' class='ipt-padrao'>
+                    
+                    <label class='lbl-padrao' for='ipt-fotos'> Fotos</label>
+                    <input type='file' id='ipt-fotos' class='ipt-fotos'>
+
+                    <input type='submit' id="ipt-registrar" value='Registrar' class='ipt-enviar'>
+                    <input type='submit' id="ipt-apagar" value='Resetar' class='ipt-apagar'>
+
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div class='footer-padrao'>
+                <h1 class="titulo-footer">
+                    Contato
+                </h1>
+                <ul class='lista-footer'>
+                    <li>
+                        WhatsApp: (48) 99822-7104
+                    </li>
+                    <li>
+                        Email: httpsdev@gmail.com
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
