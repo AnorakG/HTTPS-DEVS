@@ -373,12 +373,27 @@ main{
     border: 1px solid #f098c1;
     background-color: #ffa2e3;
 }
-.check{
-    width: 40%;
-    margin-left: 30%;
-    color:rgb(240, 240, 240);
-    text-align: center;
+.check1 input[type=checkbox]+label{
+    position: absolute;
+    left: 690px;
+    bottom: 367px;
 }
+.check1 input[type=checkbox]:checked+label{
+    position: absolute;
+    left: 690px;
+    bottom: 363.5px;
+}
+.check2 input[type=checkbox]+label{
+    position: absolute;
+    left: 690px;
+    bottom: 494.5px;
+}
+.check2 input[type=checkbox]:checked+label{
+    position: absolute;
+    left: 690px;
+    bottom: 492px;
+}
+
 
 .ipt-fotos{
     display: block;
@@ -489,7 +504,7 @@ main{
 }
 
 #senhaValidez{
-    margin: 0;
+    text-align:center;
     display: none;
 }
 #anuncioCadastro{
@@ -534,14 +549,28 @@ footer{
     margin: 10px 0;
     font-weight: bold;
 }
-
-
-
-
-
-
 *{
     font-family: 'Zilla Slab', serif;
 }
+input[type=checkbox] {
+    display:none;
+}
 
+input[type=checkbox] + label {
+    background-image: url(olho-aberto.png);
+    background-size: cover;
+    height: 15px;
+    width: 25px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+input[type=checkbox]:checked + label {
+    background-image: url(olho-riscado.png);
+    background-size: cover;
+    height: 20px;
+    width: 25px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
 

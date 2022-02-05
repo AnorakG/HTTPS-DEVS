@@ -60,13 +60,9 @@ function cadastramento(){
 }
 function validarSenha(){
     if(senha1.value == senha2.value){
-        senhaValidez.style.display = "block"
-        senhaValidez.style.color = "green"
-        senhaValidez.innerHTML = "As senhas combinam =) <br> Termine seu cadastro"
+        alert("As senhas combinam =) \nTermine seu cadastro")
     }else{
-        senhaValidez.style.display = "block"
-        senhaValidez.style.color = "red"
-        senhaValidez.innerHTML = "As senhas não combinam =( <br> Confirme sua senha"
+        alert("As senhas não combinam =( \nConfirme sua senha")
     }
 }
 

@@ -39,11 +39,10 @@
                         <input class="ipt-padrao" type="text" id="nomeUsuario" placeholder="Insira aqui o nome da sua conta"><br>
                         <label class='lbl-padrao' for='senhaUsuario'>Senha</label>
                         <input class="ipt-padrao" type="password" id="senhaUsuario" placeholder="Insira aqui sua senha"><br>
-                        <div class='check'>
+                        <div class='check1'>
                             <input type="checkbox" id="senhaVisivel2">
-                            <label class='lbl-senha' for="senhaVisivel2">Visualize sua senha</label>
+                            <label class='lbl-senha' for="senhaVisivel2"></label>
                         </div>
-
                     </div>
                         
                         <input type="button" class="btn-login" id="botaoLogin" onclick="confirmar()" value="Login">
@@ -56,15 +55,14 @@
                     </div>
                     <div class='container-login'>
                         <input class="ipt-padrao" type="text" id="nome" placeholder="Insira aqui o nome desejado">
-                        <input class="ipt-padrao" type="text" id="email" placeholder="Insira aqui o seu e-mail"><br>
+                        <input class="ipt-padrao" type="text" id="email" placeholder="Insira aqui o seu e-mail">
                         <input class="ipt-padrao" type="password" id="senha1" placeholder="Insira aqui sua senha">
-                        <input class="ipt-padrao" type="password" id="senha2" placeholder="Confime sua senha" onchange="validarSenha()"><br>
-                        <div class='check'>
+                        <input class="ipt-padrao" type="password" id="senha2" placeholder="Confime sua senha" onchange="validarSenha()">
+                        <div class='check2'>
                             <input type="checkbox" id="senhaVisivel1" onclick='visibilidade1()'>
-                            <label class='lbl-senha' for="senhaVisivel2">Visualize sua senha</label>
+                            <label class='lbl-senha' for="senhaVisivel1"></label>
                         </div>
                     </div>
-                        <br>
                         <p id="senhaValidez"></p>
                         <input class="ipt-padrao" type="date" id="dataNascimento" onchange="confirmarIdade()"><br>
                         <input type="button" class="btn-login" id="botaoCadastro" onclick="cadastrar()" value="Cadastre-se">
