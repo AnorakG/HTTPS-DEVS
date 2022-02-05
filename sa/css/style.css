@@ -574,3 +574,26 @@ input[type=checkbox]:checked + label {
     padding: 0 0 0 0px;
 }
 
+@media only screen and (max-width: 1366px) and (max-height:768px) {
+ 
+    .check1 input[type=checkbox]+label{
+        
+        left: 505px;
+        bottom: 310px;
+    }
+    .check1 input[type=checkbox]:checked+label{
+        
+        left: 505px;
+        bottom: 307px;
+    }
+    .check2 input[type=checkbox]+label{
+        
+        left: 505px;
+        bottom: 425px;
+    }
+    .check2 input[type=checkbox]:checked+label{
+        
+        left: 505px;
+        bottom: 422px;
+    }
+  }
