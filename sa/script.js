@@ -1,10 +1,8 @@
 let users = []
+
 let formLogin = document.getElementById('formLogin')
 
 let formCadastro = document.getElementById('formCadastro')
-
-let senhaValidez = document.getElementById('senhaValidez')
-let anuncioCadastro = document.getElementById('anuncioCadastro')
 
 let login=document.getElementById('nomeUsuario')
 let senhaUsuario=document.getElementById('senhaUsuario')
@@ -17,6 +15,13 @@ let dataNascimento = document.getElementById('dataNascimento')
 
 let senhaVisivel1 = document.getElementById('senhaVisivel1')
 let senhaVisivel2 = document.getElementById('senhaVisivel2')
+if(localStorage.length>0){
+    const contasExistentes = JSON.parse(localStorage.getItem('users'))
+    for(let i = 0;i<contasExistentes.length;i++)
+    {
+        users.push(contasExistentes[i])
+    }
+};
 localStorage.setItem("users", JSON.stringify(users))
 let idade,contaConectada,usuarios;
 
@@ -40,7 +45,6 @@ function voltar(){
     formLogin.style.display = "inline"
     anuncioCadastro.style.display = "none";
     formCadastro.style.display = "none";
-    senhaValidez.style.display = "none";
     nome.value=""
     email.value=""
     senha1.value=""
@@ -51,7 +55,6 @@ function cadastramento(){
     formLogin.style.display = "none"
     anuncioCadastro.style.display = "none";
     formCadastro.style.display = "inline";
-    senhaValidez.style.display = "none";
     nome.value=""
     email.value=""
     senha1.value=""
@@ -60,9 +63,17 @@ function cadastramento(){
 }
 function validarSenha(){
     if(senha1.value == senha2.value){
-        alert("As senhas combinam =) \nTermine seu cadastro")
+        Swal.fire({
+            title: 'As senhas combinam =)',
+            icon: 'success',
+            confirmButtonText: 'Termine seu cadastro'
+          })
     }else{
-        alert("As senhas não combinam =( \nConfirme sua senha")
+        Swal.fire({
+            title: 'As senhas não combinam =(',
+            icon: 'error',
+            confirmButtonText: 'Confirme sua senha'
+          })
     }
 }
 
@@ -78,25 +89,34 @@ function cadastrar(){
     console.log("cadastrar");
     console.log(users);
     /*if(idade < 18){
-        anuncioCadastro.style.display="block";
-        anuncioCadastro.style.color = "red";
-        anuncioCadastro.innerHTML = "Menores de Idade não podem se cadastrar.";
+        Swal.fire({
+            title: 'Menores de Idade não podem se cadastrar.',
+            icon: 'error',
+            timer:'1200'
+          })
     }else*/ if(users.find(confirmarNome)){
-        anuncioCadastro.style.display="block";
-        anuncioCadastro.style.color = "red";
-        anuncioCadastro.innerHTML = "Nome de usuário já cadastrado <br> Tente outro";
+        Swal.fire({
+            title: 'Nome de usuário já cadastrado <br> Tente outro',
+            icon: 'error',
+            timer:'700'
+          })
     }else if(users.find(confirmarEmail)){
-        anuncioCadastro.style.display="block";
-        anuncioCadastro.style.color = "red";
-        anuncioCadastro.innerHTML = "E-mail já cadastrado <br> Esqueceu sua senha?";
+        Swal.fire({
+            title: 'E-mail já cadastrado <br> Esqueceu sua senha?',
+            icon: 'question',
+            timer:'700'
+        })
     }else{
         users.push({nome: nome.value, senha: senha2.value, email: email.value, idade: idade})
         localStorage.setItem("users", JSON.stringify(users))
         console.log(localStorage.getItem('users'))
         console.log("Cadastro feito =)")
-        anuncioCadastro.style.display= "inline";
-        anuncioCadastro.style.color = "green";
-        anuncioCadastro.innerHTML = "Parabéns por se cadastrar! <br> Cadastro realizado =)"
+        Swal.fire({
+            title: 'Parabéns por se cadastrar! <br> Cadastro realizado =',
+            icon: 'success',
+            timer:'700'
+        })
+        anuncioCadastro.innerHTML = ")"
         setTimeout(function(){
             anuncioCadastro.innerHTML = '';
             formCadastro.style.display = "none";
@@ -135,17 +155,29 @@ function confirmar(){
         contaConectada = usuarios.find(buscarEmail)
         confirmarSenha()
     }else{
-        alert("Cadastre-se por favor")   
+        Swal.fire({
+            title: 'Cadastre-se por favor.',
+            icon: 'warning',
+            timer:'700'
+        })
     }
 }
 
 function confirmarSenha(){
     if(contaConectada.senha === senhaUsuario.value){
-        alert('Você está logado')
+        Swal.fire({
+            title: 'Você está logado.',
+            icon: 'success',
+            timer:'700'
+        })
         senhaUsuario.value = ""
         login.value = ""
         anuncioCadastro.style.display = "none";
     }else{
-        alert('Senha ou usuário incorretas \nTente novamente ou cadastre-se por favor')
+        Swal.fire({
+            title: 'Senha ou usuário incorretas <br> Tente novamente ou cadastre-se por favor.',
+            icon: 'error',
+            timer:'700'
+        })
     }
 }

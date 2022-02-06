@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
+    
     <title>Login e Cadastro</title>
     
 </head>
@@ -44,7 +45,6 @@
                             <label class='lbl-senha' for="senhaVisivel2"></label>
                         </div>
                     </div>
-                        
                         <input type="button" class="btn-login" id="botaoLogin" onclick="confirmar()" value="Login">
                         <input type="button" class="btn-criar" id="botaoRegistro" onclick="cadastramento()" value="Criar conta">
                         <br><br>
@@ -63,7 +63,6 @@
                             <label class='lbl-senha' for="senhaVisivel1"></label>
                         </div>
                     </div>
-                        <p id="senhaValidez"></p>
                         <input class="ipt-padrao" type="date" id="dataNascimento" onchange="confirmarIdade()"><br>
                         <input type="button" class="btn-login" id="botaoCadastro" onclick="cadastrar()" value="Cadastre-se">
                         <input type="button" class="btn-criar" id="botaoRetorno"  onclick="voltar()" value="Volte">
@@ -87,7 +86,8 @@
             </div>
         </footer>
     </div>
-    <script src="script.js"></script>
-    
+   
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
