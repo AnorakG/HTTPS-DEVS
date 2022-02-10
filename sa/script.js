@@ -116,12 +116,6 @@ function cadastrar(){
             icon: 'success',
             timer:'700'
         })
-        anuncioCadastro.innerHTML = ")"
-        setTimeout(function(){
-            anuncioCadastro.innerHTML = '';
-            formCadastro.style.display = "none";
-            formLogin.style.display = "inline"
-        }, 700);
         
     }
 }
