@@ -62,19 +62,20 @@ function cadastramento(){
     dataNascimento.value=""
 }
 function validarSenha(){
-    if(senha1.value == senha2.value){
-        Swal.fire({
-            title: 'As senhas combinam =)',
-            icon: 'success',
-            confirmButtonText: 'Termine seu cadastro'
-          })
-    }else{
+   if(senha1.value.length == 0||senha2.value.length == 0){}else{
+    if(senha1.value != senha2.value ){
         Swal.fire({
             title: 'As senhas não combinam =(',
             icon: 'error',
             confirmButtonText: 'Confirme sua senha'
-          })
-    }
+        })
+    }else{
+        Swal.fire({
+            title: 'As senhas combinam =)',
+            icon: 'success',
+            confirmButtonText: 'Termine seu cadastro'
+        })
+    }}
 }
 
 function confirmarIdade(){
