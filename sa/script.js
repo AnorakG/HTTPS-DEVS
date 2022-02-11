@@ -89,13 +89,19 @@ function confirmarIdade(){
 function cadastrar(){
     console.log("cadastrar");
     console.log(users);
-    /*if(idade < 18){
+    if(senha1.value.length == 0||senha2.value.length == 0||nome.value.length==0||email.value.length==0||dataNascimento.value.length==0){
+        Swal.fire({
+            title: 'Preencha todos os campos antes de se cadastrar',
+            icon: 'error',
+            timer:'800'
+          })
+    }/*else if(idade < 18){
         Swal.fire({
             title: 'Menores de Idade não podem se cadastrar.',
             icon: 'error',
             timer:'1200'
           })
-    }else*/ if(users.find(confirmarNome)){
+    }*/else if(users.find(confirmarNome)){
         Swal.fire({
             title: 'Nome de usuário já cadastrado <br> Tente outro',
             icon: 'error',
