@@ -127,14 +127,12 @@ function confirmarNome(users){
 function confirmarEmail(users){
     return users.email === email.value
 }
-
-function buscarNome(usuarios){
-    return usuarios.nome === login.value;
+function buscarNome(users){
+    return users.nome === pesquisa.value;
 }
-function buscarEmail(usuarios){
-    return usuarios.email === login.value;
+function buscarEmail(users){
+    return users.email === pesquisa.value;
 }
-
 function confirmar(){
     usuarios = JSON.parse(localStorage.getItem('users'))
     console.log (usuarios)
