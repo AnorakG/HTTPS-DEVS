@@ -170,8 +170,27 @@ main{
     background: rgba(255, 255, 255);
     border: none;
     border-radius: 1%;
+    border-bottom: 0.1px solid rgb(179, 179, 179);
+    -moz-box-shadow:    0px 0px 10px 1px rgb(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 0px 10px 1px rgb(0, 0, 0, 0.5);
+    box-shadow:         0px 0px 10px 1px rgb(0, 0, 0, 0.5);
 }
 .container-conteudo2{
+    position: relative;
+    height: auto;
+    width: 65%;
+    margin: 0 0 0 15.5%;
+    padding: 4% 2%;
+    background: rgb(240, 240, 240);
+    background: linear-gradient(90deg, rgb(233, 233, 233) 10%, rgba(255,255,255,1) 100%);
+    border: none;
+    border-radius: 1%;
+    border-bottom: 0.1px solid rgb(179, 179, 179);
+    -moz-box-shadow:    0px 0px 10px 1px rgb(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 0px 10px 1px rgb(0, 0, 0, 0.5);
+    box-shadow:         0px 0px 10px 1px rgb(0, 0, 0, 0.5);
+}
+.container-conteudo3{
     position: relative;
     height: auto;
     width: 65%;
@@ -180,6 +199,10 @@ main{
     background: rgb(255, 255, 255);
     border: none;
     border-radius: 1%;
+    border-bottom: 0.1px solid rgb(179, 179, 179);
+    -moz-box-shadow:    0px 0px 10px 1px rgb(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 0px 10px 1px rgb(0, 0, 0, 0.5);
+    box-shadow:         0px 0px 10px 1px rgb(0, 0, 0, 0.5);
 }
 .container-intro{
     position: relative;
@@ -278,17 +301,20 @@ main{
     height: auto;
     font-size: 18px;
     font-weight: bold;
-    background-color: rgb(255, 255, 255);
-    border: 3px solid rgb(105, 105, 105);;
-    border-radius: 2px;
+    background: rgb(240, 240, 240);
+    background: linear-gradient(90deg, rgb(226, 226, 226) 10%, rgba(255,255,255,1) 100%);
+    border: 1.5px solid rgb(105, 105, 105);
+    border-radius: 4px;
     cursor: pointer;
     padding: 10px;
-    transition: 1s;
 }
 .btn-home-serv:hover{
-    border: 3px solid rgb(0, 0, 0);;
-    background-color: rgb(241, 241, 241);
+    background: rgb(240, 240, 240);
+    background: linear-gradient(90deg, rgb(189, 189, 189) 10%, rgba(255,255,255,1) 100%);
+    border: 1.5px solid rgb(105, 105, 105);
     color: rgb(0, 0, 0);
+    font-size: 19px;
+    padding-bottom: 9px;
 }
 .serviços-box{
     margin-top: 8%;
@@ -433,7 +459,7 @@ main{
     margin: 0 0 4% 6%;
     padding: 10px;
     width: 82%;
-    border: 0.5px solid #ffffff;
+    border: 0.5px solid rgba(39, 39, 39, 0.5);;
     border-radius: 2.5px;
     transition: 1s;
     background-color: #ffffff;
@@ -441,7 +467,7 @@ main{
 }
 .ipt-fotos:hover{
     background-color: #ebebebc7;
-    border: 0.5px solid #7a7a7a;
+    border: 0.5px solid #000000;
 }
 .ipt-enviar{
     position: relative;
@@ -559,6 +585,35 @@ ol, ul {
 }
 
 
+.caixa-de-texto{
+    margin: -2% 4% 0 4%;
+    background: rgb(255, 255, 255);
+    padding: 4% 2% 2% 2%;
+    border-radius: 4px;
+}
+.caixa-dados-usuario{
+    margin-bottom: 6%;
+    padding:1%;
+    background: rgb(240, 240, 240);
+    background: linear-gradient(90deg, rgb(236, 236, 236) 10%, rgba(255,255,255,1) 100%);
+    border-radius: 4px;
+}
+.titulo-perfil{
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 6%;
+}
+
+.p-perfil{
+    padding-right: 1%;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 4% 1% 0 1%; 
+    color: #3b3b3b;
+    width: fit-content;
+    border-bottom: 1px solid #a1a1a1;
+}
+
 
 footer{
     border-top: 0.1px solid rgb(179, 179, 179);
@@ -609,6 +664,7 @@ input[type=checkbox]:checked + label {
     display:inline-block;
     padding: 0 0 0 0px;
 }
+
 
 @media only screen and (max-width: 1366px) and (max-height:768px) {
     .nav-lista{

@@ -32,28 +32,32 @@
             
         </ul>
         <main>
-            <div class="container-conteudo2">
+            <div class="container-conteudo3">
                 <h1 class="titulo-principal">
                     Perfil do usuário
                 </h1>
-                <form class="formulario-padrao">
-                    <label class='lbl-padrao' for='iptNomePerfil'>Nome de usuário</label>
-                    <input type='text' id='iptNomePerfil' class='ipt-padrao' readonly>
-
-                    <label class='lbl-padrao' for='iptEmailPerfil'>Email</label>
-                    <input type='text' id='iptEmailPerfil' class='ipt-padrao' readonly>
-
-                    <label class ='lbl-padrao' for="iptBioPerfil">Sobre</label>
-                    <textarea id="iptBioPerfil" class="ipt-padrao" placeholder="Sinta-se livre para falar sobre você"></textarea>
-
-                    <label class='lbl-padrao' for='iptDataPerfil'>Data de cadastro</label>
-                    <input type='text' id='iptDataPerfil' class='ipt-padrao' readonly>
+                <div class="caixa-de-texto">
+                    <div class="caixa-dados-usuario">
+                        <h1 class="titulo-perfil">
+                            Nome de usuário
+                        </h1>
+                        <p id="nomeUsuario" class="p-perfil">Jorginho Alves</p>
+                    </div>
+                    <div class="caixa-dados-usuario">
+                        <h1 class="titulo-perfil">
+                            Email
+                        </h1>
+                        <p id="emailUsuario" class="p-perfil">Jorginho_Alves@gmail.com</p>
+                    </div>
+                    <div class="caixa-dados-usuario">
+                        <h1 class="titulo-perfil">
+                            Data de nascimento
+                        </h1>
+                        <p id="nascimentoUsuario" class="p-perfil">29/09/1999</p>
+                    </div>
                     
 
-                    <input type='submit' id="ipt-buscar" value='Buscar' class='ipt-enviar'>
-                    <input type='submit' id="ipt-apagar" value='Apagar tudo' class='ipt-apagar'>
-
-                </form>
+                </div>
 
 
             </div>
