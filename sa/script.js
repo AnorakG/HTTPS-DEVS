@@ -4,6 +4,8 @@ let formLogin = document.getElementById('formLogin')
 
 let formCadastro = document.getElementById('formCadastro')
 
+let dropdownPerfil = document.getElementsByClassName("perfil-dropdown")
+
 let login=document.getElementById('nomeUsuario')
 let senhaUsuario=document.getElementById('senhaUsuario')
 
@@ -22,7 +24,8 @@ if(localStorage.length>0){
         users.push(contasExistentes[i])
     }
 };
-localStorage.setItem("users", JSON.stringify(users))
+
+localStorage.setItem('users', JSON.stringify(users))
 let idade,contaConectada,usuarios;
 
 senhaVisivel1.addEventListener('change', (event) => {
@@ -129,7 +132,10 @@ function cadastrar(){
             icon: 'success',
             timer:'700'
         })
-        
+        setTimeout(function(){
+            formCadastro.style.display = "none";
+            formLogin.style.display = "inline"
+        }, 700); 
     }
 }
 
@@ -140,10 +146,10 @@ function confirmarEmail(users){
     return users.email === email.value
 }
 function buscarNome(users){
-    return users.nome === pesquisa.value;
+    return users.nome === login.value;
 }
 function buscarEmail(users){
-    return users.email === pesquisa.value;
+    return users.email === login.value;
 }
 function confirmar(){
     usuarios = JSON.parse(localStorage.getItem('users'))
@@ -178,6 +184,9 @@ function confirmarSenha(){
         senhaUsuario.value = ""
         login.value = ""
         anuncioCadastro.style.display = "none";
+        localStorage.setItem('contaLogada', JSON.stringify(contaConectada))
+        localStorage.setItem('logado',"sim")
+        dropdownPerfil.classList.add("perfil-dropdown")
     }else{
         Swal.fire({
             title: 'Senha ou usuário incorretas <br> Tente novamente ou cadastre-se por favor.',
@@ -185,4 +194,17 @@ function confirmarSenha(){
             timer:'700'
         })
     }
+}
+
+function verificarLogin(){
+    let verifica = localStorage.getItem("logado")
+    if(verifica == "sim"){
+        window.location.href= "./perfil.html"
+    }else{
+        window.location.href= "./login.html"
+    }
+}
+
+function logOut(){
+    
 }

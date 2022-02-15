@@ -16,10 +16,15 @@
         <ul class='nav-lista'>
             <div class="image-container">
                 <a href="index.html"><img src='css/urbana-logo.png' alt='logo' class="urbana"></a>
-                <a href="perfil.html"><img src='css/user.png' alt='logo-perfil' class="perfil"></a>
+                <li class="perfil-dropdown">
+                    <a onclick="verificarLogin()"><img src='css/user.png' alt='logo-perfil' class="perfil"></a>
+                    <div class="dropdown-conteudo" id="dropdownDoPerfil">
+                        <a href="registrar-obra.html"style="color:red">Logout</a>
+                    </div>
+                </li>
             </div>
             <div class='nav'>
-                <li><a class='cabecalho-texto' href="index.html">Home</a></li>
+                <li class="outros"><a class='cabecalho-texto' href="index.html">Home</a></li>
                 <li class="dropdown">
                     <a class='btn-dropdown' href="javascript:void(0)">Serviços</a>
                     <div class="dropdown-conteudo">
@@ -28,9 +33,8 @@
                         <a href="registrar-denuncia.html">Denunciar</a>
                     </div>
                 </li>
-                <li><a class='cabecalho-texto' href="login.html">Login</a></li>
+                <li class="outros"><a class='cabecalho-texto' href="login.html">Login</a></li>
             </div>
-            
         </ul>
         <main>
             <div class="container-conteudo2">
@@ -55,6 +59,7 @@
 
                 </form>
             </div>
+            <script src="script.js"></script>
         </main>
         <footer>
             <div class='footer-padrao'>

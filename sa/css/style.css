@@ -90,12 +90,13 @@ table {
     margin-top: -1.5%;
     
 }
-li , li.dropdown{
+li.outros , li.dropdown{
 
     display: inline-block;
     margin-left: 6%;
     margin-top: 20px;
 }
+
 .image-container{
     position: absolute;
     display: inline-block;
@@ -108,6 +109,10 @@ li , li.dropdown{
     margin-left: 245%;
     width: 10%;
     margin-top: 12.5px;
+}
+
+#dropdownDoPerfil{
+    margin-left: 237%;
 }
 
 .cabecalho-texto, .btn-dropdown{
@@ -150,6 +155,10 @@ nav a:hover ,.btn-dropdown:hover{
 }
 
 .dropdown:hover .dropdown-conteudo {
+    display: block;
+    margin-bottom: 10%;
+}
+.perfil-dropdown:hover .dropdown-conteudo {
     display: block;
     margin-bottom: 10%;
 }
