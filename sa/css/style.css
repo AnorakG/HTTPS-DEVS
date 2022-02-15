@@ -705,7 +705,6 @@ input[type=checkbox]:checked + label {
         display: non;
     }
     .cabecalho-texto, .btn-dropdown{
-
     display: none;
     }
     .urbana{
