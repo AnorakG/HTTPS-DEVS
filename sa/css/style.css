@@ -699,3 +699,38 @@ input[type=checkbox]:checked + label {
         bottom: 422px;
     }
   }
+
+  @media screen and (max-width: 584px) {
+    .perfil{
+        display: non;
+    }
+    .cabecalho-texto, .btn-dropdown{
+
+    display: none;
+    }
+    .urbana{
+        width: 100px;
+        margin: 10px 0 0 10px;
+    }
+    .container-intro{
+        width: 100%;
+        margin: 0;
+        background-size: 250%;
+        background-position: 50%;
+    }
+
+    .p-destaque{
+        font-size: 18px;
+        margin-top: 30%;
+    }
+    .p-box{
+        padding-top: 15%;
+    }
+    .btn-home-serv{
+        margin-top: 20%;
+        font-size: 15px;
+    }
+    .navbar{
+
+    }
+  }
