@@ -93,8 +93,8 @@ table {
 li.outros , li.dropdown{
 
     display: inline-block;
-    margin-left: 6%;
-    margin-top: 20px;
+    margin-left: 12%;
+    margin-top: 40px;
 }
 
 .image-container{
@@ -103,17 +103,19 @@ li.outros , li.dropdown{
 }
 .urbana{
     margin-left: 5%;
-    width: 25%
+    width: 35%
 }
 .perfil{
-    margin-left: 245%;
+    margin-left: 345%;
     width: 10%;
-    margin-top: 12.5px;
+    margin-top: 22.5px;
 }
 
 #dropdownDoPerfil{
-    margin-left: 237%;
+    margin-left: 337%;
+    margin-top: 13px;
 }
+
 
 .cabecalho-texto, .btn-dropdown{
     text-transform: uppercase;
@@ -698,12 +700,21 @@ input[type=checkbox]:checked + label {
         left: 505px;
         bottom: 422px;
     }
+    .perfil{
+        margin-left: 245%;
+        margin-top: 12.5px;
+    } 
+    #dropdownDoPerfil{
+        margin-left: 237%;
+        margin-top: 8px;
+    }
+    li.outros, li.dropdown{
+        margin-left: 6%;
+        margin-top: 20px;
+    }
   }
 
   @media screen and (max-width: 584px) {
-    .perfil{
-        display: non;
-    }
     .cabecalho-texto, .btn-dropdown{
     display: none;
     }
@@ -729,7 +740,5 @@ input[type=checkbox]:checked + label {
         margin-top: 20%;
         font-size: 15px;
     }
-    .navbar{
-
-    }
+    
   }

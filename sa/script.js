@@ -23,6 +23,7 @@ if(localStorage.length>0){
     {
         users.push(contasExistentes[i])
     }
+    
 };
 
 localStorage.setItem('users', JSON.stringify(users))
