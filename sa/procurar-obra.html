@@ -11,15 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
     <title>Procurar</title>
 </head>
-<body>
+<body onload="dropdown()">
     <div class='fundo-procura'>
         <ul class='nav-lista'>
             <div class="image-container">
                 <a href="index.html"><img src='css/urbana-logo.png' alt='logo' class="urbana"></a>
-                <li class="perfil-dropdown">
-                    <a onclick="verificarLogin()"><img src='css/user.png' alt='logo-perfil' class="perfil"></a>
+                <li class="dropdown-perfil">
+                    <a onclick="acessarPerfil()"><img src='css/user.png' alt='logo-perfil' class="perfil"></a>
                     <div class="dropdown-conteudo" id="dropdownDoPerfil">
-                        <a href="registrar-obra.html"style="color:red">Logout</a>
+                        <div class="box"></div>
+                        <a onclick="logOut()" style="color:red;user-select: none;cursor:pointer">Logout</a>
                     </div>
                 </li>
             </div>
@@ -59,7 +60,7 @@
 
                 </form>
             </div>
-            <script src="script.js"></script>
+            
         </main>
         <footer>
             <div class='footer-padrao'>
@@ -77,5 +78,7 @@
             </div>
         </footer>
     </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
 </body>
 </html>

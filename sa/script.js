@@ -4,7 +4,7 @@ let formLogin = document.getElementById('formLogin')
 
 let formCadastro = document.getElementById('formCadastro')
 
-let dropdownPerfil = document.getElementsByClassName("perfil-dropdown")
+let dropdownPerfil = document.getElementsByClassName("dropdown-perfil")
 
 let login=document.getElementById('nomeUsuario')
 let senhaUsuario=document.getElementById('senhaUsuario')
@@ -17,14 +17,37 @@ let dataNascimento = document.getElementById('dataNascimento')
 
 let senhaVisivel1 = document.getElementById('senhaVisivel1')
 let senhaVisivel2 = document.getElementById('senhaVisivel2')
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
 if(localStorage.length>0){
     const contasExistentes = JSON.parse(localStorage.getItem('users'))
     for(let i = 0;i<contasExistentes.length;i++)
     {
         users.push(contasExistentes[i])
     }
-    
 };
+function dropdown(){
+    let logado = getCookie("logado")
+    console.log(logado)
+    if(logado == "sim"){
+    for(let i = 0;i<dropdownPerfil.length;i++){
+        dropdownPerfil[i].classList.add("perfil-dropdown")
+    }
+    }
+}
 
 localStorage.setItem('users', JSON.stringify(users))
 let idade,contaConectada,usuarios;
@@ -124,7 +147,7 @@ function cadastrar(){
             timer:'700'
         })
     }else{
-        users.push({nome: nome.value, senha: senha2.value, email: email.value, idade: idade})
+        users.push({nome: nome.value, senha: senha2.value, email: email.value, idade: idade,dataDeNascimento:dataNascimento.value})
         localStorage.setItem("users", JSON.stringify(users))
         console.log(localStorage.getItem('users'))
         console.log("Cadastro feito =)")
@@ -185,9 +208,9 @@ function confirmarSenha(){
         senhaUsuario.value = ""
         login.value = ""
         anuncioCadastro.style.display = "none";
-        localStorage.setItem('contaLogada', JSON.stringify(contaConectada))
-        localStorage.setItem('logado',"sim")
-        dropdownPerfil.classList.add("perfil-dropdown")
+        document.cookie="conta="+JSON.stringify(contaConectada)
+        document.cookie="logado=sim"
+        setTimeout(function(){window.location.reload(true)},800)
     }else{
         Swal.fire({
             title: 'Senha ou usuário incorretas <br> Tente novamente ou cadastre-se por favor.',
@@ -197,8 +220,8 @@ function confirmarSenha(){
     }
 }
 
-function verificarLogin(){
-    let verifica = localStorage.getItem("logado")
+function acessarPerfil(){
+    let verifica = getCookie("logado")
     if(verifica == "sim"){
         window.location.href= "./perfil.html"
     }else{
@@ -207,5 +230,30 @@ function verificarLogin(){
 }
 
 function logOut(){
-    
+    let cookies = document.cookie.split(";");
+
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=./sa;";
+    }
+    Swal.fire({
+        title: 'Logout feito com sucesso <br> volte sempre =)',
+        icon: 'success',
+        timer:'700'
+    })
+    setTimeout(function(){window.location.href="./index.html"},750)
+}
+function perfil(){
+    let perfilConectado = JSON.parse(getCookie("conta"))
+    let nomeUsuarioPerfil = document.getElementById('nomeUsuarioPerfil')
+    let emailUsuarioPerfil = document.getElementById('emailUsuarioPerfil')
+    let idadeUsuarioPerfil = document.getElementById('idadeUsuarioPerfil')
+    let dataDeNascimentoUsuarioPerfil = document.getElementById('dataNascimentoUsuarioPerfil')
+
+    nomeUsuarioPerfil.innerHTML= perfilConectado.nome
+    emailUsuarioPerfil.innerHTML= perfilConectado.email
+    dataDeNascimentoUsuarioPerfil.innerHTML= perfilConectado.dataDeNascimento.split('-').reverse().join('/')
+    idadeUsuarioPerfil.innerHTML= perfilConectado.idade
 }

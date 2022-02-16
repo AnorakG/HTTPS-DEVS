@@ -13,15 +13,16 @@
     <title>Login e Cadastro</title>
     
 </head>
-<body>
+<body onload="dropdown()">
     <div class='fundo-login'>
         <ul class='nav-lista'>
             <div class="image-container">
                 <a href="index.html"><img src='css/urbana-logo.png' alt='logo' class="urbana"></a>
-                <li class="perfil-dropdown">
-                    <a onclick="verificarLogin()"><img src='css/user.png' alt='logo-perfil' class="perfil"></a>
+                <li class="dropdown-perfil">
+                    <a onclick="acessarPerfil()"><img src='css/user.png' alt='logo-perfil' class="perfil"></a>
                     <div class="dropdown-conteudo" id="dropdownDoPerfil">
-                        <a href="registrar-obra.html"style="color:red">Logout</a>
+                        <div class="box"></div>
+                        <a onclick="logOut()" style="color:red;user-select: none;cursor:pointer">Logout</a>
                     </div>
                 </li>
             </div>

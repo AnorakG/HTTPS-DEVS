@@ -10,15 +10,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
     <title>Perfil</title>
 </head>
-<body>
+<body onload="dropdown(); perfil()">
     <div class='fundo'>
         <ul class='nav-lista'>
                 <div class="image-container">
                     <a href="index.html"><img src='css/urbana-logo.png' alt='logo' class="urbana"></a>
                     <li class="perfil-dropdown">
-                        <a onclick="verificarLogin()"><img src='css/user.png' alt='logo-perfil' class="perfil"></a>
+                        <a onclick="acessarPerfil()"><img src='css/user.png' alt='logo-perfil' class="perfil"></a>
                         <div class="dropdown-conteudo" id="dropdownDoPerfil">
-                            <a href="registrar-obra.html"style="color:red">Logout</a>
+                            <div class="box"></div>
+                            <a onclick="logOut()" style="color:red;user-select: none;cursor:pointer">Logout</a>
                         </div>
                     </li>
                 </div>
@@ -45,19 +46,25 @@
                         <h1 class="titulo-perfil">
                             Nome de usuário
                         </h1>
-                        <p id="nomeUsuario" class="p-perfil">Jorginho Alves</p>
+                        <p id="nomeUsuarioPerfil" class="p-perfil"></p>
                     </div>
                     <div class="caixa-dados-usuario">
                         <h1 class="titulo-perfil">
                             Email
                         </h1>
-                        <p id="emailUsuario" class="p-perfil">Jorginho_Alves@gmail.com</p>
+                        <p id="emailUsuarioPerfil" class="p-perfil"></p>
                     </div>
                     <div class="caixa-dados-usuario">
                         <h1 class="titulo-perfil">
-                            Data de nascimento
+                            Data de Nascimento
                         </h1>
-                        <p id="nascimentoUsuario" class="p-perfil">29/09/1999</p>
+                        <p id="dataNascimentoUsuarioPerfil" class="p-perfil"></p>
+                    </div>
+                    <div class="caixa-dados-usuario">
+                        <h1 class="titulo-perfil">
+                            Idade 
+                        </h1>
+                        <p id="idadeUsuarioPerfil" class="p-perfil"></p>
                     </div>
                     
 
@@ -84,6 +91,7 @@
             </div>
         </footer>
     </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="script.js"></script>
 </body>
 </html>
