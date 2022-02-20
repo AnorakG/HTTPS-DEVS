@@ -140,7 +140,7 @@ li.outros , li.dropdown{
     height: min-content; 
     width: 25%;  
     border-radius: 2%;
-    margin-left: -5.25%;
+    margin-left: -7%;
 }
 .dropdown-conteudo a {
     font-family: 'Zilla Slab', serif;
@@ -717,6 +717,9 @@ input[type=checkbox]:checked + label {
     li.outros, li.dropdown{
         margin-left: 6%;
         margin-top: 20px;
+    }
+    .dropdown-conteudo{
+        margin-left: -5.25%;
     }
   }
 

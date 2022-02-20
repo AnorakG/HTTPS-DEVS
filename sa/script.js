@@ -1,4 +1,5 @@
 let users = []
+let admin = [{nome:"admin",senha:"1234",dataDeNascimento:"11/11/2021",}]
 
 let formLogin = document.getElementById('formLogin')
 
@@ -38,6 +39,7 @@ if(localStorage.length>0){
     {
         users.push(contasExistentes[i])
     }
+    
 };
 function dropdown(){
     let logado = getCookie("logado")
@@ -49,6 +51,7 @@ function dropdown(){
     }
 }
 
+localStorage.setItem('admin',JSON.stringify(admin))
 localStorage.setItem('users', JSON.stringify(users))
 let idade,contaConectada,usuarios;
 
@@ -147,7 +150,7 @@ function cadastrar(){
             timer:'700'
         })
     }else{
-        users.push({nome: nome.value, senha: senha2.value, email: email.value, idade: idade,dataDeNascimento:dataNascimento.value})
+        users.push({nome: nome.value, senha: senha2.value, email: email.value, idade: idade + " anos",dataDeNascimento:dataNascimento.value})
         localStorage.setItem("users", JSON.stringify(users))
         console.log(localStorage.getItem('users'))
         console.log("Cadastro feito =)")
@@ -175,11 +178,19 @@ function buscarNome(users){
 function buscarEmail(users){
     return users.email === login.value;
 }
+function buscarAdmin(admin){
+    return admin.nome === login.value;
+}
 function confirmar(){
     usuarios = JSON.parse(localStorage.getItem('users'))
+    adm = JSON.parse(localStorage.getItem('admin'))
     console.log (usuarios)
-
-    if(usuarios.find(buscarNome)){
+    if(adm.find(buscarAdmin)){
+        console.log('Bem Vindo Administrador')
+        console.log(adm.find(buscarAdmin))
+        contaConectada = adm.find(buscarAdmin)
+        confirmarSenha()
+    }else if(usuarios.find(buscarNome)){
         console.log('Nome encontrado!')
         console.log(usuarios.find(buscarNome))
         contaConectada = usuarios.find(buscarNome)
@@ -256,4 +267,7 @@ function perfil(){
     emailUsuarioPerfil.innerHTML= perfilConectado.email
     dataDeNascimentoUsuarioPerfil.innerHTML= perfilConectado.dataDeNascimento.split('-').reverse().join('/')
     idadeUsuarioPerfil.innerHTML= perfilConectado.idade
+}
+function novaSenha() {
+
 }
