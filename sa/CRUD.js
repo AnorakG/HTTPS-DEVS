@@ -10,7 +10,7 @@ if(localStorage.length>0){
     const denunciasExistentes = JSON.parse(localStorage.getItem('denuncias'))
     for(let i = 0;i<denunciasExistentes.length;i++)
     {
-        denunciasExistentes.push(denunciasExistentes[i])
+        denuncias.push(denunciasExistentes[i])
     }
     
 };
