@@ -1,6 +1,7 @@
 let denuncias = []
 let obras = []
 
+let teste = document.getElementById('teste')
 
 let problema = document.getElementById("ipt-descricao-denuncia")
 let endereco = document.getElementById("ipt-endereco-denuncia")
@@ -15,8 +16,8 @@ let imagemDaDenuncia
 
 imagemDenuncia.addEventListener('change', (e)=>{
     let fileList = e.target.files;
-let files = {};
-let index = 0;
+    let files = {};
+    let index = 0;
 for(let file of fileList) {
     files[index] = file;
     index ++;
@@ -30,7 +31,6 @@ Object.keys(files).forEach( key => {
      reader.addEventListener("load", () =>{  
         localStorage.setItem('img',reader.result)
      })
-     reader.readAsDataURL(files[key]);
 
 })})
 if(localStorage.length>0){
@@ -62,7 +62,7 @@ function registrarDenuncias(){
     problema.value = '';
     endereco.value = '';
     data.value= '';
-    
+    imagemDenuncia.value = '';
 }
 function registrarObras(){
     obras.push({descricao: descricao.value, enderecoObra: enderecoObra.value,dataInicial: dataInicial.value.split('-').reverse().join('/'), dataFinal: dataFinal.value.split('-').reverse().join('/')})
