@@ -1,5 +1,6 @@
 let users = []
 let admin = [{nome:"admin",senha:"1234",dataDeNascimento:"11/11/2021",}]
+let idade,contaConectada,usuarios;
 
 let formLogin = document.getElementById('formLogin')
 
@@ -18,6 +19,7 @@ let dataNascimento = document.getElementById('dataNascimento')
 
 let senhaVisivel1 = document.getElementById('senhaVisivel1')
 let senhaVisivel2 = document.getElementById('senhaVisivel2')
+
 function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
@@ -53,7 +55,7 @@ function dropdown(){
 
 localStorage.setItem('admin',JSON.stringify(admin))
 localStorage.setItem('users', JSON.stringify(users))
-let idade,contaConectada,usuarios;
+
 
 senhaVisivel1.addEventListener('change', (event) => {
     if (event.currentTarget.checked) {

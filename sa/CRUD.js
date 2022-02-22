@@ -1,17 +1,38 @@
 let denuncias = []
 let obras = []
 
+
 let problema = document.getElementById("ipt-descricao-denuncia")
 let endereco = document.getElementById("ipt-endereco-denuncia")
 let data = document.getElementById("ipt-dataInicial-denuncia")
+let imagemDenuncia = document.getElementById('ipt-fotos-denuncia')
 
 let descricao = document.getElementById("ipt-descricao")
 let enderecoObra = document.getElementById("ipt-endereco")
 let dataInicial = document.getElementById("ipt-dataInicial")
 let dataFinal = document.getElementById("ipt-dataFinal")
+let imagemDaDenuncia
 
+imagemDenuncia.addEventListener('change', (e)=>{
+    let fileList = e.target.files;
+let files = {};
+let index = 0;
+for(let file of fileList) {
+    files[index] = file;
+    index ++;
+}
 
+// Now iterate object instead of array
+Object.keys(files).forEach( key => {
 
+     let reader = new FileReader();
+     
+     reader.addEventListener("load", () =>{  
+        localStorage.setItem('img',reader.result)
+     })
+     reader.readAsDataURL(files[key]);
+
+})})
 if(localStorage.length>0){
     const obrasExistentes = JSON.parse(localStorage.getItem('obras'))
     const denunciasExistentes = JSON.parse(localStorage.getItem('denuncias'))
@@ -28,12 +49,13 @@ if(localStorage.length>0){
 };
 
 function registrarDenuncias(){
-    denuncias.push({problema: problema.value, endereco: endereco.value,data: data.value.split('-').reverse().join('/')})
+    imagemDaDenuncia = localStorage.getItem("img")
+    denuncias.push({problema: problema.value, endereco: endereco.value,data: data.value.split('-').reverse().join('/'), imagem: imagemDaDenuncia})
     localStorage.setItem("denuncias", JSON.stringify(denuncias))
     console.log(localStorage.getItem('denuncias'))
     console.log("Denuncia feita ( ͡° ͜ʖ ͡°)")
     Swal.fire({
-        title: 'obrigado pela denunciar! <br> denuncia realizada =',
+        title: 'Obrigado pela denunciar! <br> Denúncia realizada ',
         icon: 'success',
         timer:'700'
     })
