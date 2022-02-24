@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="icon2.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
+    <title>Procurar</title>
+</head>
+<body>
+    <div class='fundo-procura'>
+        <ul class='nav-lista'>
+            <div class="image-container">
+                <a href="index.html"><img src='css/urbana-logo.png' alt='logo' class="urbana"></a>
+                <a href="perfil.html"><img src='css/user.png' alt='logo-perfil' class="perfil"></a>
+            </div>
+            <div class='nav'>
+                <li><a class='cabecalho-texto' href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a class='btn-dropdown' href="javascript:void(0)">Serviços</a>
+                    <div class="dropdown-conteudo">
+                        <a href="registrar-obra.html">Registrar obra</a>
+                        <a href="procurar-obra.html">Procurar obra</a>
+                        <a href="registrar-denuncia.html">Denunciar</a>
+                    </div>
+                </li>
+                <li><a class='cabecalho-texto' href="login.html">Login</a></li>
+            </div>
+            
+        </ul>
+        <main>
+            <div class="container-conteudo2">
+                
+                <div class='pesquisa-container'>
+                    <div class='primeira-parte-conteudo'>
+                        <div class="tituloPesquisa-box">
+                            <h class="tituloSecundario-pesquisa">Procurar Obras</h>
+                            </div>
+                        <div class="caixa-pesquisa">
+                            <input type='text' id='ipt-endereco-procurado' class='ipt-pesquisa' placeholder="Endereço">
+                            <button type='button' id="btn-buscar"class='btn-pesquisa'>Pesquisar</button>
+                        </div>
+                        <div class="obras-pesquisa">
+                            <ul class="listaDeObras" id='listaDeObras' data-list>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class='segunda-parte-conteudo'>
+                        <div class="tituloPesquisa-box">
+                        <h class="tituloSecundario-pesquisa">Dados da Obra</h>
+                        </div>
+                        <div class="dadosObra">
+                            <h class="tituloDados-obra">Descrição: </h>
+                            <textarea class="txtALista-obra" id="txtADescricao"></textarea>
+                            <h class="tituloDados-obra">Endereço: </h>
+                            <p class="pLista-obra" id="pEndereço"></p>
+                            <h class="tituloDados-obra">Data Inicial:</h>
+                            <p class="pLista-obra" id="pDataInicial"></p>
+                            <h class="tituloDados-obra">Data Final:</h>
+                            <p class="pLista-obra" id="pDataFinal"></p>
+                        </div>                
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class='footer-padrao'>
+                <h1 class="titulo-footer">
+                    Contato
+                </h1>
+                <ul class='lista-footer'>
+                    <li>
+                        WhatsApp: (48) 99822-7104
+                    </li>
+                    <li>
+                        Email: httpsdev@gmail.com
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
