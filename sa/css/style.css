@@ -722,64 +722,69 @@ input[type=checkbox]:checked + label {
         margin-left: -5.25%;
     }
   }
-  @media screen and (max-width:1828px) {
+  @media screen and (max-width:1836px) {
     .perfil{
-        margin-left: 320%;
+        margin-left: 325%;
+    }
+  }
+  @media screen and (max-width:1730px){
+    .perfil{
+        margin-left: 315%;
     }
   }
   @media screen and (max-width:1696px){
     .perfil{
-        margin-left: 300%;
+        margin-left: 305%;
     }
   }
-  @media screen and (max-width:1596px){
+  @media screen and (max-width:1616px){
     .perfil{
-        margin-left: 280%;
+        margin-left: 285%;
     }
   }
-  @media screen and (max-width:1496px){
+  @media screen and (max-width:1516px){
       .perfil{
-          margin-left: 260%;
+          margin-left: 265%;
       }
   }
-  @media screen and (max-width:1396px){
+  @media screen and (max-width:1406px){
     .perfil{
-        margin-left: 240%;
+        margin-left: 245%;
     }
   }
-  @media screen and (max-width:1296px){
+  @media screen and (max-width:1306px){
     .perfil{
-        margin-left: 220%;
+        margin-left: 225%;
     }
   }
-  @media screen and (max-width:1196px){
+  @media screen and (max-width:1206px){
     .perfil{
-        margin-left: 200%;
+        margin-left: 205%;
     }
   }
-  @media screen and (max-width:1096px){
+  @media screen and (max-width:1098px){
     .perfil{
-        margin-left: 180%;
+        margin-left: 185%;
     }
   }
-  @media screen and (max-width:996px){
+  @media screen and (max-width:998px){
     .perfil{
-        margin-left: 160%;
+        margin-left: 165%;
     }
   }
   @media screen and (max-width:896px){
     .perfil{
-        margin-left: 140%;
+        margin-left: 145%;
     }
   }
   @media screen and (max-width:796px){
     .perfil{
-        margin-left: 120%;
+        margin-left: 125%;
     }
   } 
   @media screen and (max-width:696px){
     .perfil{
-        margin-left: 100%;
+        margin-left: 105%;
     }
   }
 /*pesquisa*/
