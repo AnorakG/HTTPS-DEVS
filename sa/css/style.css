@@ -722,8 +722,66 @@ input[type=checkbox]:checked + label {
         margin-left: -5.25%;
     }
   }
-
-  
+  @media screen and (max-width:1828px) {
+    .perfil{
+        margin-left: 320%;
+    }
+  }
+  @media screen and (max-width:1696px){
+    .perfil{
+        margin-left: 300%;
+    }
+  }
+  @media screen and (max-width:1596px){
+    .perfil{
+        margin-left: 280%;
+    }
+  }
+  @media screen and (max-width:1496px){
+      .perfil{
+          margin-left: 260%;
+      }
+  }
+  @media screen and (max-width:1396px){
+    .perfil{
+        margin-left: 240%;
+    }
+  }
+  @media screen and (max-width:1296px){
+    .perfil{
+        margin-left: 220%;
+    }
+  }
+  @media screen and (max-width:1196px){
+    .perfil{
+        margin-left: 200%;
+    }
+  }
+  @media screen and (max-width:1096px){
+    .perfil{
+        margin-left: 180%;
+    }
+  }
+  @media screen and (max-width:996px){
+    .perfil{
+        margin-left: 160%;
+    }
+  }
+  @media screen and (max-width:896px){
+    .perfil{
+        margin-left: 140%;
+    }
+  }
+  @media screen and (max-width:796px){
+    .perfil{
+        margin-left: 120%;
+    }
+  } 
+  @media screen and (max-width:696px){
+    .perfil{
+        margin-left: 100%;
+    }
+  }
 /*pesquisa*/
 
 .caixa-pesquisa{

@@ -1,6 +1,7 @@
 let users = []
 let admin = [{nome:"admin",senha:"1234",dataDeNascimento:"11/11/2021",}]
 let idade,contaConectada,usuarios;
+let id = 0
 
 let formLogin = document.getElementById('formLogin')
 
@@ -45,7 +46,7 @@ if(localStorage.length>0){
 };
 function dropdown(){
     let logado = getCookie("logado")
-    console.log(logado)
+
     if(logado == "sim"){
     for(let i = 0;i<dropdownPerfil.length;i++){
         dropdownPerfil[i].classList.add("perfil-dropdown")
@@ -119,6 +120,8 @@ function confirmarIdade(){
 }
 
 function cadastrar(){
+    let loop = JSON.parse(localStorage.getItem('users')) 
+    for(let i = 0; i<loop.length;i++){id += 1}
     console.log("cadastrar");
     console.log(users);
     if(senha1.value.length == 0||senha2.value.length == 0||nome.value.length==0||email.value.length==0||dataNascimento.value.length==0){
@@ -152,7 +155,8 @@ function cadastrar(){
             timer:'700'
         })
     }else{
-        users.push({nome: nome.value, senha: senha2.value, email: email.value, idade: idade + " anos",dataDeNascimento:dataNascimento.value})
+       
+        users.push({nome: nome.value, senha: senha2.value, email: email.value, idade: idade + " anos",dataDeNascimento:dataNascimento.value, id:id})
         localStorage.setItem("users", JSON.stringify(users))
         console.log(localStorage.getItem('users'))
         console.log("Cadastro feito =)")
