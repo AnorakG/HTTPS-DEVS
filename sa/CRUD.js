@@ -48,7 +48,7 @@ function getCookie(cname) {
 function registrarDenuncias(){
     
     let logado = getCookie("logado")
-    let conta = JSON.parse(getCookie("conta"))
+    
     
     if(problema.value.length == 0||endereco.value.length==0||data.value.length==0||imagemDenuncia.value.length==0){
         Swal.fire({
@@ -63,6 +63,7 @@ function registrarDenuncias(){
             timer:'800'
         })
     }else{
+    let conta = JSON.parse(getCookie("conta"))
     denuncias.push({problema: problema.value, endereco: endereco.value,data: data.value.split('-').reverse().join('/'), imagem: imagemDenuncia.value, id:conta.id})
     localStorage.setItem("denuncias", JSON.stringify(denuncias))
     console.log(localStorage.getItem('denuncias'))
@@ -85,7 +86,7 @@ function confirmaData(str1, str2)
 function registrarObras(){
     console.log(confirmaData(dataInicial.value,dataFinal.value))   
     let logado = getCookie("logado")
-    let conta = JSON.parse(getCookie("conta"))
+    
     if(descricao.value.length == 0||enderecoObra.value.length==0||dataInicial.value.length==0 ||dataFinal.value.length==0||imagemObras.value.length==0){
         Swal.fire({
             title: 'Preencha todos os campos',
@@ -105,6 +106,7 @@ function registrarObras(){
             timer:'800'
         })
     }else{
+        let conta = JSON.parse(getCookie("conta"))
         obras.push({descricao: descricao.value, enderecoObra: enderecoObra.value,dataInicial: dataInicial.value.split('-').reverse().join('/'), dataFinal: dataFinal.value.split('-').reverse().join('/'),imagem: imagemObras.value, id: conta.id})
         localStorage.setItem("obras", JSON.stringify(obras))
         console.log(localStorage.getItem('obras'))

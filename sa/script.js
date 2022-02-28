@@ -293,6 +293,8 @@ function deletar(){
       }).then((result) => {
         if (result.isConfirmed) {
         let cadastros = JSON.parse(localStorage.getItem("users"))
+        let obras = JSON.parse(localStorage.getItem("obras"))
+        let denuncias = JSON.parse(localStorage.getItem('denuncias'))
         let conta = JSON.parse(getCookie("conta"))
         let cookies = document.cookie.split(";");
         for (i = 0; i < cadastros.length; i++) {
@@ -302,6 +304,22 @@ function deletar(){
                 localStorage.setItem('users', JSON.stringify(cadastros))
             }
         }
+        for (i = 0; i < obras.length; i++) {
+            if (conta.id == obras[i].id) {
+                excluirObras = i
+                obras.splice(excluirObras, 1)
+                localStorage.setItem('obras', JSON.stringify(obras))
+                i--
+            }
+        }
+        for (i = 0; i < denuncias.length; i++) {
+            if (conta.id == denuncias[i].id) {
+                excluirDenuncias = i
+                obras.splice(excluirDenuncias, 1)
+                localStorage.setItem('denuncias', JSON.stringify(denuncias))
+                i--
+            }
+        }
         Swal.fire(
             'Conta Deletada',
             'Sua conta foi deletada com sucesso.',
@@ -309,10 +327,10 @@ function deletar(){
             '700'
         )
         for (var i = 0; i < cookies.length; i++) {
-        var cookie = cookies[i];
-        var eqPos = cookie.indexOf("=");
-        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=./sa;";
+            var cookie = cookies[i];
+            var eqPos = cookie.indexOf("=");
+            var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=./sa;";
         }
         setTimeout(function(){window.location.href="./index.html"},750)
         }
