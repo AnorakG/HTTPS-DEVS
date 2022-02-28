@@ -63,28 +63,28 @@ function registrarDenuncias(){
             timer:'800'
         })
     }else{
-    let conta = JSON.parse(getCookie("conta"))
-    denuncias.push({problema: problema.value, endereco: endereco.value,data: data.value.split('-').reverse().join('/'), imagem: imagemDenuncia.value, id:conta.id})
-    localStorage.setItem("denuncias", JSON.stringify(denuncias))
-    console.log(localStorage.getItem('denuncias'))
-    console.log("Denuncia feita")
-    Swal.fire({
-        title: 'Obrigado pela denunciar! <br> Denúncia realizada',
-        icon: 'success',
-        timer:'700'
-    })
-    problema.value = '';
-    endereco.value = '';
-    data.value= '';
-    imagemDenuncia.value = '';
-}
+        let conta = JSON.parse(getCookie("conta"))
+        denuncias.push({problema: problema.value, endereco: endereco.value,data: data.value.split('-').reverse().join('/'), imagem: imagemDenuncia.value, id:conta.id})
+        localStorage.setItem("denuncias", JSON.stringify(denuncias))
+        //console.log(localStorage.getItem('denuncias'))
+        console.log("Denuncia feita")
+        Swal.fire({
+            title: 'Obrigado pela denunciar! <br> Denúncia realizada',
+            icon: 'success',
+            timer:'700'
+        })
+        problema.value = '';
+        endereco.value = '';
+        data.value= '';
+        imagemDenuncia.value = '';
+    }
 }
 function confirmaData(str1, str2)
 {
     return new Date(str1) < new Date(str2);
 }
 function registrarObras(){
-    console.log(confirmaData(dataInicial.value,dataFinal.value))   
+    //console.log(confirmaData(dataInicial.value,dataFinal.value))   
     let logado = getCookie("logado")
     
     if(descricao.value.length == 0||enderecoObra.value.length==0||dataInicial.value.length==0 ||dataFinal.value.length==0||imagemObras.value.length==0){
@@ -109,7 +109,7 @@ function registrarObras(){
         let conta = JSON.parse(getCookie("conta"))
         obras.push({descricao: descricao.value, enderecoObra: enderecoObra.value,dataInicial: dataInicial.value.split('-').reverse().join('/'), dataFinal: dataFinal.value.split('-').reverse().join('/'),imagem: imagemObras.value, id: conta.id})
         localStorage.setItem("obras", JSON.stringify(obras))
-        console.log(localStorage.getItem('obras'))
+       //console.log(localStorage.getItem('obras'))
         console.log("Registro feito")
         Swal.fire({
             title: 'Obrigado pelo registro ! <br> Registro realizado',

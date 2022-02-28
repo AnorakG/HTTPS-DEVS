@@ -227,6 +227,7 @@ function confirmarSenha(){
             icon: 'success',
             timer:'700'
         })
+        console.log("Senha Correta!")
         senhaUsuario.value = ""
         login.value = ""
         anuncioCadastro.style.display = "none";
