@@ -447,6 +447,7 @@ main{
     border: 1px solid #f098c1;
     background-color: #ffa2e3;
 }
+
 .check1 input[type=checkbox]+label{
     position: absolute;
     left: 690px;
@@ -544,7 +545,7 @@ main{
     cursor: pointer;
     color: rgb(0, 0, 0);
     border: 1px solid rgb(32, 121, 124);
-    background-color: rgb(91, 185, 189);
+    background-color: #5bb9bd;
 }
 .btn-login:hover{
     color: rgb(40, 0, 0);
@@ -681,6 +682,25 @@ input[type=checkbox]:checked + label {
 }
 
 
+.btn-del{
+    position: relative;
+    width: 50%;
+    padding: 15px 0;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 2.5px;
+    transition: 1s all;
+    cursor: pointer;
+    color: #ffffff;
+    border: 1px solid #7c2020;
+    background-color: #d33;
+}
+.btn-del:hover{
+    color: rgb(40, 0, 0);
+    border: 1px solid #5e1818;
+    background-color: #bd5b5b;
+}
 @media only screen and (max-width: 1366px) and (max-height:768px) {
     .nav-lista{
         height: 75px;
@@ -737,29 +757,34 @@ input[type=checkbox]:checked + label {
         margin-left: 305%;
     }
   }
-  @media screen and (max-width:1616px){
+  @media screen and (max-width:1618px){
     .perfil{
         margin-left: 285%;
     }
   }
-  @media screen and (max-width:1516px){
+  @media screen and (max-width:1518px){
       .perfil{
           margin-left: 265%;
       }
   }
-  @media screen and (max-width:1406px){
+  @media screen and (max-width:1421px){
     .perfil{
         margin-left: 245%;
     }
   }
-  @media screen and (max-width:1306px){
+  @media screen and (max-width:1320px){
     .perfil{
         margin-left: 225%;
     }
   }
-  @media screen and (max-width:1206px){
+  @media screen and (max-width:1218px){
     .perfil{
         margin-left: 205%;
+    }
+  }
+  @media screen and (max-width:1118px){
+    .perfil{
+        margin-left: 195%;
     }
   }
   @media screen and (max-width:1098px){
@@ -767,22 +792,27 @@ input[type=checkbox]:checked + label {
         margin-left: 185%;
     }
   }
+  @media screen and (max-width:1018px){
+    .perfil{
+        margin-left: 175%;
+    }
+  }
   @media screen and (max-width:998px){
     .perfil{
         margin-left: 165%;
     }
   }
-  @media screen and (max-width:896px){
+  @media screen and (max-width:912px){
     .perfil{
         margin-left: 145%;
     }
   }
-  @media screen and (max-width:796px){
+  @media screen and (max-width:809px){
     .perfil{
         margin-left: 125%;
     }
   } 
-  @media screen and (max-width:696px){
+  @media screen and (max-width:706px){
     .perfil{
         margin-left: 105%;
     }

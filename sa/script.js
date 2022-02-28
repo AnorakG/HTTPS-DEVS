@@ -1,7 +1,7 @@
 let users = []
 let admin = [{nome:"admin",senha:"1234",dataDeNascimento:"11/11/2021",}]
 let idade,contaConectada,usuarios;
-let id = 0
+let id = 1
 
 let formLogin = document.getElementById('formLogin')
 
@@ -120,10 +120,15 @@ function confirmarIdade(){
 }
 
 function cadastrar(){
-    let loop = JSON.parse(localStorage.getItem('users')) 
-    for(let i = 0; i<loop.length;i++){id += 1}
+    let pegaID = JSON.parse(localStorage.getItem('users'))
+    let idFinal = pegaID.slice(-1) 
+    if(idFinal.length == 0){
+        id = 1
+    }else{
+        id = idFinal[0].id + 1;
+    }
     console.log("cadastrar");
-    console.log(users);
+    //console.log(users);
     if(senha1.value.length == 0||senha2.value.length == 0||nome.value.length==0||email.value.length==0||dataNascimento.value.length==0){
         Swal.fire({
             title: 'Preencha todos os campos antes de se cadastrar',
@@ -158,7 +163,7 @@ function cadastrar(){
        
         users.push({nome: nome.value, senha: senha2.value, email: email.value, idade: idade + " anos",dataDeNascimento:dataNascimento.value, id:id})
         localStorage.setItem("users", JSON.stringify(users))
-        console.log(localStorage.getItem('users'))
+        //console.log(localStorage.getItem('users'))
         console.log("Cadastro feito =)")
         Swal.fire({
             title: 'Parabéns por se cadastrar! <br> Cadastro realizado =',
@@ -190,20 +195,20 @@ function buscarAdmin(admin){
 function confirmar(){
     usuarios = JSON.parse(localStorage.getItem('users'))
     adm = JSON.parse(localStorage.getItem('admin'))
-    console.log (usuarios)
+
     if(adm.find(buscarAdmin)){
         console.log('Bem Vindo Administrador')
-        console.log(adm.find(buscarAdmin))
+        //console.log(adm.find(buscarAdmin))
         contaConectada = adm.find(buscarAdmin)
         confirmarSenha()
     }else if(usuarios.find(buscarNome)){
         console.log('Nome encontrado!')
-        console.log(usuarios.find(buscarNome))
+        //console.log(usuarios.find(buscarNome))
         contaConectada = usuarios.find(buscarNome)
         confirmarSenha()
     }else if(usuarios.find(buscarEmail)){
         console.log('E-mail encontrado!')
-        console.log(usuarios.find(buscarEmail))
+        //console.log(usuarios.find(buscarEmail))
         contaConectada = usuarios.find(buscarEmail)
         confirmarSenha()
     }else{
@@ -274,6 +279,42 @@ function perfil(){
     dataDeNascimentoUsuarioPerfil.innerHTML= perfilConectado.dataDeNascimento.split('-').reverse().join('/')
     idadeUsuarioPerfil.innerHTML= perfilConectado.idade
 }
-function novaSenha() {
-
+function deletar(){
+    Swal.fire({
+        title: 'Você tem certeza?',
+        text: "Você não conseguirá recuperar sua conta nem seus registros!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#28a745',
+        cancelButtonColor: '#d33',
+        reverseButtons: true,
+        confirmButtonText: 'Sim, pode deletar!',
+        cancelButtonText:'Cancelar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+        let cadastros = JSON.parse(localStorage.getItem("users"))
+        let conta = JSON.parse(getCookie("conta"))
+        let cookies = document.cookie.split(";");
+        for (i = 0; i < cadastros.length; i++) {
+            if (conta.id == cadastros[i].id) {
+                excluirUsers = i
+                cadastros.splice(excluirUsers, 1)
+                localStorage.setItem('users', JSON.stringify(cadastros))
+            }
+        }
+        Swal.fire(
+            'Conta Deletada',
+            'Sua conta foi deletada com sucesso.',
+            'success',
+            '700'
+        )
+        for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=./sa;";
+        }
+        setTimeout(function(){window.location.href="./index.html"},750)
+        }
+      })
 }
