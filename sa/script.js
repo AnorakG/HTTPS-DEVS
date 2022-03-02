@@ -1,7 +1,5 @@
 let users = []
 let admin = [{nome:"admin",senha:"1234",dataDeNascimento:"11/11/2021",}]
-let obra = []
-let denuncia = []
 let idade,contaConectada,usuarios;
 let id = 1
 
@@ -40,22 +38,11 @@ function getCookie(cname) {
   }
 if(localStorage.length>0){
     const contasExistentes = JSON.parse(localStorage.getItem('users'))
-    const obrasExistentes = JSON.parse(localStorage.getItem('obras'))
-    const denunciasExistentes = JSON.parse(localStorage.getItem('denuncias'))
     
     for(let i = 0;i<contasExistentes.length;i++)
     {
         users.push(contasExistentes[i])
     }
-    for(let i = 0;i<obrasExistentes.length;i++)
-    {
-         obra.push(obrasExistentes[i])
-    }
-    for(let i = 0;i<denunciasExistentes.length;i++)
-    {
-        denuncia.push(denunciasExistentes[i])
-    }
-    
 };
 function dropdown(){
     let logado = getCookie("logado")
@@ -69,8 +56,7 @@ function dropdown(){
 
 localStorage.setItem('admin',JSON.stringify(admin))
 localStorage.setItem('users', JSON.stringify(users))
-localStorage.setItem('obras',JSON.stringify(obra))
-localStorage.setItem('denuncias',JSON.stringify(denuncia))
+
 
 senhaVisivel1.addEventListener('change', (event) => {
     if (event.currentTarget.checked) {
@@ -319,7 +305,7 @@ function deletar(){
                 localStorage.setItem('users', JSON.stringify(cadastros))
             }
         }
-        if(obras = []){}else{
+        if(obras == null){}else if(obras.length === 0){}else{
         for (i = 0; i < obras.length; i++) {
             if (conta.id == obras[i].id) {
                 excluirObras = i
@@ -328,7 +314,7 @@ function deletar(){
                 i--
             }
         }}
-        if(denuncias = []){}else{
+        if (denuncias == null){}else if(denuncias.length === 0){}else{
         for (i = 0; i < denuncias.length; i++) {
             if (conta.id == denuncias[i].id) {
                 excluirDenuncias = i
