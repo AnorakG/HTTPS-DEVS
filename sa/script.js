@@ -1,5 +1,7 @@
 let users = []
 let admin = [{nome:"admin",senha:"1234",dataDeNascimento:"11/11/2021",}]
+let obra = []
+let denuncia = []
 let idade,contaConectada,usuarios;
 let id = 1
 
@@ -56,7 +58,8 @@ function dropdown(){
 
 localStorage.setItem('admin',JSON.stringify(admin))
 localStorage.setItem('users', JSON.stringify(users))
-
+localStorage.setItem('obras',JSON.stringify(obra))
+localStorage.setItem('denuncias',JSON.stringify(denuncia))
 
 senhaVisivel1.addEventListener('change', (event) => {
     if (event.currentTarget.checked) {
@@ -305,6 +308,7 @@ function deletar(){
                 localStorage.setItem('users', JSON.stringify(cadastros))
             }
         }
+        if(obras = []){}else{
         for (i = 0; i < obras.length; i++) {
             if (conta.id == obras[i].id) {
                 excluirObras = i
@@ -312,7 +316,8 @@ function deletar(){
                 localStorage.setItem('obras', JSON.stringify(obras))
                 i--
             }
-        }
+        }}
+        if(denuncias = []){}else{
         for (i = 0; i < denuncias.length; i++) {
             if (conta.id == denuncias[i].id) {
                 excluirDenuncias = i
@@ -320,7 +325,7 @@ function deletar(){
                 localStorage.setItem('denuncias', JSON.stringify(denuncias))
                 i--
             }
-        }
+        }}
         Swal.fire(
             'Conta Deletada',
             'Sua conta foi deletada com sucesso.',
