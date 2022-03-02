@@ -40,9 +40,20 @@ function getCookie(cname) {
   }
 if(localStorage.length>0){
     const contasExistentes = JSON.parse(localStorage.getItem('users'))
+    const obrasExistentes = JSON.parse(localStorage.getItem('obras'))
+    const denunciasExistentes = JSON.parse(localStorage.getItem('denuncias'))
+    
     for(let i = 0;i<contasExistentes.length;i++)
     {
         users.push(contasExistentes[i])
+    }
+    for(let i = 0;i<obrasExistentes.length;i++)
+    {
+         obra.push(obrasExistentes[i])
+    }
+    for(let i = 0;i<denunciasExistentes.length;i++)
+    {
+        denuncia.push(denunciasExistentes[i])
     }
     
 };
