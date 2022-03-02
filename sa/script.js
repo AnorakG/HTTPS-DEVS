@@ -316,7 +316,7 @@ function deletar(){
         for (i = 0; i < denuncias.length; i++) {
             if (conta.id == denuncias[i].id) {
                 excluirDenuncias = i
-                obras.splice(excluirDenuncias, 1)
+                denuncias.splice(excluirDenuncias, 1)
                 localStorage.setItem('denuncias', JSON.stringify(denuncias))
                 i--
             }
