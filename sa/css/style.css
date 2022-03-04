@@ -826,12 +826,17 @@ input[type=checkbox]:checked + label {
   }
   @media screen and (max-width:809px){
     .perfil{
-        margin-left: 125%;
+        margin-left: 135%;
+    }
+    .urbana {
+        margin-left: 5%;
+        width: 28%;
+        margin-top: 1%;
     }
   } 
   @media screen and (max-width:706px){
     .perfil{
-        margin-left: 105%;
+        margin-left: 125%;
     }
   }
 /*pesquisa*/
@@ -940,11 +945,8 @@ input[type=checkbox]:checked + label {
     font-weight: bold;
 }
 
-
   @media screen and (max-width: 584px) {
-    .cabecalho-texto, .btn-dropdown{
-    display: none;
-    }
+    
     .urbana{
         width: 100px;
         margin: 10px 0 0 10px;
@@ -967,5 +969,134 @@ input[type=checkbox]:checked + label {
         margin-top: 20%;
         font-size: 15px;
     }
+   
     
   }
+  @media screen and (max-width: 749px) {
+    .nav {
+        position: absolute;
+        text-align: center;
+        margin-left: 25%;
+        width: 51%;
+        margin-top: -1.5%;
+    }
+    .urbana {
+        margin-left: 5%;
+        width: 25%;
+        margin-top: 1%;
+    }
+    .perfil {
+        margin-left: 125%;
+    }
+  }
+  @media screen and (max-width: 715px) {
+    .perfil {
+        margin-left: 120%;
+    }
+  }
+  @media screen and (max-width: 688px) {
+    .perfil {
+        margin-left: 115%;
+    }
+  }
+  @media screen and (max-width: 656px) {
+    .perfil {
+        margin-left: 110%;
+    }
+  }
+  @media screen and (max-width: 625px) {
+    .perfil {
+        margin-left: 105%;
+    }
+  }
+  @media screen and (max-width: 610px) {
+    .perfil {
+        margin-left: 100%;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .perfil {
+        margin-left: 100%;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .perfil {
+        margin-left: 90%;
+    }
+    .nav {
+        position: absolute;
+        text-align: center;
+        margin-left: 25%;
+        width: 51%;
+        margin-top: -1.5%;
+    }
+    .cabecalho-texto, .btn-dropdown {
+        font-size: 18px;
+    }
+  }
+  @media screen and (max-width: 530px) {
+    .perfil {
+        margin-left: 85%;
+    }
+    .urbana {
+        margin-left: 4%;
+        width: 20%;
+        margin-top: 2.5%;
+    }
+    .cabecalho-texto, .btn-dropdown {
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .perfil {
+        margin-left: 100%;
+    }
+    
+    }
+@media screen and (max-width: 591px) {
+    .perfil {
+        margin-left: 95%;
+        }
+        
+        }
+@media screen and (max-width: 566px) {
+    .perfil {
+        margin-left: 90%;
+            }
+            
+            }
+@media screen and (max-width: 375px) {
+    .nav {
+        width: 50%;
+    }
+    .cabecalho-texto, .btn-dropdown {
+        font-size: 12px;
+ }
+ .perfil {
+    margin-left: 85%;
+    margin-top: 5%;
+        }
+ .urbana {
+    margin-left: 4%;
+    width: 23%;
+    margin-top: 4%;
+}
+}
+@media screen and (max-width: 477px) {
+    .nav {
+        width: 50%;
+    }
+    .cabecalho-texto, .btn-dropdown {
+        font-size: 12px;
+ }
+ .perfil {
+    margin-left: 85%;
+    margin-top: 5%;
+        }
+ .urbana {
+    margin-left: 4%;
+    width: 23%;
+    margin-top: 4%;
+}
+
+}
