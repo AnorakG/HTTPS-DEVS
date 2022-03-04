@@ -50,7 +50,7 @@ function registrarDenuncias(){
     let logado = getCookie("logado")
     
     
-    if(problema.value.length == 0||endereco.value.length==0||data.value.length==0||imagemDenuncia.value.length==0){
+    if(problema.value.length == 0||endereco.value.length==0||data.value.length==0){
         Swal.fire({
             title: 'Preencha todos os campos',
             icon: 'error',
@@ -87,7 +87,7 @@ function registrarObras(){
     //console.log(confirmaData(dataInicial.value,dataFinal.value))   
     let logado = getCookie("logado")
     
-    if(descricao.value.length == 0||enderecoObra.value.length==0||dataInicial.value.length==0 ||dataFinal.value.length==0||imagemObras.value.length==0){
+    if(descricao.value.length == 0||enderecoObra.value.length==0||dataInicial.value.length==0 ||dataFinal.value.length==0){
         Swal.fire({
             title: 'Preencha todos os campos',
             icon: 'error',

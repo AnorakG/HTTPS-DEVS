@@ -28,13 +28,15 @@ function registroObras () {
                 linhaNova.appendChild(document.createElement("br"))
             }
             if(j===4){
+                if(obras[i].imagem.length == 0){linhaNova.appendChild(document.createElement("br"))}else{
                 let img = document.createElement("img")
                 img.src = obras[i].imagem  
-                img.alt = "Imagem não suportada e/ou incorreta"
+                img.alt = "Imagem não suportada e/ou inexistente"
                 img.width = 300
                 linhaNova.appendChild(img)
                 linhaNova.appendChild(document.createElement("br"))
                 linhaNova.appendChild(document.createElement("br"))
+                }
             }
         }
     }
@@ -65,6 +67,7 @@ function registroDenuncias () {
                  linhaNova2.appendChild(document.createElement("br"))
             }
             if(j===3){
+                if(denuncias[i].imagem.length == 0){linhaNova2.appendChild(document.createElement("br"))}else{
                 let img = document.createElement("img")
                 img.src = denuncias[i].imagem  
                 img.alt = "Imagem não suportada e/ou incorreta"
@@ -72,7 +75,8 @@ function registroDenuncias () {
                 linhaNova2.appendChild(img)
                 linhaNova2.appendChild(document.createElement("br"))
                 linhaNova2.appendChild(document.createElement("br"))
-             }
+                }
+            }
         }
     }
 }
