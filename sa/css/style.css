@@ -468,7 +468,16 @@ main{
     left: 690px;
     bottom: 492px;
 }
-
+.check3 input[type=checkbox]+label{
+    position: absolute;
+    left: 690px;
+    bottom: 367px;
+}
+.check3 input[type=checkbox]:checked+label{
+    position: absolute;
+    left: 690px;
+    bottom: 363.5px;
+}
 
 .ipt-fotos{
     display: block;
@@ -714,7 +723,7 @@ input[type=checkbox]:checked + label {
     }
     .check1 input[type=checkbox]:checked+label{
         left: 505px;
-        bottom: 307px;
+        bottom: 307.5px;
     }
     .check2 input[type=checkbox]+label{
         left: 505px;
@@ -722,7 +731,15 @@ input[type=checkbox]:checked + label {
     }
     .check2 input[type=checkbox]:checked+label{
         left: 505px;
-        bottom: 422px;
+        bottom: 422.5px;
+    }
+    .check3 input[type=checkbox]+label{
+        left: 490px;
+        bottom: 299px;
+    }
+    .check3 input[type=checkbox]:checked+label{
+        left: 490px;
+        bottom: 296.5px;
     }
     .perfil{
         margin-left: 245%;

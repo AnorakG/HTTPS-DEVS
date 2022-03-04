@@ -35,7 +35,7 @@ function getCookie(cname) {
       }
     }
     return "";
-  }
+}
 if(localStorage.length>0){
     const contasExistentes = JSON.parse(localStorage.getItem('users'))
     

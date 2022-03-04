@@ -41,8 +41,6 @@ function registroObras () {
         }
     }
 }
-
-
 function registroDenuncias () {
     let denuncias = JSON.parse(localStorage.getItem('denuncias'))
     let novoRegistro = document.getElementById("denuncias")
