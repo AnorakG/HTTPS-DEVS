@@ -1,5 +1,5 @@
 let users = []
-let admin = [{nome:"admin",senha:"1234",dataDeNascimento:"11/11/2021",}]
+let admin = [{nome:"admin",senha:"1234",dataDeNascimento:"11/11/2021",idade:"4 meses"}]
 let idade,contaConectada,usuarios;
 let id = 1
 
@@ -141,7 +141,7 @@ function cadastrar(){
             icon: 'error',
             timer:'1200'
           })
-    }*/else if(users.find(confirmarNome)){
+    }*/else if(users.find(confirmarNome)||admin.find(confirmarAdmin)){
         Swal.fire({
             title: 'Nome de usuário já cadastrado <br> Tente outro',
             icon: 'error',
@@ -182,6 +182,9 @@ function confirmarNome(users){
 }
 function confirmarEmail(users){
     return users.email === email.value
+}
+function confirmarAdmin(admin){
+    return admin.nome === nome.value;
 }
 function buscarNome(users){
     return users.nome === login.value;
@@ -272,13 +275,20 @@ function perfil(){
     let perfilConectado = JSON.parse(getCookie("conta"))
     let nomeUsuarioPerfil = document.getElementById('nomeUsuarioPerfil')
     let emailUsuarioPerfil = document.getElementById('emailUsuarioPerfil')
+    let emailPerfil = document.getElementById('emailPerfil')
     let idadeUsuarioPerfil = document.getElementById('idadeUsuarioPerfil')
     let dataDeNascimentoUsuarioPerfil = document.getElementById('dataNascimentoUsuarioPerfil')
+    let btnDel = document.getElementById("btn-del")
 
     nomeUsuarioPerfil.innerHTML= perfilConectado.nome
     emailUsuarioPerfil.innerHTML= perfilConectado.email
     dataDeNascimentoUsuarioPerfil.innerHTML= perfilConectado.dataDeNascimento.split('-').reverse().join('/')
     idadeUsuarioPerfil.innerHTML= perfilConectado.idade
+
+    if(perfilConectado.nome == admin[0].nome){
+        emailPerfil.style.display = "none"
+        btnDel.style.display = "none"
+    }
 }
 function deletar(){
     Swal.fire({
