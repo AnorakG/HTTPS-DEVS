@@ -236,7 +236,7 @@ main{
     position: relative;
     width: 65%;
     height: 500px;
-    margin: 15% 0 15% 17.5%;
+    margin: 5% 0 5% 17.5%;
     background-color: whitesmoke;
     border-radius: 2px;
     -moz-box-shadow:    0px 0px 10px 2px rgb(0, 0, 0, 0.5);
@@ -270,8 +270,10 @@ main{
 }
 .intro-focus2{
     position: relative;
-    height: 100%;
-    width: 40%;
+    height: 100.5%;
+    width: 43%;
+    top: -502px;
+    right: 9px;
     margin-left: 50%;
     background: rgba(255, 255, 255);
     border: none;
@@ -980,6 +982,7 @@ input[type=checkbox]:checked + label {
         width: 51%;
         margin-top: -1.5%;
     }
+    
     .urbana {
         margin-left: 5%;
         width: 25%;
@@ -1098,5 +1101,66 @@ input[type=checkbox]:checked + label {
     width: 23%;
     margin-top: 4%;
 }
+}
+@media screen and (max-width: 327px) {
+    .nav {
+        width: 50%;
+    }
+    .cabecalho-texto, .btn-dropdown {
+        font-size: 8px;
+ }
+ .perfil {
+    margin-left: 80%;
+    margin-top: 6.5%;
+        }
+ .urbana {
+    margin-left: 4%;
+    width: 23%;
+    margin-top: 6%;
 
+ }
+}
+@media screen and (max-width: 226px) {
+    .nav {
+        width: 50%;
+    }
+    .cabecalho-texto, .btn-dropdown {
+        font-size: 7px;
+ }
+ .perfil {
+    margin-left: 80%;
+    margin-top: 6.5%;
+        }
+ .urbana {
+    margin-left: 4%;
+    width: 23%;
+    margin-top: 6%;
+
+ }
+}
+@media screen and (min-width: 200px) {
+    .btn-home-serv {
+        font-size: 10px;
+        width: 100%;
+    }
+}
+#slider {
+    width: 49%;
+    height: 31.3em;
+    position: relative;
+}
+
+#slider img{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: opacity 800ms;
+}
+
+#slider img.selected { 
+    opacity: 1;
 }
