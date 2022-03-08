@@ -120,7 +120,7 @@ li.outros , li.dropdown{
     align-items:baseline;
 }
 .box{
-    height: 13px;
+    height: 58;
 }
 .cabecalho-texto, .btn-dropdown{
     text-transform: uppercase;
@@ -957,6 +957,17 @@ input[type=checkbox]:checked + label {
         background-size: 250%;
         background-position: 50%;
     }
+    .container-intro2 {
+        position: relative;
+        width: 65%;
+        height: 500px;
+        margin: 5% 0 5% 17.5%;
+        background-color: whitesmoke;
+        border-radius: 2px;
+        -moz-box-shadow: 0px 0px 10px 2px rgb(0, 0, 0, 0.5);
+        -webkit-box-shadow: 0px 0px 10px 2px rgb(0 0 0 / 50%);
+        box-shadow: 0px 0px 10px 2px rgb(0 0 0 / 50%);
+    }
 
     .p-destaque{
         font-size: 18px;
@@ -1162,3 +1173,40 @@ input[type=checkbox]:checked + label {
 #slider img.selected { 
     opacity: 1;
 }
+@media screen and (max-width: 794px) {
+    .p-introducao {
+        padding-top: 10%;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 36px;
+        display: flex;
+        align-items: center;
+        color: rgb(0, 0, 0);
+    }
+}
+@media screen and (max-width: 715px) {
+    .p-introducao {
+        padding-top: 10%;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 36px;
+        display: flex;
+        align-items: center;
+        color: rgb(0, 0, 0);
+    }
+}
+@media screen and (max-width: 635px) {
+    .p-introducao {
+        padding-top: 10%;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 36px;
+        display: flex;
+        align-items: center;
+        color: rgb(0, 0, 0);
+    }
+}
+
