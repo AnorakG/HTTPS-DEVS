@@ -683,7 +683,7 @@ input[type=checkbox]:checked + label {
 
 .btn-del{
     position: relative;
-    width: 50%;
+    width: 49%;
     padding: 15px 0;
     font-weight: bold;
     font-size: 16px;
@@ -699,6 +699,25 @@ input[type=checkbox]:checked + label {
     color: rgb(40, 0, 0);
     border: 1px solid #5e1818;
     background-color: #bd5b5b;
+}
+.btn-editor{
+    position: relative;
+    width: 49%;
+    padding: 15px 0;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 2.5px;
+    transition: 1s all;
+    cursor: pointer;
+    color: #000000;
+    border: 1px solid #646464;
+    background-color: #ffffff;
+}
+.btn-editor:hover{
+    color: #1a1a1a;
+    border: 1px solid #303030;
+    background-color: #b3b3b3;
 }
 @media only screen and (max-width: 1366px) and (max-height:768px) {
     .nav-lista{
