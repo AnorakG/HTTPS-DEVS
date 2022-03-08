@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="imagex/png" href="icon2.png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/editor.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
@@ -44,25 +45,23 @@
         </ul>
         <main>
             <div class="container-conteudo">
-                <form id="formLogin">
                     <div class="textoLogin">
                         <h class='titulo-principal'>Editor</h>
                     </div>
                     <div class='container-login'>
                         <label class='lbl-padrao' for='nomeUsuario'>E-mail</label>
-                        <input class="ipt-padrao" type="text" id="emailNovo" placeholder="Edite aqui seu e-mail"><br>
+                        <input class="ipt-padrao" type="text" id="emailNovo" placeholder="Insira aqui seu novo e-mail">
+                        <button class="btn-editar">Editar E-mail</button><br><br>
                         <label class='lbl-padrao' for='senhaUsuario'>Senha</label>
                         <input class="ipt-padrao" type="password" id="senhaNova1" placeholder="Insira aqui sua nova senha">
-                        <input class="ipt-padrao" type="password" id="senhaNova2" placeholder="Confirme sua nova senha"><br>
+                        <input class="ipt-padrao" type="password" id="senhaNova2" placeholder="Confirme sua nova senha">
                         <div class='check3'>
                             <input type="checkbox" id="senhaVisivel3">
                             <label class='lbl-senha' for="senhaVisivel3"></label>
                         </div>
+                        <button class="btn-editar">Editar Senha</button><br><br>
+                        <button class="btn-voltar" onclick="location.href='perfil.html'">Voltar para o perfil</button>
                     </div>
-                        <input type="button" class="btn-login" id="botaoLogin" onclick="confirmar()" value="Login">
-                       
-                        <br><br>
-                </form>
         </main>
         <footer>
             <div class='footer-padrao'>
