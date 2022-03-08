@@ -450,33 +450,23 @@ main{
 
 .check1 input[type=checkbox]+label{
     position: absolute;
-    left: 690px;
-    bottom: 367px;
+    left: 84%;
+    bottom: 50.5%;
 }
 .check1 input[type=checkbox]:checked+label{
     position: absolute;
-    left: 690px;
-    bottom: 363.5px;
+    left: 84%;
+    bottom: 50.1%;
 }
 .check2 input[type=checkbox]+label{
     position: absolute;
-    left: 690px;
-    bottom: 494.5px;
+    left: 84%;
+    bottom: 58.5%
 }
 .check2 input[type=checkbox]:checked+label{
     position: absolute;
-    left: 690px;
-    bottom: 492px;
-}
-.check3 input[type=checkbox]+label{
-    position: absolute;
-    left: 690px;
-    bottom: 367px;
-}
-.check3 input[type=checkbox]:checked+label{
-    position: absolute;
-    left: 690px;
-    bottom: 363.5px;
+    left: 84%;
+    bottom: 58.1%;
 }
 
 .ipt-fotos{
@@ -717,30 +707,7 @@ input[type=checkbox]:checked + label {
     .btn-home-serv{
         margin-top: 10%;
     }
-    .check1 input[type=checkbox]+label{
-        left: 505px;
-        bottom: 310px;
-    }
-    .check1 input[type=checkbox]:checked+label{
-        left: 505px;
-        bottom: 307.5px;
-    }
-    .check2 input[type=checkbox]+label{
-        left: 505px;
-        bottom: 425px;
-    }
-    .check2 input[type=checkbox]:checked+label{
-        left: 505px;
-        bottom: 422.5px;
-    }
-    .check3 input[type=checkbox]+label{
-        left: 490px;
-        bottom: 299px;
-    }
-    .check3 input[type=checkbox]:checked+label{
-        left: 490px;
-        bottom: 296.5px;
-    }
+
     .perfil{
         margin-left: 245%;
         margin-top: 12.5px;
