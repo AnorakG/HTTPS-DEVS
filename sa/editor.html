@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
-    
+    <script src="./https/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <title>Editor</title>
     
 </head>
@@ -51,10 +51,10 @@
                     <div class='container-login'>
                         <label class='lbl-padrao' for='nomeUsuario'>E-mail</label>
                         <input class="ipt-padrao" type="text" id="emailNovo" placeholder="Insira aqui seu novo e-mail">
-                        <button class="btn-editar">Editar E-mail</button><br><br>
+                        <button class="btn-editar" onclick="editarEmail()">Editar E-mail</button><br><br>
                         <label class='lbl-padrao' for='senhaUsuario'>Senha</label>
-                        <input class="ipt-padrao" type="password" id="senhaNova1" placeholder="Insira aqui sua nova senha">
-                        <input class="ipt-padrao" type="password" id="senhaNova2" placeholder="Confirme sua nova senha">
+                        <input class="ipt-padrao" type="password" id="senhaNova1" placeholder="Insira aqui sua nova senha" onchange="validarNovaSenha()">
+                        <input class="ipt-padrao" type="password" id="senhaNova2" placeholder="Confirme sua nova senha" onchange="validarNovaSenha()">
                         <div class='check3'>
                             <input type="checkbox" id="senhaVisivel3">
                             <label class='lbl-senha' for="senhaVisivel3"></label>
@@ -80,7 +80,8 @@
         </footer>
     </div>
    
+ 
+    <script src="./script.js"></script> 
     <script src="./editor.js"></script>
-    <script src="./script.js"></script>
 </body>
 </html>

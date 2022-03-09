@@ -218,7 +218,8 @@ function confirmar(){
         Swal.fire({
             title: 'Cadastre-se por favor.',
             icon: 'warning',
-            timer:'700'
+            timer:'700',
+            showConfirmButton: false
         })
     }
 }
@@ -267,7 +268,8 @@ function logOut(){
     Swal.fire({
         title: 'Logout feito com sucesso <br> volte sempre =)',
         icon: 'success',
-        timer:'700'
+        timer:'700',
+        showConfirmButton: false
     })
     setTimeout(function(){window.location.href="./index.html"},750)
 }
@@ -333,12 +335,13 @@ function deletar(){
                 i--
             }
         }}
-        Swal.fire(
-            'Conta Deletada',
-            'Sua conta foi deletada com sucesso.',
-            'success',
-            '700'
-        )
+        Swal.fire({
+            title:'Conta Deletada',
+            text:'Sua conta foi deletada com sucesso.',
+            icon:'success',
+            timer:'700',
+            showConfirmButton: false
+        })
         for (var i = 0; i < cookies.length; i++) {
             var cookie = cookies[i];
             var eqPos = cookie.indexOf("=");
