@@ -24,7 +24,9 @@ senhaVisivel3.addEventListener('change', (event) => {
       senhaNova2.type="password"
     }
 })
-
+function verificarEmail(contas){
+    return contas.email === emailNovo.value
+}
 function validarNovaSenha(){
     if(senhaNova1.value.length == 0||senhaNova2.value.length == 0){}else{
         if(senhaNova1.value != senhaNova2.value ){
@@ -44,11 +46,59 @@ function validarNovaSenha(){
 }
 function editarEmail(){
    if(!emailNovo.value.length){
-       Swal.fire({
-        title:'Insira o novo e-mail desejado por favor.',
-        icon:'warning',
-        timer:'700',
-        showConfirmButton: false
-    })
+        Swal.fire({
+            title:'Insira o novo e-mail desejado por favor.',
+            icon:'warning',
+            timer:'700',
+            showConfirmButton: false
+        })
+   }else if(contas.find(verificarEmail)){
+        Swal.fire({
+            title:'E-mail já cadastrado.',
+            icon:'warning',
+            timer:'700',
+            showConfirmButton: false
+        })
+   }else{
+        Swal.fire({
+            title:'Novo e-mail cadastrado.',
+            icon:'success',
+            timer:'700',
+            showConfirmButton: false
+        })
+        contas[editarUser].email = emailNovo.value
+        usuarioLogado.email = emailNovo.value
+        
+        localStorage.setItem("users", JSON.stringify(contas))
+        document.cookie = 'conta='+ JSON.stringify(usuarioLogado)
    }
+}
+function editarSenha(){
+    if(!senhaNova1.value.length ||!senhaNova2.value){
+        Swal.fire({
+            title:'Insira a nova senha desejada por favor.',
+            icon:'warning',
+            timer:'700',
+            showConfirmButton: false
+        })
+    }else if(senhaNova1.value != senhaNova2.value){
+        Swal.fire({
+            title: 'As senhas não combinam.',
+            icon: 'error',
+            timer:'700',
+            showConfirmButton: false
+        })
+    }else{
+        Swal.fire({
+            title:'Nova senha cadastrada.',
+            icon:'success',
+            timer:'700',
+            showConfirmButton: false
+        })
+        contas[editarUser].senha = senhaNova2.value
+        usuarioLogado.senha = senhaNova2.value
+        
+        localStorage.setItem("users", JSON.stringify(contas))
+        document.cookie = 'conta='+ JSON.stringify(usuarioLogado)
+    }
 }
