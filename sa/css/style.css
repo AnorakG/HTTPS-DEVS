@@ -725,7 +725,16 @@ input[type=checkbox]:checked + label {
     .btn-home-serv{
         margin-top: 10%;
     }
-
+    .check1 input[type=checkbox]+label{
+        position: absolute;
+        left: 84%;
+        bottom: 49.2%;
+    }
+    .check1 input[type=checkbox]:checked+label{
+        position: absolute;
+        left: 84%;
+        bottom: 48.8%;
+    }
     .perfil{
         margin-left: 245%;
         margin-top: 12.5px;
