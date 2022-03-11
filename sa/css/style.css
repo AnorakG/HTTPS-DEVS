@@ -177,7 +177,7 @@
                 }
                 
                 .nav {
-                    position: fixed;
+                  
                     z-index: 1;
                     top: 0;
                     text-align: center;
@@ -383,11 +383,12 @@
                 
                 .intro-focus2 {
                     position: relative;
-                    height: 100.5%;
-                    width: 43%;
-                    top: -502px;
-                    right: 9px;
-                    margin-left: 50%;
+                    height: 100.1%;
+                    display: block;
+                    width: 42%;
+                    top: -500.5px;
+                    right: 40px;
+                    margin-left: 52.8%;
                     background: rgba(255, 255, 255);
                     border: none;
                     text-align: center;
@@ -1378,7 +1379,7 @@
                 #slider img {
                     opacity: 0;
                     position: absolute;
-                    width: 100%;
+                    width: 105%;
                     height: 100%;
                     object-fit: cover;
                     transition: opacity 800ms;
