@@ -281,6 +281,7 @@ function perfil(){
     let idadeUsuarioPerfil = document.getElementById('idadeUsuarioPerfil')
     let dataDeNascimentoUsuarioPerfil = document.getElementById('dataNascimentoUsuarioPerfil')
     let btnDel = document.getElementById("btn-del")
+    let btnEditor = document.getElementById("btn-editor")
 
     nomeUsuarioPerfil.innerHTML= perfilConectado.nome
     emailUsuarioPerfil.innerHTML= perfilConectado.email
@@ -290,6 +291,7 @@ function perfil(){
     if(perfilConectado.nome == admin[0].nome){
         emailPerfil.style.display = "none"
         btnDel.style.display = "none"
+        btnEditor.style.display = "none"
     }
 }
 function deletar(){

@@ -12,6 +12,7 @@ let enderecoObra = document.getElementById("ipt-endereco")
 let dataInicial = document.getElementById("ipt-dataInicial")
 let dataFinal = document.getElementById("ipt-dataFinal")
 
+function confirmaRegistros(){
 if(localStorage.length>0){
     const obrasExistentes = JSON.parse(localStorage.getItem('obras'))
     const denunciasExistentes = JSON.parse(localStorage.getItem('denuncias'))
@@ -25,9 +26,11 @@ if(localStorage.length>0){
         denuncias.push(denunciasExistentes[i])
     }
     
-};
+}
 localStorage.setItem("denuncias",JSON.stringify(denuncias))
-localStorage.setItem("obras",JSON.stringify(obras))
+localStorage.setItem("obras",JSON.stringify(obras));
+}
+
 function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);

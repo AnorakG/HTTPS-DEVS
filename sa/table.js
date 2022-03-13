@@ -6,7 +6,7 @@ function registroObras () {
     let novoConteudo = document.getElementById("obras")
     let div = document.createElement("div")
    
- 
+    if(obras == null){}else if(obras.length === 0){}else{
     for(let i=0; i<obras.length;i++){
        const linhaNova = novoConteudo.appendChild(div)
         for(let j=0; j<5;j++){
@@ -40,6 +40,7 @@ function registroObras () {
             }
         }
     }
+    }
 }
 function registroDenuncias () {
     let denuncias = JSON.parse(localStorage.getItem('denuncias'))
@@ -47,7 +48,7 @@ function registroDenuncias () {
     let div2 = document.createElement("div2") 
 
 
-    
+    if (denuncias == null){}else if(denuncias.length === 0){}else{
     for(let i=0; i<denuncias.length;i++){
         const linhaNova2 = novoRegistro.appendChild(div2)
          for(let j=0; j<4;j++){
@@ -76,5 +77,6 @@ function registroDenuncias () {
                 }
             }
         }
+    }
     }
 }
