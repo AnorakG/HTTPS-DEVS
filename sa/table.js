@@ -41,6 +41,9 @@ function registroObras () {
                 img.alt = "Imagem não suportada e/ou inexistente"
                 img.classList.add("img-obra")
                 linhaNova.appendChild(img)
+                let divLinha1 = document.createElement('hr')
+                linhaNova.appendChild(divLinha1)
+                divLinha1.classList.add('hr-registros')
                 }
             }
         }
@@ -81,6 +84,9 @@ function registroDenuncias () {
                 img.src = denuncias[i].imagem  
                 img.alt = "Imagem não suportada e/ou incorreta"
                 linhaNova2.appendChild(img)
+                let divLinha = document.createElement('hr')
+                linhaNova2.appendChild(divLinha)
+                divLinha.classList.add('hr-registros')
                 }
             }
         }
