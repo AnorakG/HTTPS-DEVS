@@ -11,31 +11,36 @@ function registroObras () {
        const linhaNova = novoConteudo.appendChild(div)
         for(let j=0; j<5;j++){
             if(j===0){
-                linhaNova.appendChild(document.createElement("br"))
-                linhaNova.appendChild(document.createTextNode(obras[i].descricao))
-                linhaNova.appendChild(document.createElement("br"))
+                let descricao = document.createElement("p")
+                descricao.classList.add("p-descricao")
+                descricao.innerHTML = obras[i].descricao
+                linhaNova.appendChild(descricao)
             }
             if(j===1){
-                linhaNova.appendChild(document.createTextNode("Endereço da Obra: "+ obras[i].enderecoObra))
-                linhaNova.appendChild(document.createElement("br"))
+                let enderecoObra = document.createElement("p")
+                enderecoObra.classList.add("p-enderecoObra")
+                enderecoObra.innerHTML = "Endereço da Obra: " + obras[i].enderecoObra
+                linhaNova.appendChild(enderecoObra)
             }
             if(j===2){
-                linhaNova.appendChild(document.createTextNode("Data Inicial: "+ obras[i].dataInicial))
-                linhaNova.appendChild(document.createElement("br"))
+                let dataInicial = document.createElement("p")
+                dataInicial.classList.add("p-datainicial")
+                dataInicial.innerHTML = "Data Inicial: "+ obras[i].dataInicial
+                linhaNova.appendChild(dataInicial)
             }
             if(j===3){
-                linhaNova.appendChild(document.createTextNode("Data Final: "+ obras[i].dataFinal))
-                linhaNova.appendChild(document.createElement("br"))
+                let dataFinal = document.createElement("p")
+                dataFinal.classList.add("p-dataFinal")
+                dataFinal.innerHTML = "Data Final: "+ obras[i].dataFinal
+                linhaNova.appendChild(dataFinal)
             }
             if(j===4){
                 if(obras[i].imagem.length == 0){linhaNova.appendChild(document.createElement("br"))}else{
                 let img = document.createElement("img")
                 img.src = obras[i].imagem  
                 img.alt = "Imagem não suportada e/ou inexistente"
-                img.width = 300
+                img.classList.add("img-obra")
                 linhaNova.appendChild(img)
-                linhaNova.appendChild(document.createElement("br"))
-                linhaNova.appendChild(document.createElement("br"))
                 }
             }
         }
@@ -53,27 +58,29 @@ function registroDenuncias () {
         const linhaNova2 = novoRegistro.appendChild(div2)
          for(let j=0; j<4;j++){
             if(j===0){
-                 linhaNova2.appendChild(document.createElement("br"))
-                 linhaNova2.appendChild(document.createTextNode(denuncias[i].problema))
-                 linhaNova2.appendChild(document.createElement("br"))
+                let problema = document.createElement("p")
+                problema.classList.add("p-problema")
+                problema.innerHTML = denuncias[i].problema
+                linhaNova2.appendChild(problema)
              }
             if(j===1){
-                 linhaNova2.appendChild(document.createTextNode("Endereço: "+ denuncias[i].endereco))
-                 linhaNova2.appendChild(document.createElement("br"))
+                let endereco = document.createElement("p")
+                endereco.classList.add("p-endereco")
+                endereco.innerHTML = "Endereço: "+ denuncias[i].endereco
+                linhaNova2.appendChild(endereco)
              }
             if(j===2){
-                 linhaNova2.appendChild(document.createTextNode("Data: "+ denuncias[i].data))
-                 linhaNova2.appendChild(document.createElement("br"))
+                let data = document.createElement("p")
+                data.classList.add("p-data")
+                data.innerHTML = "Data: "+ denuncias[i].data
+                linhaNova2.appendChild(data)
             }
             if(j===3){
                 if(denuncias[i].imagem.length == 0){linhaNova2.appendChild(document.createElement("br"))}else{
                 let img = document.createElement("img")
                 img.src = denuncias[i].imagem  
                 img.alt = "Imagem não suportada e/ou incorreta"
-                img.width = 300
                 linhaNova2.appendChild(img)
-                linhaNova2.appendChild(document.createElement("br"))
-                linhaNova2.appendChild(document.createElement("br"))
                 }
             }
         }
