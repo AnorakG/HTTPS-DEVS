@@ -321,7 +321,7 @@ function deletar(){
         }
         if(obras == null){}else if(obras.length === 0){}else{
         for (i = 0; i < obras.length; i++) {
-            if (conta.id == obras[i].id) {
+            if (conta.id == obras[i].userId) {
                 excluirObras = i
                 obras.splice(excluirObras, 1)
                 localStorage.setItem('obras', JSON.stringify(obras))
@@ -330,7 +330,7 @@ function deletar(){
         }}
         if (denuncias == null){}else if(denuncias.length === 0){}else{
         for (i = 0; i < denuncias.length; i++) {
-            if (conta.id == denuncias[i].id) {
+            if (conta.id == denuncias[i].userId) {
                 excluirDenuncias = i
                 denuncias.splice(excluirDenuncias, 1)
                 localStorage.setItem('denuncias', JSON.stringify(denuncias))

@@ -1,5 +1,6 @@
 let denuncias = []
 let obras = []
+let idObras, idDenuncias
 
 let problema = document.getElementById("ipt-descricao-denuncia")
 let endereco = document.getElementById("ipt-endereco-denuncia")
@@ -16,19 +17,21 @@ function confirmaRegistros(){
 if(localStorage.length>0){
     const obrasExistentes = JSON.parse(localStorage.getItem('obras'))
     const denunciasExistentes = JSON.parse(localStorage.getItem('denuncias'))
-
+    if(obrasExistentes == null){localStorage.setItem("obras", JSON.stringify(obras))}else{
     for(let i = 0;i<obrasExistentes.length;i++)
     {
          obras.push(obrasExistentes[i])
     }
+    localStorage.setItem("obras",JSON.stringify(obras));
+    }
+    if(denunciasExistentes == null){localStorage.setItem("denuncias", JSON.stringify(denuncias))}else{
     for(let i = 0;i<denunciasExistentes.length;i++)
     {
         denuncias.push(denunciasExistentes[i])
     }
-    
+    localStorage.setItem("denuncias",JSON.stringify(denuncias))
 }
-localStorage.setItem("denuncias",JSON.stringify(denuncias))
-localStorage.setItem("obras",JSON.stringify(obras));
+}
 }
 
 function getCookie(cname) {
@@ -52,7 +55,13 @@ function registrarDenuncias(){
     
     let logado = getCookie("logado")
     
-    
+    let pegaIDDenuncias = JSON.parse(localStorage.getItem('denuncias'))
+    let idFinalDenuncias = pegaIDDenuncias.slice(-1) 
+    if(idFinalDenuncias.length == 0){
+        idDenuncias = 1
+    }else{
+        idDenuncias = idFinalDenuncias[0].id + 1;
+    }
     if(problema.value.length == 0||endereco.value.length==0||data.value.length==0){
         Swal.fire({
             title: 'Preencha todos os campos',
@@ -67,7 +76,7 @@ function registrarDenuncias(){
         })
     }else{
         let conta = JSON.parse(getCookie("conta"))
-        denuncias.push({problema: problema.value, endereco: endereco.value,data: data.value.split('-').reverse().join('/'), imagem: imagemDenuncia.value, id:conta.id})
+        denuncias.push({problema: problema.value, endereco: endereco.value,data: data.value.split('-').reverse().join('/'), imagem: imagemDenuncia.value, userId:conta.id, id:idDenuncias})
         localStorage.setItem("denuncias", JSON.stringify(denuncias))
         //console.log(localStorage.getItem('denuncias'))
         console.log("Denuncia feita")
@@ -89,6 +98,14 @@ function confirmaData(str1, str2)
 function registrarObras(){
     //console.log(confirmaData(dataInicial.value,dataFinal.value))   
     let logado = getCookie("logado")
+
+    let pegaIDObras = JSON.parse(localStorage.getItem('obras'))
+    let idFinalObras = pegaIDObras.slice(-1) 
+    if(idFinalObras.length == 0){
+        idObras = 1
+    }else{
+        idObras = idFinalObras[0].id + 1;
+    }
     
     if(descricao.value.length == 0||enderecoObra.value.length==0||dataInicial.value.length==0 ||dataFinal.value.length==0){
         Swal.fire({
@@ -110,7 +127,7 @@ function registrarObras(){
         })
     }else{
         let conta = JSON.parse(getCookie("conta"))
-        obras.push({descricao: descricao.value, enderecoObra: enderecoObra.value,dataInicial: dataInicial.value.split('-').reverse().join('/'), dataFinal: dataFinal.value.split('-').reverse().join('/'),imagem: imagemObras.value, id: conta.id})
+        obras.push({descricao: descricao.value, enderecoObra: enderecoObra.value,dataInicial: dataInicial.value.split('-').reverse().join('/'), dataFinal: dataFinal.value.split('-').reverse().join('/'),imagem: imagemObras.value, userId: conta.id, id: idObras})
         localStorage.setItem("obras", JSON.stringify(obras))
        //console.log(localStorage.getItem('obras'))
         console.log("Registro feito")

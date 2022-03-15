@@ -1,6 +1,9 @@
 let denuncias = JSON.parse(localStorage.getItem('denuncias'))
 let obras = JSON.parse(localStorage.getItem('obras'))
 let usuario = JSON.parse(getCookie("conta"))
+let selectedRow;
+
+let edit1, edit2,edit3;
 
 let tituloDenuncia = document.getElementById("tituloDenuncias")
 let tituloObras = document.getElementById("tituloObras")
@@ -41,13 +44,13 @@ function planilhaDenuncias(){
                 let btnDelRegistro = document.createElement("button")
                 btnDelRegistro.classList.add("btn-planilha")
                 btnDelRegistro.innerText = "Deletar"
-                btnDelRegistro.setAttribute("onclick","deletarRegistroAdmin()")
+                btnDelRegistro.setAttribute("onclick",`deletarRegistro(this, ${denuncias[i].id})`)
                 td.appendChild(btnDelRegistro)
             }
             }
         }
     }else{
-        let denunciasDoUsuario = denuncias.filter(id =>  id.id == usuario.id)
+        let denunciasDoUsuario = denuncias.filter(id =>  id.userId == usuario.id)
         if(denunciasDoUsuario.length==0){
             tituloDenuncia.style.display = "none"
             tbl.style.display = "none"
@@ -78,10 +81,11 @@ function planilhaDenuncias(){
                 let btnDelRegistro = document.createElement("button")
                 btnDelRegistro.classList.add("btn-planilha")
                 btnDelRegistro.innerText = "Deletar"
-                btnDelRegistro.setAttribute("onclick","deletarRegistro()")
+                btnDelRegistro.setAttribute("onclick",`deletarRegistro(this, ${denunciasDoUsuario[i].id})`)
                 let btnEditaRegistro = document.createElement("button")
                 btnEditaRegistro.classList.add("btn-planilha")
                 btnEditaRegistro.innerText = "Editar"
+                btnEditaRegistro.setAttribute("onclick",`editarRegistro(${denunciasDoUsuario[i].id})`)
                 td.appendChild(btnDelRegistro)
                 td.appendChild(btnEditaRegistro)
             }
@@ -96,7 +100,7 @@ function planilhaObras(){
     if (obras == null){
         tituloObras.style.display = "none"
         tbl.style.display = "none"
-    }else if(denuncias.length === 0){
+    }else if(obras.length === 0){
         tituloObras.style.display = "none"
         tbl.style.display = "none"
     }else{
@@ -130,13 +134,13 @@ function planilhaObras(){
                 let btnDelRegistro = document.createElement("button")
                 btnDelRegistro.classList.add("btn-planilha")
                 btnDelRegistro.innerText = "Deletar"
-                btnDelRegistro.setAttribute("onclick","deletarRegistroAdmin()")
+                btnDelRegistro.setAttribute("onclick",`deletarRegistroObras(this, ${obras[i].id})`)
                 td.appendChild(btnDelRegistro)
             }
             }
         }
     }else{
-        let obrasDoUsuario = obras.filter(id =>  id.id == usuario.id)
+        let obrasDoUsuario = obras.filter(id =>  id.userId == usuario.id)
         if(obrasDoUsuario.length==0){
             tituloObras.style.display = "none"
             tbl.style.display = "none"
@@ -155,7 +159,7 @@ function planilhaObras(){
                 td.appendChild(document.createTextNode(obrasDoUsuario[i].dataInicial));
             }
             if(j===3){
-                td.appendChild(document.createTextNode(obras[i].dataFinal));
+                td.appendChild(document.createTextNode(obrasDoUsuario[i].dataFinal));
             }
             if(j===4){
                 if(obrasDoUsuario[i].imagem.length == 0){}else{
@@ -170,10 +174,11 @@ function planilhaObras(){
                 let btnDelRegistro = document.createElement("button")
                 btnDelRegistro.classList.add("btn-planilha")
                 btnDelRegistro.innerText = "Deletar"
-                btnDelRegistro.setAttribute("onclick","deletarRegistro()")
+                btnDelRegistro.setAttribute("onclick",`deletarRegistroObras(this, ${obrasDoUsuario[i].id})`)
                 let btnEditaRegistro = document.createElement("button")
                 btnEditaRegistro.classList.add("btn-planilha")
                 btnEditaRegistro.innerText = "Editar"
+                btnEditaRegistro.setAttribute("onclick",`editarRegistroObras(${obrasDoUsuario[i].id})`)
                 td.appendChild(btnDelRegistro)
                 td.appendChild(btnEditaRegistro)
             }
@@ -182,4 +187,106 @@ function planilhaObras(){
         }
     }
 }
+}
+function deletarRegistro(td, id){
+    Swal.fire({
+        title: 'Você tem certeza?',
+        text: "Você não conseguirá recuperar esse registro.",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#28a745',
+        cancelButtonColor: '#d33',
+        reverseButtons: true,
+        confirmButtonText: 'Sim, pode deletar.',
+        cancelButtonText:'Cancelar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+        row = td.parentElement.parentElement;
+        document.getElementById("planilhaDenuncias").deleteRow(row.rowIndex);
+        let index = denuncias.findIndex((elem)=> {return elem.id == id})
+        console.log(index)
+        denuncias.splice(index,1)
+        localStorage.setItem("denuncias",JSON.stringify(denuncias))
+      }})
+}
+function deletarRegistroObras(td, id){
+    Swal.fire({
+        title: 'Você tem certeza?',
+        text: "Você não conseguirá recuperar esse registro.",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#28a745',
+        cancelButtonColor: '#d33',
+        reverseButtons: true,
+        confirmButtonText: 'Sim, pode deletar.',
+        cancelButtonText:'Cancelar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+        row = td.parentElement.parentElement;
+        document.getElementById("planilhaObras").deleteRow(row.rowIndex);
+        let index = obras.findIndex((elem)=> {return elem.id == id})
+        obras.splice(index,1)
+        localStorage.setItem("obras",JSON.stringify(obras))
+      }})
+}
+
+function editarRegistro(id){
+    let index = denuncias.findIndex((elem)=> {return elem.id == id})
+    Swal.fire({
+        title: 'Edite seu registro',
+        html:
+        '<br>'+'<label for="swal-input1">Edite a descrição do seu problema:</label>'+
+        '<br>'+`<input id="swal-input1" class="swal2-input" value=${denuncias[index].problema}>`+
+        '<br>'+ '<br>'+'<label for="swal-input2">Edite a imagem do seu problema:</label>'+
+        '<br>'+`<input type="url" id="swal-input2" class="swal2-input" value=${denuncias[index].image === undefined ? "" : denuncias[index].image}>`,
+        showCancelButton: true,
+        cancelButtonColor: '#d33',
+        confirmButtonColor: '#28a745',
+        reverseButtons: true,
+        confirmButtonText: 'Editar',
+        cancelButtonText:'Cancelar',
+        preConfirm: () => {
+              edit1 = document.getElementById('swal-input1').value,
+              edit2 = document.getElementById('swal-input2').value
+          }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            let index = denuncias.findIndex((elem)=> {return elem.id == id})
+            denuncias[index].problema = edit1;
+            denuncias[index].image = edit2;
+            localStorage.setItem("denuncias", JSON.stringify(denuncias))
+            setTimeout(function(){window.location.reload(true)},100)
+    }})
+}
+function editarRegistroObras(id){
+    let index = obras.findIndex((elem)=> {return elem.id == id})
+    Swal.fire({
+        title: 'Edite seu registro',
+        html:
+        '<br>'+'<label for="swal-input1">Edite a descrição da sua obra:</label>'+
+        '<br>'+`<input id="swal-input1" class="swal2-input" value=${obras[index].descricao}>`+
+        '<br>'+ '<br>'+'<label for="swal-input2">Edite a data final da sua obra:</label>'+
+        '<br>'+`<input style="width: 299px;" type="date" id="swal-input2" class="swal2-input" value=${obras[index].dataFinal.split('/').reverse().join('-')}>`+
+        '<br>'+ '<br>'+'<label for="swal-input3">Edite a imagem da sua obra:</label>'+
+        '<br>'+`<input type="url" id="swal-input3" class="swal2-input" value=${obras[index].image === undefined ? "" : obras[index].image}>`,
+        showCancelButton: true,
+        cancelButtonColor: '#d33',
+        confirmButtonColor: '#28a745',
+        reverseButtons: true,
+        confirmButtonText: 'Editar',
+        cancelButtonText:'Cancelar',
+        preConfirm: () => {
+              edit1 = document.getElementById('swal-input1').value,
+              edit2 = document.getElementById('swal-input2').value,
+              edit3 = document.getElementById('swal-input3').value
+          }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            let index = obras.findIndex((elem)=> {return elem.id == id})
+            obras[index].descricao = edit1;
+            obras[index].dataFinal = edit2.split('-').reverse().join('/');
+            obras[index].image = edit3;
+            localStorage.setItem("obras", JSON.stringify(obras))
+            setTimeout(function(){window.location.reload(true)},100)
+    }})
 }
