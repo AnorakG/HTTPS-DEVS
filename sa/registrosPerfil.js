@@ -32,9 +32,11 @@ function planilhaDenuncias(){
                 td.appendChild(document.createTextNode(denuncias[i].data));
             }
             if(j===3){
-                if(denuncias[i].imagem.length == 0){}else{
+                if(denuncias[i].imagem.length == 0){
+                    td.appendChild(document.createTextNode("Imagem não registrada"));
+                }else{
                     let img = document.createElement("img")
-                    img.src = denuncias[i].imagem  
+                    img.src = denuncias[i].imagem
                     img.alt = "Imagem não suportada e/ou inexistente"
                     img.width = 200
                     img.height = 100
@@ -42,7 +44,7 @@ function planilhaDenuncias(){
             }}
             if(j==4){
                 let btnDelRegistro = document.createElement("button")
-                btnDelRegistro.classList.add("btn-planilha")
+                btnDelRegistro.classList.add("btn-planilhaDel")
                 btnDelRegistro.innerText = "Deletar"
                 btnDelRegistro.setAttribute("onclick",`deletarRegistro(this, ${denuncias[i].id})`)
                 td.appendChild(btnDelRegistro)
@@ -55,9 +57,9 @@ function planilhaDenuncias(){
             tituloDenuncia.style.display = "none"
             tbl.style.display = "none"
         }else{
-        for (let i = 0; i < denunciasDoUsuario.length; i++) {
+        for (let i = 0; i < denunciasDoUsuario.length; i++) {      
             const tr = tbl.insertRow();
-            for (let j = 0; j < 6; j++) {
+            for (let j = 0; j < 5; j++) {
             const td = tr.insertCell();
             if(j===0){
                 td.appendChild(document.createTextNode(denunciasDoUsuario[i].problema));
@@ -69,7 +71,9 @@ function planilhaDenuncias(){
                 td.appendChild(document.createTextNode(denunciasDoUsuario[i].data));
             }
             if(j===3){
-                if(denunciasDoUsuario[i].imagem.length == 0){}else{
+                if(denunciasDoUsuario[i].imagem.length == 0){
+                    td.appendChild(document.createTextNode("Imagem não registrada"));
+                }else{
                     let img = document.createElement("img")
                     img.src = denunciasDoUsuario[i].imagem  
                     img.alt = "Imagem não suportada e/ou inexistente"
@@ -79,7 +83,7 @@ function planilhaDenuncias(){
             }}
             if(j==4){
                 let btnDelRegistro = document.createElement("button")
-                btnDelRegistro.classList.add("btn-planilha")
+                btnDelRegistro.classList.add("btn-planilhaDel")
                 btnDelRegistro.innerText = "Deletar"
                 btnDelRegistro.setAttribute("onclick",`deletarRegistro(this, ${denunciasDoUsuario[i].id})`)
                 let btnEditaRegistro = document.createElement("button")
@@ -122,7 +126,9 @@ function planilhaObras(){
                 td.appendChild(document.createTextNode(obras[i].dataFinal));
             }
             if(j===4){
-                if(obras[i].imagem.length == 0){}else{
+                if(obras[i].imagem.length == 0){
+                    td.appendChild(document.createTextNode("Imagem não registrada"));
+                }else{
                     let img = document.createElement("img")
                     img.src = obras[i].imagem  
                     img.alt = "Imagem não suportada e/ou inexistente"
@@ -162,7 +168,9 @@ function planilhaObras(){
                 td.appendChild(document.createTextNode(obrasDoUsuario[i].dataFinal));
             }
             if(j===4){
-                if(obrasDoUsuario[i].imagem.length == 0){}else{
+                if(obrasDoUsuario[i].imagem.length == 0){
+                    td.appendChild(document.createTextNode("Imagem não registrada"));
+                }else{
                     let img = document.createElement("img")
                     img.src = obrasDoUsuario[i].imagem  
                     img.alt = "Imagem não suportada e/ou inexistente"
@@ -172,7 +180,7 @@ function planilhaObras(){
             }}
             if(j==5){
                 let btnDelRegistro = document.createElement("button")
-                btnDelRegistro.classList.add("btn-planilha")
+                btnDelRegistro.classList.add("btn-planilhaDel")
                 btnDelRegistro.innerText = "Deletar"
                 btnDelRegistro.setAttribute("onclick",`deletarRegistroObras(this, ${obrasDoUsuario[i].id})`)
                 let btnEditaRegistro = document.createElement("button")
