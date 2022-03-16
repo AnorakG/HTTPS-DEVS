@@ -13,6 +13,8 @@ let enderecoObra = document.getElementById("ipt-endereco")
 let dataInicial = document.getElementById("ipt-dataInicial")
 let dataFinal = document.getElementById("ipt-dataFinal")
 
+// Essa função adiciona os registros feitos pelo usuário no LocalStorage.
+
 function confirmaRegistros(){
 if(localStorage.length>0){
     const obrasExistentes = JSON.parse(localStorage.getItem('obras'))
@@ -34,6 +36,8 @@ if(localStorage.length>0){
 }
 }
 
+//essa função pega o cookie de dentro do parâmetro
+
 function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
@@ -49,7 +53,8 @@ function getCookie(cname) {
     }
     return "";
 }
-
+/* Essa função verifica se o usuário está logado e caso esteja ela permite que o usuário faça um novo registro
+de denuncia*/
 
 function registrarDenuncias(){
     
@@ -91,12 +96,18 @@ function registrarDenuncias(){
         imagemDenuncia.value = '';
     }
 }
+
+/* Essa função verifica se o usuário está logado e caso esteja ela permite que o usuário faça um novo registro
+de obras*/
+
+
 function confirmaData(str1, str2)
 {
     return new Date(str1) < new Date(str2);
 }
-function registrarObras(){
-    //console.log(confirmaData(dataInicial.value,dataFinal.value))   
+
+// Essa função verifica se o usuário está logado e 
+function registrarObras(){   
     let logado = getCookie("logado")
 
     let pegaIDObras = JSON.parse(localStorage.getItem('obras'))

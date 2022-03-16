@@ -1,12 +1,23 @@
 
+    // A primeira variável pega o id da div de obras para os dados do array do registros de obras
 
 let obras = JSON.parse(localStorage.getItem('obras'))
+
+    // Essa função pega os dados do localStorage e joga numa nova div associando a uma postagem.
+    // Sempre irá criar uma nova div a cada novo registro feito pelo usuário.
 function registroObras () {
     let obras = JSON.parse(localStorage.getItem('obras'))
     let novoConteudo = document.getElementById("obras")
     let div = document.createElement("div")
-   
+
+    // Aqui diz se o array "obras" estiver vazio ele não preenche a div.
+    // Caso contrário ele pega o tamanho do array da div com os dados do registro feito pelo usuário.
+
     if(obras == null){}else if(obras.length === 0){}else{
+
+    // O for vai pegar apenas uma das linhas da array "obras" do localStorage, criar uma linha nova
+    // e adicionar na div "container-conteudo2" de registro de obras.
+
     for(let i=0; i<obras.length;i++){
        const linhaNova = novoConteudo.appendChild(div)
         for(let j=0; j<5;j++){
@@ -50,13 +61,23 @@ function registroObras () {
     }
     }
 }
+
+    // Essa função pega os dados do localStorage e joga numa nova div associando a uma postagem.
+    // Sempre irá criar uma nova div a cada novo registro feito pelo usuário.
+
 function registroDenuncias () {
     let denuncias = JSON.parse(localStorage.getItem('denuncias'))
     let novoRegistro = document.getElementById("denuncias")
     let div2 = document.createElement("div2") 
 
+    // Aqui diz se o array "denuncias" estiver vazio ele não preenche a div.
+    // Caso contrário ele pega o tamanho do array da div com os dados do registro feito pelo usuário.
 
     if (denuncias == null){}else if(denuncias.length === 0){}else{
+
+    // O for vai pegar apenas uma das linhas da array "denuncias" do localStorage, criar uma linha nova
+    // e adicionar na div "container-conteudo2" de registro de denuncias.
+
     for(let i=0; i<denuncias.length;i++){
         const linhaNova2 = novoRegistro.appendChild(div2)
          for(let j=0; j<4;j++){

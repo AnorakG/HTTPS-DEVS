@@ -24,9 +24,13 @@ senhaVisivel3.addEventListener('change', (event) => {
       senhaNova2.type="password"
     }
 })
+// Essa função verifica se o novo E-mail registrado é diferente do e-mail antigo.
+
 function verificarEmail(contas){
     return contas.email === emailNovo.value
 }
+// Essa função verifica se as novas senhas combinam.
+
 function validarNovaSenha(){
     if(senhaNova1.value.length == 0||senhaNova2.value.length == 0){}else{
         if(senhaNova1.value != senhaNova2.value ){
@@ -44,22 +48,24 @@ function validarNovaSenha(){
         }
     }
 }
+// Essa função cadastra e verifica se o novo E-mail registrado é diferente do e-mail antigo.
+
 function editarEmail(){
-   if(!emailNovo.value.length){
+    if(!emailNovo.value.length){
         Swal.fire({
             title:'Insira o novo e-mail desejado por favor.',
             icon:'warning',
             timer:'700',
             showConfirmButton: false
         })
-   }else if(contas.find(verificarEmail)){
+    }else if(contas.find(verificarEmail)){
         Swal.fire({
             title:'E-mail já cadastrado.',
             icon:'warning',
             timer:'700',
             showConfirmButton: false
         })
-   }else{
+    }else{
         Swal.fire({
             title:'Novo e-mail cadastrado.',
             icon:'success',
@@ -71,8 +77,10 @@ function editarEmail(){
         
         localStorage.setItem("users", JSON.stringify(contas))
         document.cookie = 'conta='+ JSON.stringify(usuarioLogado)
-   }
+    }
 }
+// Essa função cadastra e verifica se as novas senhas combinam.
+
 function editarSenha(){
     if(!senhaNova1.value.length ||!senhaNova2.value){
         Swal.fire({

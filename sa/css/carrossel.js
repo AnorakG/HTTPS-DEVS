@@ -1,3 +1,5 @@
+// Esse codigo define o tempo de transição das imagens do carrossel.
+
 let time = 3000,
     currentImageIndex = 0,
     images = document
@@ -20,7 +22,7 @@ function nextImage() {
 
 function start() {
     setInterval(() => {
-        // troca de image
+        // troca de imagem
         nextImage()
     }, time)
 }

@@ -1,3 +1,4 @@
+//Aqui estão as variáveis de login e cadastro.
 let users = []
 let admin = [{nome:"admin",senha:"1234",dataDeNascimento:"11/11/2021",idade:"4 meses"}]
 let idade,contaConectada,usuarios;
@@ -20,6 +21,9 @@ let dataNascimento = document.getElementById('dataNascimento')
 
 let senhaVisivel1 = document.getElementById('senhaVisivel1')
 let senhaVisivel2 = document.getElementById('senhaVisivel2')
+
+
+//essa função pega o cookie de dentro do parâmetro 
 
 function getCookie(cname) {
     let name = cname + "=";
@@ -44,6 +48,8 @@ if(localStorage.length>0){
         users.push(contasExistentes[i])
     }
 };
+
+// Essa função confirma se o usuário estiver logado e pega os dados dele e coloca no perfil.
 function dropdown(){
     let logado = getCookie("logado")
 
@@ -74,6 +80,8 @@ senhaVisivel2.addEventListener('change', (event) => {
       senhaUsuario.type="password"
     }
 })
+// Essa função faz com que o usuário retorne á pagina de login.
+
 function voltar(){
     formLogin.style.display = "inline"
     anuncioCadastro.style.display = "none";
@@ -84,6 +92,8 @@ function voltar(){
     senha2.value=""
     dataNascimento.value=""
 }
+// Essa função direciona o usuário para a pagina de cadastro.
+
 function cadastramento(){
     formLogin.style.display = "none"
     anuncioCadastro.style.display = "none";
@@ -94,6 +104,8 @@ function cadastramento(){
     senha2.value=""
     dataNascimento.value=""
 }
+// Essa função faz parte do cadastro e verifica se as senhas combinam.
+
 function validarSenha(){
    if(senha1.value.length == 0||senha2.value.length == 0){}else{
     if(senha1.value != senha2.value ){
@@ -110,6 +122,7 @@ function validarSenha(){
         })
     }}
 }
+// Essa função faz parte do cadastro confirma e verifica a idade do usuário.
 
 function confirmarIdade(){
     const dataDeNascimento = new Date(dataNascimento.value)
@@ -118,6 +131,7 @@ function confirmarIdade(){
     idade = Math.floor((hoje-dataDeNascimento) / (365.25 * 24 * 60 * 60 * 1000))
     console.log(idade)
 }
+// Essa função cadastra o usuário e retorna o novo id a cada usuário novo.
 
 function cadastrar(){
     let pegaID = JSON.parse(localStorage.getItem('users'))
@@ -128,20 +142,14 @@ function cadastrar(){
         id = idFinal[0].id + 1;
     }
     console.log("cadastrar");
-    //console.log(users);
+    
     if(senha1.value.length == 0||senha2.value.length == 0||nome.value.length==0||email.value.length==0||dataNascimento.value.length==0){
         Swal.fire({
             title: 'Preencha todos os campos antes de se cadastrar',
             icon: 'error',
             timer:'800'
           })
-    }/*else if(idade < 18){
-        Swal.fire({
-            title: 'Menores de Idade não podem se cadastrar.',
-            icon: 'error',
-            timer:'1200'
-          })
-    }*/else if(users.find(confirmarNome)||admin.find(confirmarAdmin)){
+    }else if(users.find(confirmarNome)||admin.find(confirmarAdmin)){
         Swal.fire({
             title: 'Nome de usuário já cadastrado <br> Tente outro',
             icon: 'error',
@@ -176,6 +184,7 @@ function cadastrar(){
         }, 700); 
     }
 }
+// As três funções abaixo confirmam os dados do cadastro do usuário.
 
 function confirmarNome(users){
     return users.nome === nome.value
@@ -186,6 +195,8 @@ function confirmarEmail(users){
 function confirmarAdmin(admin){
     return admin.nome === nome.value;
 }
+
+// As três funções abaixo buscam os dados do usuário.
 function buscarNome(users){
     return users.nome === login.value;
 }
@@ -195,23 +206,26 @@ function buscarEmail(users){
 function buscarAdmin(admin){
     return admin.nome === login.value;
 }
+
+// Essa função conecta o usuário logado ao seu perfil.
+
 function confirmar(){
     usuarios = JSON.parse(localStorage.getItem('users'))
     adm = JSON.parse(localStorage.getItem('admin'))
 
     if(adm.find(buscarAdmin)){
         console.log('Bem Vindo Administrador')
-        //console.log(adm.find(buscarAdmin))
+
         contaConectada = adm.find(buscarAdmin)
         confirmarSenha()
     }else if(usuarios.find(buscarNome)){
         console.log('Nome encontrado!')
-        //console.log(usuarios.find(buscarNome))
+        
         contaConectada = usuarios.find(buscarNome)
         confirmarSenha()
     }else if(usuarios.find(buscarEmail)){
         console.log('E-mail encontrado!')
-        //console.log(usuarios.find(buscarEmail))
+        
         contaConectada = usuarios.find(buscarEmail)
         confirmarSenha()
     }else{
@@ -223,6 +237,7 @@ function confirmar(){
         })
     }
 }
+// Essa função confirma se a senha do usuário é da mesma conta do usuário.
 
 function confirmarSenha(){
     if(contaConectada.senha === senhaUsuario.value){
@@ -246,6 +261,7 @@ function confirmarSenha(){
         })
     }
 }
+// Essa função da acesso ao perfil do usuário.
 
 function acessarPerfil(){
     let verifica = getCookie("logado")
@@ -255,6 +271,7 @@ function acessarPerfil(){
         window.location.href= "./login.html"
     }
 }
+// Essa função da logOut na conta do usuário.
 
 function logOut(){
     let cookies = document.cookie.split(";");
@@ -273,6 +290,8 @@ function logOut(){
     })
     setTimeout(function(){window.location.href="./index.html"},750)
 }
+// Essa função da acesso aos dados pessoais do usuário. 
+
 function perfil(){
     let perfilConectado = JSON.parse(getCookie("conta"))
     let nomeUsuarioPerfil = document.getElementById('nomeUsuarioPerfil')
@@ -294,6 +313,8 @@ function perfil(){
         btnEditor.style.display = "none"
     }
 }
+
+// Essa função deleta a conta e as informações registradas pelo usuário, é uma função irreversível.
 function deletar(){
     Swal.fire({
         title: 'Você tem certeza?',
