@@ -8,10 +8,12 @@ let edit1, edit2,edit3;
 let tituloDenuncia = document.getElementById("tituloDenuncias")
 let tituloObras = document.getElementById("tituloObras")
 
+
 function confirmaData(str1, str2)
 {
     return new Date(str1) < new Date(str2);
 }
+// Essa função cria uma nova planilha com os dados das denuncias feitas pelo usuário.
 
 function planilhaDenuncias(){
     let tbl = document.getElementById('planilhaDenuncias')
@@ -104,6 +106,8 @@ function planilhaDenuncias(){
     }
 }
 }
+// Essa função cria uma nova planilha com os dados das obras registradas pelo usuário.
+
 function planilhaObras(){
     let tbl = document.getElementById('planilhaObras')
     if (obras == null){
@@ -201,6 +205,8 @@ function planilhaObras(){
     }
 }
 }
+// Essa função permite que o usuário possa deletar um unico registro de denuncia.
+
 function deletarRegistro(td, id){
     Swal.fire({
         title: 'Você tem certeza?',
@@ -222,6 +228,7 @@ function deletarRegistro(td, id){
         localStorage.setItem("denuncias",JSON.stringify(denuncias))
       }})
 }
+// Essa função permite que o usuário possa deletar um unico registro de obras registradas.
 function deletarRegistroObras(td, id){
     Swal.fire({
         title: 'Você tem certeza?',
@@ -242,6 +249,7 @@ function deletarRegistroObras(td, id){
         localStorage.setItem("obras",JSON.stringify(obras))
       }})
 }
+// Essa função permite que o usuário possa editar os dados de um único registro de denúncia.
 
 function editarRegistro(id){
     let index = denuncias.findIndex((elem)=> {return elem.id == id})
@@ -271,6 +279,7 @@ function editarRegistro(id){
             setTimeout(function(){window.location.reload(true)},100)
     }})
 }
+// Essa função permite que o usuário possa editar os dados de um único registro de obra.
 function editarRegistroObras(id){
     let index = obras.findIndex((elem)=> {return elem.id == id})
     Swal.fire({
