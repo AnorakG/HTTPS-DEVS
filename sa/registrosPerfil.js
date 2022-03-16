@@ -8,6 +8,11 @@ let edit1, edit2,edit3;
 let tituloDenuncia = document.getElementById("tituloDenuncias")
 let tituloObras = document.getElementById("tituloObras")
 
+function confirmaData(str1, str2)
+{
+    return new Date(str1) < new Date(str2);
+}
+
 function planilhaDenuncias(){
     let tbl = document.getElementById('planilhaDenuncias')
     if (denuncias == null){
@@ -292,9 +297,17 @@ function editarRegistroObras(id){
         if (result.isConfirmed) {
             let index = obras.findIndex((elem)=> {return elem.id == id})
             obras[index].descricao = edit1;
-            obras[index].dataFinal = edit2.split('-').reverse().join('/');
+            if(confirmaData(obras[index].dataInicial,edit2) === false){
+                Swal.fire({
+                    title: 'Data final mais recente que a data inicial',
+                    icon: 'error',
+                    timer:'800'
+                })
+            }else{
+                obras[index].dataFinal = edit2.split('-').reverse().join('/')
+            }
             obras[index].image = edit3;
             localStorage.setItem("obras", JSON.stringify(obras))
-            setTimeout(function(){window.location.reload(true)},100)
+            setTimeout(function(){window.location.reload(true)},800)
     }})
 }
