@@ -289,10 +289,10 @@
                 
                 .intro-focus2 {
                     position: relative;
-                    height: 100.4%;
+                    height: 100.1%;
                     display: block;
-                    width: 41.9%;
-                    top: -501px;
+                    width: 40.6%;
+                    top: -500.5px;
                     right: 40px;
                     margin-left: 52.8%;
                     background: rgba(255, 255, 255);
@@ -795,7 +795,20 @@
                     .nav-lista {
                         height: 75px;
                     }
-                    
+                    .intro-focus2 {
+                        position: relative;
+                        height: 100.4%;
+                        display: block;
+                        width: 41.9%;
+                        top: -501px;
+                        right: 40px;
+                        margin-left: 52.8%;
+                        background: rgba(255, 255, 255);
+                        border: none;
+                        text-align: center;
+                        padding: 0 5%;
+                        border-radius: 1%;
+                    }
                     .btn-home-serv {
                         margin-top: 10%;
                     }
@@ -1951,24 +1964,10 @@
     width: 10%;
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (max-width: 1920px) {
     .img-alarme {
         margin-top: 31%;
         width: 75px;
-    }
-    .intro-focus2 {
-        position: relative;
-        height: 100.4%;
-        display: block;
-        width: 40.6%;
-        top: -501px;
-        right: 40px;
-        margin-left: 52.8%;
-        background: rgba(255, 255, 255);
-        border: none;
-        text-align: center;
-        padding: 0 5%;
-        border-radius: 1%;
     }
 }
 @media screen and (max-width: 584px) {
