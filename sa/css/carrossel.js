@@ -22,7 +22,7 @@ function nextImage() {
 
 function start() {
     setInterval(() => {
-        // troca de imagem
+        // troca de imagem.
         nextImage()
     }, time)
 }

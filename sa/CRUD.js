@@ -83,7 +83,6 @@ function registrarDenuncias(){
         let conta = JSON.parse(getCookie("conta"))
         denuncias.push({problema: problema.value, endereco: endereco.value,data: data.value.split('-').reverse().join('/'), imagem: imagemDenuncia.value, userId:conta.id, id:idDenuncias})
         localStorage.setItem("denuncias", JSON.stringify(denuncias))
-        //console.log(localStorage.getItem('denuncias'))
         console.log("Denuncia feita")
         Swal.fire({
             title: 'Obrigado pela denunciar! <br> Denúncia realizada',
@@ -97,16 +96,14 @@ function registrarDenuncias(){
     }
 }
 
-/* Essa função verifica se o usuário está logado e caso esteja ela permite que o usuário faça um novo registro
-de obras*/
-
-
+// Essa função verifica se a data final é mais recente que a data inicial.
 function confirmaData(str1, str2)
 {
     return new Date(str1) < new Date(str2);
 }
 
-// Essa função verifica se o usuário está logado e 
+/* Essa função verifica se o usuário está logado e caso esteja ela permite que o usuário faça um novo registro
+de obras*/
 function registrarObras(){   
     let logado = getCookie("logado")
 
@@ -140,7 +137,6 @@ function registrarObras(){
         let conta = JSON.parse(getCookie("conta"))
         obras.push({descricao: descricao.value, enderecoObra: enderecoObra.value,dataInicial: dataInicial.value.split('-').reverse().join('/'), dataFinal: dataFinal.value.split('-').reverse().join('/'),imagem: imagemObras.value, userId: conta.id, id: idObras})
         localStorage.setItem("obras", JSON.stringify(obras))
-       //console.log(localStorage.getItem('obras'))
         console.log("Registro feito")
         Swal.fire({
             title: 'Obrigado pelo registro ! <br> Registro realizado',
