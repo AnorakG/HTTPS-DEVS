@@ -337,8 +337,11 @@
                     align-items: center;
                     color: rgb(0, 0, 0);
                 }
-                
+                .btn-home-serv:visited{
+                    color: #000000;
+                }
                 .btn-home-serv {
+                    text-decoration: none;
                     width: 70%;
                     height: auto;
                     font-size: 18px;
@@ -349,6 +352,7 @@
                     border-radius: 4px;
                     cursor: pointer;
                     padding: 15px;
+                   
                 }
                 
                 .btn-home-serv:hover {
