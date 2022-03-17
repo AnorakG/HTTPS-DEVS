@@ -243,7 +243,7 @@
                     margin: 0 0 0 17.5%;
                     background: url(container-intro.jpg);
                     border: none;
-                    background-size: 100%;
+                    background-size: cover;
                     border-radius: 1%;
                     -moz-box-shadow: 0px 0px 10px 2px rgb(0, 0, 0, 0.5);
                     -webkit-box-shadow: 0px 0px 10px 2px rgb(0, 0, 0, 0.5);
@@ -255,7 +255,7 @@
                     width: 65%;
                     height: 500px;
                     margin: 5% 0 5% 17.5%;
-                    background-color: whitesmoke;
+                    background-color: white;
                     border-radius: 1%;
                     -moz-box-shadow: 0px 0px 10px 2px rgb(0, 0, 0, 0.5);
                     -webkit-box-shadow: 0px 0px 10px 2px rgb(0, 0, 0, 0.5);
@@ -345,6 +345,7 @@
                     width: 70%;
                     height: auto;
                     font-size: 18px;
+                    color: black;
                     font-weight: bold;
                     background: rgb(240, 240, 240);
                     background: linear-gradient(90deg, rgb(226, 226, 226) 10%, rgba(255, 255, 255, 1) 100%);
@@ -1072,7 +1073,7 @@
                         margin: 0;
                         margin-top: 10%;
                         height: 500px;
-                        background-color: whitesmoke;
+                        background-color: white;
                         border-radius: 1%;
                         -moz-box-shadow: 0px 0px 10px 2px rgb(0, 0, 0, 0.5);
                         -webkit-box-shadow: 0px 0px 10px 2px rgb(0 0 0 / 50%);
@@ -1394,42 +1395,46 @@
                 @media screen and (max-width: 306px) {
                     .img-alarme {
                         margin-top: 28%;
-                        width: 75px;
+                        width: 50px;
+                    }
+                    .img-notas {
+                        margin-top: 6%;
+                        width: 50px;
                     }
                 }
                 
                 @media screen and (max-width: 293px) {
                     .img-alarme {
                         margin-top: 53%;
-                        width: 75px;
+                        width: 50px;
                     }
                 }
                 
                 @media screen and (max-width: 290px) {
                     .img-alarme {
                         margin-top: 78%;
-                        width: 75px;
+                        width: 50px;
                     }
                 }
                 
                 @media screen and (max-width: 270px) {
                     .img-alarme {
                         margin-top: 60%;
-                        width: 75px;
+                        width: 50px;
                     }
                 }
                 
                 @media screen and (max-width: 223px) {
                     .img-alarme {
                         margin-top: 100%;
-                        width: 75px;
+                        width: 50px;
                     }
                 }
                 
                 @media screen and (max-width: 208px) {
                     .img-alarme {
                         margin-top: 145%;
-                        width: 75px;
+                        width: 50px;
                     }
                 }
                 
@@ -1621,6 +1626,19 @@
                         -webkit-box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 50%);
                         box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 50%);
                     }
+                    .container-intro {
+                        width: 100%;
+                        margin: 0;
+                        height: 330px;
+                        background-size: 250%;
+                        background-position: 50%;
+                    }
+                    .btn-home-serv {
+                        font-size: 13px;
+                        width: 70%;
+                        padding: 10px;
+                        
+                    }
                 }
                 
                 @media screen and (max-width: 270px) {
@@ -1703,6 +1721,7 @@
                         color: rgb(0, 0, 0);
                         font-weight: bold;
                     }
+                    
                 }
                 
                 @media screen and (min-width: 200px) and (max-width: 584px) {
@@ -1964,7 +1983,7 @@
     width: 10%;
 }
 
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 1920px) and (min-width: 1919 ) {
     .img-alarme {
         margin-top: 31%;
         width: 75px;
@@ -2110,3 +2129,81 @@
             width: 97.7%
         }
     }
+    @media screen and (max-width:1300px){
+        .dropdown-conteudo {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            height: min-content;
+            z-index: 3;
+            width: 25%;
+            border-radius: 2%;
+            margin-left: -7%;
+        }
+    }
+    @media only screen and (max-width: 1365px) and (min-width: 200px ) {
+        .intro-focus2 {
+            position: relative;
+            height: 100.1%;
+            display: block;
+            width: 41%;
+            top: -501px;
+            right: 4%;
+            margin-left: 52.8%;
+            background: rgba(255, 255, 255);
+            border: none;
+            text-align: center;
+            border-radius: 1%;
+        }
+    }
+    @media only screen and (max-width: 833px){
+        .p-introducao {
+            padding-top: 10%;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 17px;
+            line-height: 36px;
+            display: flex;
+            align-items: center;
+            color: rgb(0, 0, 0);
+        }
+    }
+    @media only screen and (max-width: 708px){
+        .p-introducao {
+            padding-top: 10%;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 36px;
+            display: flex;
+            align-items: center;
+            color: rgb(0, 0, 0);
+        }
+    }
+    @media only screen and (max-width: 333px){
+        .p-introducao {
+            padding-top: 10%;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 36px;
+            display: flex;
+            align-items: center;
+            color: rgb(0, 0, 0);
+        }
+    }
+    @media only screen and (max-width: 285px){
+        .p-introducao {
+            padding-top: 10%;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 11px;
+            line-height: 25px;
+            display: flex;
+            align-items: center;
+            color: rgb(0, 0, 0);
+        }
+    }
+    
+    
+    
