@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="imagex/png" href="icon2.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
+    <script src="./https/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <title>Perfil</title>
+</head>
+<body onload="dropdown(); perfil(); planilhaDenuncias(); planilhaObras()">
+    <div class='fundo'>
+        <ul class='nav-lista'>
+                <div class="image-container">
+                    <a href="index.html"><img src='css/urbana-logo.png' alt='logo' class="urbana"></a>
+                    <li class="perfil-dropdown">
+                        <a onclick="acessarPerfil()"><img src='css/user.png' alt='logo-perfil' class="perfil"></a>
+                        <div class="dropdown-conteudo" id="dropdownDoPerfil">
+                            <div class="box"></div>
+                            <a onclick="logOut()" style="color:red;user-select: none;cursor:pointer">Logout</a>
+                        </div>
+                    </li>
+                </div>
+                <div class='nav'>
+                    <li class="outros"><a class='cabecalho-texto' href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a class='btn-dropdown' href="javascript:void(0)">Serviços</a>
+                        <div class="dropdown-conteudo">
+                            <a href="registrar-obra.html">Registrar obra</a> 
+                            <a href="registrar-denuncia.html">Denunciar</a>
+                            <a href="procurar-obra.html">Registros</a>
+                           
+                        </div>
+                    </li>
+                    <li class="outros"><a onclick="acessarPerfil()" class='cabecalho-texto' style="cursor:pointer;">Login</a></li>
+                </div>
+        </ul>
+        <main>
+            <div class="container-conteudo3">
+                <h1 class="titulo-principal">
+                    Perfil do usuário
+                </h1>
+                <div class="caixa-de-texto">
+                    <div class="caixa-dados-usuario">
+                        <h1 class="titulo-perfil">
+                            Nome de usuário
+                        </h1>
+                        <p id="nomeUsuarioPerfil" class="p-perfil"></p>
+                    </div>
+                    <div class="caixa-dados-usuario" id="emailPerfil">
+                        <h1 class="titulo-perfil">
+                            Email
+                        </h1>
+                        <p id="emailUsuarioPerfil" class="p-perfil"></p>
+                    </div>
+                    <div class="caixa-dados-usuario">
+                        <h1 class="titulo-perfil">
+                            Data de Nascimento
+                        </h1>
+                        <p id="dataNascimentoUsuarioPerfil" class="p-perfil"></p>
+                    </div>
+                    <div class="caixa-dados-usuario">
+                        <h1 class="titulo-perfil">
+                            Idade 
+                        </h1>
+                        <p id="idadeUsuarioPerfil" class="p-perfil"></p>
+                    </div>
+                    <h1 id="tituloDenuncias"class="titulo-perfil">Denúncias</h1>
+                    <table id="planilhaDenuncias">
+                        <thead><tr>
+                          <th>Problema</th>
+                          <th>Endereço</th>
+                          <th>Data</th>
+                          <th>Imagem</th>
+                          <th></th>
+                          </tr>
+                        </thead>
+                    </table>
+                    <h1 id="tituloObras"class="titulo-perfil">Obras</h1>
+                    <table id="planilhaObras">
+                        <thead><tr>
+                          <th>Descrição</th>
+                          <th>Endereço</th>
+                          <th>Data Inicial</th>
+                          <th>Data Final</th>
+                          <th>Imagem</th>
+                          <th></th>
+                          </tr>
+                        </thead>
+                      </table>
+                    <button id="btn-del" class="btn-del" onclick="deletar()">Deletar Conta</button>
+                    <button id="btn-editor" class="btn-editor" onclick="location.href='editor.html'">Edite seus dados</button>
+                </div>
+
+
+            </div>
+    
+
+        </main>
+        <footer>
+            <div class='footer-padrao'>
+                <h1 class="titulo-footer">
+                    Contato
+                </h1>
+                <ul class='lista-footer'>
+                    <li>
+                        WhatsApp: (48) 99822-7104
+                    </li>
+                    <li>
+                        Email: httpsdev@gmail.com
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="registrosPerfil.js"></script>
+</body>
+</html>

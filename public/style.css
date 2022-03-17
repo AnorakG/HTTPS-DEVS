@@ -1,0 +1,230 @@
+*{
+    margin:0;
+    padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+	line-height: 1;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}
+
+#formCadastro{
+    display: none;
+}
+
+#senhaValidez{
+    margin: 0;
+    display: none;
+}
+#anuncioCadastro{
+    margin: 0;
+    display: none;
+}
+#senhaVisivel{
+    color: black;
+}
+.btn{
+    outline: none !important;
+	background: #5a5a5a;
+    width: 82%;
+    color: rgb(0, 0, 0);
+    border-radius: 2.5px;
+    font-weight: bold;
+    border: 3px solid #313131;
+    margin: 0 0 3% 6%;
+    display: block;
+    padding: 10px;
+    transition: 1s;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #3f3f3f;
+    border: 3px solid #3a3a3a;
+    color: #000000;
+   
+}
+
+ol, ul {
+	list-style: none;
+}
+.fundo-cadastrar{
+    position: relative;
+    background: url(img-login.jfif);
+    background-repeat: no-repeat;
+    background-size: 125%;
+}
+    .cabecalho {
+        position: relative;
+        width: 100%;
+        padding: 1% 0;
+        background: rgba(0, 0, 0, 0.8);
+        height: 30px;
+    }
+    .urbana{
+        position: absolute;
+        font-family: 'Zilla Slab', serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 30px;
+        width:15%;
+        text-align: center;
+        color:rgb(255, 255, 255);
+    }
+    nav {
+        position: absolute;
+        width:30%; 
+        text-align: center;
+        margin-left: 35%;
+    }
+    nav li {
+        display: inline;
+        padding: 0 2.5%;
+    }
+    
+    nav a {
+        text-transform: uppercase;
+        font-family: 'Zilla Slab', serif;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 20px;
+        color: #FFFFFF;
+        transition: 1s;
+        line-height: 30px;
+    }
+    nav a:hover{
+        color:rgb(109, 109, 109);
+    }
+    main{
+        height: 100%;
+        margin:5% 0;
+    }
+    .container-conteudo{
+        position: relative;
+        height: auto;
+        width: 65%;
+        margin: 0 0 0 11.5%;
+        padding: 4% 6%;
+        background: rgba(0, 0, 0, 0.8);
+        border: none;
+    }
+    .titulo-principal{
+        font-size: 30px; 
+        margin: 0 0 8% 4%;
+        color: rgb(255, 255, 255);
+        transition: 400ms;
+        font-style: normal;
+        font-weight: bold;
+    }
+    .ipt-padrao{
+        display: block;
+        margin: 0 0 3% 6%;
+        padding: 10px;
+        width: 82%;
+        border: 0.5px solid #ffffff;
+        border-radius: 2.5px;
+        transition: 1s;
+        cursor: pointer;
+    }
+    .ipt-padrao:hover{
+        background-color: #ebebebc7;
+        border: 0.5px solid #7a7a7a;
+    }
+    
+
+#nomeUsuario{
+    width: 82%;
+    /*margin-top: 150px;*/
+    padding: 15px;
+    border: 1px solid #5b08a3;
+    border-radius: 15px;
+    outline: none;
+    text-align: center;
+    font-size: medium;
+}
+
+#senhaUsuario{
+    width: 82%;
+    margin-bottom: 5px;
+    padding:15px;
+    border: 1px solid #5b08a3;
+    border-radius: 15px;
+    outline: none;
+    text-align: center;
+    font-size: medium;
+}
+#nome,#email{
+    margin-top: 175px;
+}
+.cadastrar{
+    
+    display: inline;
+    padding: 10px;
+    margin-left: 0;
+    outline: none;
+    border: 1px solid #555555;
+    text-align: center;
+    font-size: 15px;
+}
+#botaoCadastro,#botaoLogin{
+    margin-top: 10px;
+    
+}
+.textoCadastro{
+    margin-top: 105px;
+    font-size:xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder; 
+}
+#dataNascimento{
+    width: 85%;
+    padding: 10px;
+    border-radius: 25px;
+    outline: none;
+    border: 1px solid #5b08a3;
+    text-align: center;
+    font-size: medium;
+}
+#senha1{
+    border-radius:  0px 0px 0px 15px;
+}
+#senha2{
+    border-radius: 0px 0px 15px 0px;
+}
+#nome{
+    border-radius: 15px 0px 0px 0px;
+}
+#email{
+    border-radius: 0px 15px 0px 0px;
+}
+#senha1,#senha2{
+    margin-bottom: 10px;
+}
+#senhaVisivel1{
+    margin-bottom: 10px;
+}
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: rgba(0, 0, 0, 0.9);
+    margin: 0;
+    font-family: 'Zilla Slab', serif;
+    font-size: 22px;
+    color: white;
+    padding: 2.5% 0;
+}
+.footer-padrao{
+    text-align:center;
+    position: relative;
+    width:30%;
+    margin-left: 35%;
+}
+.titulo-footer{
+    margin: 10px 0;
+    font-weight: bold;
+}

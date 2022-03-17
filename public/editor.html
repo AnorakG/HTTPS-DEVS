@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="icon2.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/editor.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
+    <script src="./https/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <title>Editor</title>
+    
+</head>
+<body>
+    <div class='fundo-login'>
+        <ul class='nav-lista'>
+            <div class="image-container">
+                <a href="index.html"><img src='css/urbana-logo.png' alt='logo' class="urbana"></a>
+                <li class="dropdown-perfil">
+                    <a onclick="acessarPerfil()"><img src='css/user.png' alt='logo-perfil' class="perfil"></a>
+                    <div class="dropdown-conteudo" id="dropdownDoPerfil">
+                        <div class="box"></div>
+                        <a onclick="logOut()" style="color:red;user-select: none;cursor:pointer">Logout</a>
+                    </div>
+                </li>
+            </div>
+            <div class='nav'>
+                <li class="outros"><a class='cabecalho-texto' href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a class='btn-dropdown' href="javascript:void(0)">Serviços</a>
+                    <div class="dropdown-conteudo">
+                        <a href="registrar-obra.html">Registrar obra</a>
+                        <a href="registrar-denuncia.html">Denunciar</a>
+                        <a href="procurar-obra.html">Registros</a>
+                        
+                    </div>
+                </li>
+                <li class="outros"><a class='cabecalho-texto'  onclick="acessarPerfil()" style="cursor:pointer;">Login</a></li>
+            </div>
+            </div>
+            
+        </ul>
+        <main>
+            <div class="container-conteudo">
+                    <div class="textoLogin">
+                        <h class='titulo-principal'>Editor</h>
+                    </div>
+                    <div class='container-login'>
+                        <label class='lbl-padrao' for='nomeUsuario'>E-mail</label>
+                        <input class="ipt-padrao" type="text" id="emailNovo" placeholder="Insira aqui seu novo e-mail">
+                        <button class="btn-editar" onclick="editarEmail()">Editar E-mail</button><br><br>
+                        <label class='lbl-padrao' for='senhaUsuario'>Senha</label>
+                        <input class="ipt-padrao" type="password" id="senhaNova1" placeholder="Insira aqui sua nova senha" onchange="validarNovaSenha()">
+                        <input class="ipt-padrao" type="password" id="senhaNova2" placeholder="Confirme sua nova senha" onchange="validarNovaSenha()">
+                        <div class='check3'>
+                            <input type="checkbox" id="senhaVisivel3">
+                            <label class='lbl-senha' for="senhaVisivel3"></label>
+                        </div>
+                        <button class="btn-editar" onclick="editarSenha()">Editar Senha</button><br><br>
+                        <button class="btn-voltar" onclick="location.href='perfil.html'">Voltar para o perfil</button>
+                    </div>
+        </main>
+        <footer>
+            <div class='footer-padrao'>
+                <h1 class="titulo-footer">
+                    Contato
+                </h1>
+                <ul class='lista-footer'>
+                    <li>
+                        WhatsApp: (48) 99822-7104
+                    </li>
+                    <li>
+                        Email: httpsdev@gmail.com
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="./script.js"></script> 
+    <script src="./editor.js"></script>
+</body>
+</html>
