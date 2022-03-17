@@ -2088,6 +2088,9 @@
         border: 1px solid #7c2020;
         background-color: #d33;
     }
+    .btn-logout-mobile{
+       width: 100%;
+    }
     #planilhaObras th, #planilhaDenuncias th {
         padding: 2%;
         font-size: 10px;
@@ -2097,4 +2100,13 @@
         background-color: #2e325a;
         color: white;
     }
+    }
+    .btn-logout-mobile{
+        display: none;
+    }
+    @media screen and (max-width:1024px){
+        .btn-logout-mobile{
+            display: block;
+            width: 97.7%
+        }
     }
