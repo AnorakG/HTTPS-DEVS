@@ -1955,7 +1955,7 @@ input[type="checkbox"]:checked + label {
   }
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 584px) {
   .check1 input[type="checkbox"] + label {
     position: absolute;
     left: 84%;
@@ -1998,12 +1998,12 @@ input[type="checkbox"]:checked + label {
   .check1 input[type="checkbox"] + label {
     position: absolute;
     left: 84%;
-    bottom: 47.5%;
+    bottom: 49.9%;
   }
   .check1 input[type="checkbox"]:checked + label {
     position: absolute;
     left: 84%;
-    bottom: 47.1%;
+    bottom: 49.5%;
   }
 }
 
@@ -2011,12 +2011,12 @@ input[type="checkbox"]:checked + label {
   .check1 input[type="checkbox"] + label {
     position: absolute;
     left: 84%;
-    bottom: 47%;
+    bottom: 49.7%;
   }
   .check1 input[type="checkbox"]:checked + label {
     position: absolute;
     left: 84%;
-    bottom: 46.6%;
+    bottom: 49.3%;
   }
 }
 
@@ -2024,12 +2024,12 @@ input[type="checkbox"]:checked + label {
   .check1 input[type="checkbox"] + label {
     position: absolute;
     left: 84%;
-    bottom: 46.5%;
+    bottom: 49.1%;
   }
   .check1 input[type="checkbox"]:checked + label {
     position: absolute;
     left: 84%;
-    bottom: 46.1%;
+    bottom: 48.7%;
   }
 }
 
@@ -2037,25 +2037,12 @@ input[type="checkbox"]:checked + label {
   .check1 input[type="checkbox"] + label {
     position: absolute;
     left: 84%;
-    bottom: 46%;
+    bottom: 49%;
   }
   .check1 input[type="checkbox"]:checked + label {
     position: absolute;
     left: 84%;
-    bottom: 45.6%;
-  }
-}
-
-@media only screen and (max-width: 230px) {
-  .check1 input[type="checkbox"] + label {
-    position: absolute;
-    left: 84%;
-    bottom: 45.5%;
-  }
-  .check1 input[type="checkbox"]:checked + label {
-    position: absolute;
-    left: 84%;
-    bottom: 45.1%;
+    bottom: 48.6%;
   }
 }
 
