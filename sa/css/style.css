@@ -2327,7 +2327,17 @@ input[type="checkbox"]:checked + label {
 @media screen and (max-width: 1024px) {
   .btn-logout-mobile {
     display: block;
-    width: 97.7%;
+    width: 98.7%;
+    padding: 15px 0;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 2.5px;
+    transition: 1s all;
+    cursor: pointer;
+    color: #ffffff;
+    border: 1px solid #2f00ff;
+    background-color: #441afa;
   }
 }
 @media screen and (max-width: 1300px) {
