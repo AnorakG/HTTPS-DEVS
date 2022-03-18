@@ -41,3 +41,46 @@
     border: 1px solid rgb(91, 178, 189);
     background-color: rgb(221, 221, 221);
 }
+@media screen and (max-width:987px) {
+    .btn-voltar{
+        width: 50%;
+        padding: 15px 0;
+        margin-left: 25%;
+    }
+}
+@media screen and (max-width:651px) {
+    .check3 input[type=checkbox]+label{
+        position: absolute;
+        left: 84%;
+        bottom: 41.5%;
+    }
+    .check3 input[type=checkbox]:checked+label{
+        position: absolute;
+        left: 84%;
+        bottom: 41.1%;
+    }
+}
+@media screen and (max-width:400px) {
+    .check3 input[type=checkbox]+label{
+        position: absolute;
+        left: 84%;
+        bottom: 43.7%;
+    }
+    .check3 input[type=checkbox]:checked+label{
+        position: absolute;
+        left: 84%;
+        bottom: 43.3%;
+    }
+}
+@media screen and (max-width:271px) {
+    .check3 input[type=checkbox]+label{
+        position: absolute;
+        left: 84%;
+        bottom: 45.8%;
+    }
+    .check3 input[type=checkbox]:checked+label{
+        position: absolute;
+        left: 84%;
+        bottom: 45.4%;
+    }
+}

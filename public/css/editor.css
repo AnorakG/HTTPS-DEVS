@@ -1,43 +1,87 @@
-.check3 input[type=checkbox]+label{
-    position: absolute;
-    left: 84%;
-    bottom: 42.3%;
+.check3 input[type="checkbox"] + label {
+  position: absolute;
+  left: 84%;
+  bottom: 42.3%;
 }
-.check3 input[type=checkbox]:checked+label{
-    position: absolute;
-    left: 84%;
-    bottom: 41.9%;
+.check3 input[type="checkbox"]:checked + label {
+  position: absolute;
+  left: 84%;
+  bottom: 41.9%;
 }
-#emailNovo, #senhaNova2{
-    margin-bottom: 10px;
+#emailNovo,
+#senhaNova2 {
+  margin-bottom: 10px;
 }
-.btn-editar{
-    position: relative;
+.btn-editar {
+  position: relative;
+  width: 50%;
+  margin-left: 25%;
+  padding: 15px 0;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 2.5px;
+  transition: 1s all;
+  cursor: pointer;
+  color: #ffffff;
+  border: 1px solid #181818;
+  background-color: black;
+}
+.btn-voltar {
+  position: relative;
+  margin: 0.5% 0 0 33%;
+  width: 33%;
+  padding: 15px 0;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 2.5px;
+  transition: 1s all;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(91, 178, 189);
+  background-color: rgb(221, 221, 221);
+}
+@media screen and (max-width: 987px) {
+  .btn-voltar {
     width: 50%;
+    padding: 15px 0;
     margin-left: 25%;
-    padding: 15px 0;
-    font-weight: bold;
-    font-size: 16px;
-    border: none;
-    border-radius: 2.5px;
-    transition: 1s all;
-    cursor: pointer;
-    color: #ffffff;
-    border: 1px solid #181818;
-    background-color: black;
+  }
 }
-.btn-voltar{
-    position: relative;
-    margin: 0.5% 0 0 33%;
-    width: 33%;
-    padding: 15px 0;
-    font-weight: bold;
-    font-size: 16px;
-    border: none;
-    border-radius: 2.5px;
-    transition: 1s all;
-    cursor: pointer;
-    color: rgb(0, 0, 0);
-    border: 1px solid rgb(91, 178, 189);
-    background-color: rgb(221, 221, 221);
+@media screen and (max-width: 651px) {
+  .check3 input[type="checkbox"] + label {
+    position: absolute;
+    left: 84%;
+    bottom: 41.5%;
+  }
+  .check3 input[type="checkbox"]:checked + label {
+    position: absolute;
+    left: 84%;
+    bottom: 41.1%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .check3 input[type="checkbox"] + label {
+    position: absolute;
+    left: 84%;
+    bottom: 43.7%;
+  }
+  .check3 input[type="checkbox"]:checked + label {
+    position: absolute;
+    left: 84%;
+    bottom: 43.3%;
+  }
+}
+@media screen and (max-width: 271px) {
+  .check3 input[type="checkbox"] + label {
+    position: absolute;
+    left: 84%;
+    bottom: 45.8%;
+  }
+  .check3 input[type="checkbox"]:checked + label {
+    position: absolute;
+    left: 84%;
+    bottom: 45.4%;
+  }
 }
