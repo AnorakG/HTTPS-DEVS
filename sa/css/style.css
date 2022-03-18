@@ -952,12 +952,22 @@ input[type="checkbox"]:checked + label {
   }
 }
 
-@media screen and (max-width: 1760px) {
+@media screen and (max-width: 1800px) {
   .perfil {
     margin-left: 325%;
   }
   #dropdownDoPerfil {
     margin-left: 318%;
+  }
+}
+
+
+@media screen and (max-width: 1760px) {
+  .perfil {
+    margin-left: 320%;
+  }
+  #dropdownDoPerfil {
+    margin-left: 313%;
   }
 }
 @media screen and (max-width: 1730px) {
