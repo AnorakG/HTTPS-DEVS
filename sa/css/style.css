@@ -239,6 +239,7 @@ li.dropdown {
   background-color: #ffffff;
   height: min-content;
   width: 25%;
+  z-index: 3;
   border-radius: 2%;
   margin-left: -7%;
 }
@@ -946,84 +947,126 @@ input[type="checkbox"]:checked + label {
   .perfil {
     margin-left: 325%;
   }
+  #dropdownDoPerfil {
+    margin-left: 318%;
+}
 }
 
 @media screen and (max-width: 1730px) {
   .perfil {
     margin-left: 315%;
   }
+  #dropdownDoPerfil {
+    margin-left: 308%;
+}
 }
 
 @media screen and (max-width: 1696px) {
   .perfil {
     margin-left: 305%;
   }
+  #dropdownDoPerfil {
+    margin-left: 298%;
+}
 }
 
 @media screen and (max-width: 1618px) {
   .perfil {
     margin-left: 285%;
   }
+  #dropdownDoPerfil {
+    margin-left: 278%;
+}
 }
 
 @media screen and (max-width: 1518px) {
   .perfil {
     margin-left: 265%;
   }
+  #dropdownDoPerfil {
+    margin-left: 258%;
+}
 }
 
 @media screen and (max-width: 1421px) {
   .perfil {
     margin-left: 245%;
   }
+  #dropdownDoPerfil {
+    margin-left: 238%;
+}
 }
 
 @media screen and (max-width: 1320px) {
   .perfil {
     margin-left: 225%;
   }
+  #dropdownDoPerfil {
+    margin-left: 218%;
+}
 }
 
 @media screen and (max-width: 1218px) {
   .perfil {
     margin-left: 205%;
   }
+  #dropdownDoPerfil {
+    margin-left: 198%;
+}
 }
 
 @media screen and (max-width: 1118px) {
   .perfil {
     margin-left: 195%;
   }
+  #dropdownDoPerfil {
+    margin-left: 188%;
+}
 }
 
 @media screen and (max-width: 1098px) {
   .perfil {
     margin-left: 185%;
   }
+  #dropdownDoPerfil {
+    margin-left: 178%;
+}
 }
 
 @media screen and (max-width: 1018px) {
   .perfil {
     margin-left: 175%;
   }
+  #dropdownDoPerfil {
+    margin-left: 167%;
+}
 }
 
 @media screen and (max-width: 998px) {
   .perfil {
     margin-left: 165%;
   }
+  #dropdownDoPerfil {
+    margin-left: 158%;
+}
 }
 
 @media screen and (max-width: 912px) {
   .perfil {
     margin-left: 145%;
   }
+  #dropdownDoPerfil {
+    margin-left: 138%;
+}
 }
 
 @media screen and (max-width: 809px) {
   .perfil {
     margin-left: 135%;
   }
+  #dropdownDoPerfil {
+    margin-left: 128%;
+}
   .urbana {
     margin-left: 5%;
     width: 28%;
@@ -1035,6 +1078,9 @@ input[type="checkbox"]:checked + label {
   .perfil {
     margin-left: 125%;
   }
+  #dropdownDoPerfil {
+    margin-left: 118%;
+}
 }
 /*pesquisa*/
 
@@ -1239,48 +1285,72 @@ input[type="checkbox"]:checked + label {
   .perfil {
     margin-left: 125%;
   }
+  #dropdownDoPerfil {
+    margin-left: 118%;
+}
 }
 
 @media screen and (max-width: 715px) {
   .perfil {
     margin-left: 120%;
   }
+  #dropdownDoPerfil {
+    margin-left: 113%;
+}
 }
 
 @media screen and (max-width: 688px) {
   .perfil {
     margin-left: 115%;
   }
+  #dropdownDoPerfil {
+    margin-left: 108%;
+}
 }
 
 @media screen and (max-width: 656px) {
   .perfil {
     margin-left: 110%;
   }
+  #dropdownDoPerfil {
+    margin-left: 103%;
+}
 }
 
 @media screen and (max-width: 625px) {
   .perfil {
     margin-left: 105%;
   }
+  #dropdownDoPerfil {
+    margin-left: 98%;
+}
 }
 
 @media screen and (max-width: 610px) {
   .perfil {
     margin-left: 100%;
   }
+  #dropdownDoPerfil {
+    margin-left: 93%;
+}
 }
 
 @media screen and (max-width: 600px) {
   .perfil {
     margin-left: 100%;
   }
+  #dropdownDoPerfil {
+    margin-left: 93%;
+}
 }
 
 @media screen and (max-width: 600px) {
   .perfil {
     margin-left: 90%;
   }
+  #dropdownDoPerfil {
+    margin-left: 83%;
+}
   .nav {
     position: absolute;
     text-align: center;
@@ -1298,6 +1368,9 @@ input[type="checkbox"]:checked + label {
   .perfil {
     margin-left: 85%;
   }
+  #dropdownDoPerfil {
+    margin-left: 78%;
+}
   .urbana {
     margin-left: 4%;
     width: 20%;
@@ -1313,18 +1386,27 @@ input[type="checkbox"]:checked + label {
   .perfil {
     margin-left: 100%;
   }
+  #dropdownDoPerfil {
+    margin-left: 93%;
+}
 }
 
 @media screen and (max-width: 591px) {
   .perfil {
     margin-left: 95%;
   }
+  #dropdownDoPerfil {
+    margin-left: 88%;
+}
 }
 
 @media screen and (max-width: 566px) {
   .perfil {
     margin-left: 90%;
   }
+  #dropdownDoPerfil {
+    margin-left: 83%;
+}
 }
 
 @media screen and (max-width: 375px) {
@@ -1339,6 +1421,9 @@ input[type="checkbox"]:checked + label {
     margin-left: 85%;
     margin-top: 5%;
   }
+  #dropdownDoPerfil {
+    margin-left: 78%;
+}
   .urbana {
     margin-left: 4%;
     width: 23%;
@@ -1358,6 +1443,9 @@ input[type="checkbox"]:checked + label {
     margin-left: 85%;
     margin-top: 5%;
   }
+  #dropdownDoPerfil {
+    margin-left: 78%;
+}
   .urbana {
     margin-left: 4%;
     width: 23%;
@@ -1377,6 +1465,9 @@ input[type="checkbox"]:checked + label {
     margin-left: 80%;
     margin-top: 6.5%;
   }
+  #dropdownDoPerfil {
+    margin-left: 73%;
+}
   .urbana {
     margin-left: 4%;
     width: 23%;
@@ -1396,6 +1487,9 @@ input[type="checkbox"]:checked + label {
     margin-left: 80%;
     margin-top: 6.5%;
   }
+  #dropdownDoPerfil {
+    margin-left: 73%;
+}
   .urbana {
     margin-left: 4%;
     width: 23%;
@@ -2340,18 +2434,7 @@ input[type="checkbox"]:checked + label {
     background-color: #441afa;
   }
 }
-@media screen and (max-width: 1300px) {
-  .dropdown-conteudo {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    height: min-content;
-    z-index: 3;
-    width: 25%;
-    border-radius: 2%;
-    margin-left: -7%;
-  }
-}
+
 @media only screen and (max-width: 1365px) and (min-width: 200px) {
   .intro-focus2 {
     position: relative;
@@ -2415,3 +2498,286 @@ input[type="checkbox"]:checked + label {
     color: rgb(0, 0, 0);
   }
 }
+@media only screen and (min-width: 1200px) and (max-width: 1300) {
+    .dropdown-conteudo {
+        display: none;
+        background-color: #ffffff;
+        height: min-content;
+        z-index: 3;
+        width: 25%;
+        border-radius: 2%;
+       
+    }
+}
+@media only screen and (min-width: 1100px) and (max-width: 1200px) {
+   
+    .dropdown-conteudo {
+        position: absolute;
+        display: none;
+        background-color: #ffffff;
+        height: min-content;
+        width: 25%;
+        z-index: 3;
+        top: 95%;
+        border-radius: 2%;
+        margin-left: -5%;
+    }
+    .dropdown-conteudo a {
+        font-family: "Zilla Slab", serif;
+        font-size: 15px;
+        color: black;
+        padding: 13px 1px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        position: relative;
+        height: 7px;
+        font-weight: bold;
+    }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1100px) {
+   
+    .dropdown-conteudo {
+        position: absolute;
+        display: none;
+        background-color: #ffffff;
+        height: min-content;
+        width: 26%;
+        top: 95%;
+        z-index: 3;
+        border-radius: 2%;
+        margin-left: -4%;
+    }
+    .dropdown-conteudo a {
+        font-family: "Zilla Slab", serif;
+        font-size: 15px;
+        color: black;
+        padding: 13px 1px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        position: relative;
+        height: 5px;
+        font-weight: bold;
+    }
+}
+@media only screen and (min-width: 900px) and (max-width: 1000px) {
+   
+    .dropdown-conteudo {
+        position: absolute;
+        display: none;
+        background-color: #ffffff;
+        height: min-content;
+        width: 27%;
+        top: 94%;
+        z-index: 3;
+        border-radius: 2%;
+        margin-left: -4%;
+    }
+    .dropdown-conteudo a {
+        font-family: "Zilla Slab", serif;
+        font-size: 15px;
+        color: black;
+        padding: 13px 1px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        position: relative;
+        height: 5px;
+        font-weight: bold;
+    }
+}
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+   
+    .dropdown-conteudo {
+        position: absolute;
+        display: none;
+        background-color: #ffffff;
+        height: min-content;
+        width: 27%;
+        top: 93%;
+        z-index: 3;
+        border-radius: 2%;
+        margin-left: -2.5%;
+    }
+    .dropdown-conteudo a {
+        font-family: "Zilla Slab", serif;
+        font-size: 15px;
+        color: black;
+        padding: 13px 1px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        position: relative;
+        height: 5px;
+        font-weight: bold;
+    }
+}
+@media only screen and (min-width: 700px) and (max-width: 800px) {
+   
+    .dropdown-conteudo {
+        position: absolute;
+        display: none;
+        background-color: #ffffff;
+        height: min-content;
+        width: 27%;
+        top: 91%;
+        z-index: 3;
+        border-radius: 2%;
+        margin-left: -1.1%;
+    }
+    .dropdown-conteudo a {
+        font-family: "Zilla Slab", serif;
+        font-size: 13px;
+        color: black;
+        padding: 13px 1px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        position: relative;
+        height: 5px;
+        font-weight: bold;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 700px) {
+   
+    .dropdown-conteudo {
+        position: absolute;
+        display: none;
+        background-color: #ffffff;
+        height: min-content;
+        width: 28%;
+        top: 89%;
+        z-index: 3;
+        border-radius: 2%;
+        margin-left: -1.5%;
+    }
+    .dropdown-conteudo a {
+        font-family: "Zilla Slab", serif;
+        font-size: 13px;
+        color: black;
+        padding: 13px 1px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        position: relative;
+        height: 5px;
+        font-weight: bold;
+    }
+}
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+   
+    .dropdown-conteudo {
+        position: absolute;
+        display: none;
+        background-color: #ffffff;
+        height: min-content;
+        width: 32.4%;
+        top: 87%;
+        z-index: 3;
+        border-radius: 2%;
+        margin-left: -2.5%;
+    }
+    .dropdown-conteudo a {
+        font-family: "Zilla Slab", serif;
+        font-size: 13px;
+        color: black;
+        padding: 13px 1px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        position: relative;
+        height: 5px;
+        font-weight: bold;
+    }
+}
+@media only screen and (min-width: 400px) and (max-width: 500px) {
+   
+    .dropdown-conteudo {
+        position: absolute;
+        display: none;
+        background-color: #ffffff;
+        height: min-content;
+        width: 40%;
+        top: 85%;
+        z-index: 3;
+        border-radius: 2%;
+        margin-left: -6%;
+    }
+    .dropdown-conteudo a {
+        font-family: "Zilla Slab", serif;
+        font-size: 11px;
+        color: black;
+        padding: 13px 1px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        position: relative;
+        height: 5px;
+        font-weight: bold;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 400px) {
+   
+    .dropdown-conteudo {
+        position: absolute;
+        display: none;
+        background-color: #ffffff;
+        height: min-content;
+        width: 47%;
+        top: 85%;
+        z-index: 3;
+        border-radius: 2%;
+        margin-left: -11%;
+    }
+    .dropdown-conteudo a {
+        font-family: "Zilla Slab", serif;
+        font-size: 10px;
+        color: black;
+        padding: 13px 1px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        position: relative;
+        height: 5px;
+        font-weight: bold;
+    }
+}
+@media only screen and (min-width: 200px) and (max-width: 300px) {
+   
+    .dropdown-conteudo {
+        position: absolute;
+        display: none;
+        background-color: #ffffff;
+        height: min-content;
+        width: 58%;
+        top: 83%;
+        z-index: 3;
+        border-radius: 2%;
+        margin-left: -13%;
+    }
+    .dropdown-conteudo a {
+        font-family: "Zilla Slab", serif;
+        font-size: 9px;
+        color: black;
+        padding: 13px 1px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        position: relative;
+        height: 5px;
+        font-weight: bold;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
