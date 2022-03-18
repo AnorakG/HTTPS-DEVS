@@ -943,7 +943,16 @@ input[type="checkbox"]:checked + label {
   }
 }
 
-@media screen and (max-width: 1836px) {
+@media screen and (max-width: 1865px) {
+  .perfil {
+    margin-left: 330%;
+  }
+  #dropdownDoPerfil {
+    margin-left: 323%;
+  }
+}
+
+@media screen and (max-width: 1760px) {
   .perfil {
     margin-left: 325%;
   }
@@ -951,40 +960,38 @@ input[type="checkbox"]:checked + label {
     margin-left: 318%;
   }
 }
-
 @media screen and (max-width: 1730px) {
   .perfil {
-    margin-left: 315%;
+    margin-left: 310%;
   }
   #dropdownDoPerfil {
-    margin-left: 308%;
+    margin-left: 303%;
   }
 }
-
 @media screen and (max-width: 1696px) {
   .perfil {
-    margin-left: 305%;
+    margin-left: 290%;
   }
   #dropdownDoPerfil {
-    margin-left: 298%;
+    margin-left: 283%;
   }
 }
 
 @media screen and (max-width: 1618px) {
   .perfil {
-    margin-left: 285%;
+    margin-left: 275%;
   }
   #dropdownDoPerfil {
-    margin-left: 278%;
+    margin-left: 268%;
   }
 }
 
 @media screen and (max-width: 1518px) {
   .perfil {
-    margin-left: 265%;
+    margin-left: 255%;
   }
   #dropdownDoPerfil {
-    margin-left: 258%;
+    margin-left: 248%;
   }
 }
 
@@ -997,7 +1004,7 @@ input[type="checkbox"]:checked + label {
   }
 }
 
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 1360px) {
   .perfil {
     margin-left: 225%;
   }
@@ -1006,7 +1013,7 @@ input[type="checkbox"]:checked + label {
   }
 }
 
-@media screen and (max-width: 1218px) {
+@media screen and (max-width: 1260px) {
   .perfil {
     margin-left: 205%;
   }
@@ -1015,7 +1022,7 @@ input[type="checkbox"]:checked + label {
   }
 }
 
-@media screen and (max-width: 1118px) {
+@media screen and (max-width: 1150px) {
   .perfil {
     margin-left: 195%;
   }
@@ -1026,19 +1033,19 @@ input[type="checkbox"]:checked + label {
 
 @media screen and (max-width: 1098px) {
   .perfil {
-    margin-left: 185%;
-  }
-  #dropdownDoPerfil {
-    margin-left: 178%;
-  }
-}
-
-@media screen and (max-width: 1018px) {
-  .perfil {
     margin-left: 175%;
   }
   #dropdownDoPerfil {
-    margin-left: 167%;
+    margin-left: 168%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .perfil {
+    margin-left: 165%;
+  }
+  #dropdownDoPerfil {
+    display: none !important;
   }
 }
 
@@ -1046,26 +1053,17 @@ input[type="checkbox"]:checked + label {
   .perfil {
     margin-left: 165%;
   }
-  #dropdownDoPerfil {
-    margin-left: 158%;
-  }
 }
 
 @media screen and (max-width: 912px) {
   .perfil {
     margin-left: 145%;
   }
-  #dropdownDoPerfil {
-    margin-left: 138%;
-  }
 }
 
 @media screen and (max-width: 809px) {
   .perfil {
     margin-left: 135%;
-  }
-  #dropdownDoPerfil {
-    margin-left: 128%;
   }
   .urbana {
     margin-left: 5%;
@@ -1077,9 +1075,6 @@ input[type="checkbox"]:checked + label {
 @media screen and (max-width: 706px) {
   .perfil {
     margin-left: 125%;
-  }
-  #dropdownDoPerfil {
-    margin-left: 118%;
   }
 }
 /*pesquisa*/
