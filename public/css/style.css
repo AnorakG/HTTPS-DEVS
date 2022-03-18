@@ -2005,6 +2005,17 @@ input[type="checkbox"]:checked + label {
     left: 84%;
     bottom: 49.5%;
   }
+  .check2 input[type="checkbox"] + label {
+    position: absolute;
+    left: 84%;
+    bottom: 61.5%;
+  }
+  
+  .check2 input[type="checkbox"]:checked + label {
+    position: absolute;
+    left: 84%;
+    bottom: 61.1%;
+  }
 }
 
 @media only screen and (max-width: 350px) {
