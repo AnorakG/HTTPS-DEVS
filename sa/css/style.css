@@ -813,10 +813,21 @@ footer {
 }
 
 .footer-padrao {
-  text-align: center;
+  border: 1px #000000 solid;
   position: relative;
   width: 30%;
   margin-left: 35%;
+}
+.lista-footer li{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+  justify-content: center;
+  border: 1px solid black;
+  width: 30%
+}
+.iconsFooter{
+  width: 100%;
 }
 
 .titulo-footer {
@@ -891,6 +902,12 @@ input[type="checkbox"]:checked + label {
   border: 1px solid #303030;
   background-color: #b3b3b3;
 }
+
+
+.iconsFooter{
+  width: 10%;
+}
+
 
 @media only screen and (max-width: 1366px) and (max-height: 768px) {
   .nav-lista {
