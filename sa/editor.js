@@ -55,21 +55,21 @@ function editarEmail(){
         Swal.fire({
             title:'Insira o novo e-mail desejado por favor.',
             icon:'warning',
-            timer:'700',
+            timer:'1000',
             showConfirmButton: false
         })
     }else if(contas.find(verificarEmail)){
         Swal.fire({
             title:'E-mail já cadastrado.',
             icon:'warning',
-            timer:'700',
+            timer:'1000',
             showConfirmButton: false
         })
     }else{
         Swal.fire({
             title:'Novo e-mail cadastrado.',
             icon:'success',
-            timer:'700',
+            timer:'1000',
             showConfirmButton: false
         })
         contas[editarUser].email = emailNovo.value
@@ -86,21 +86,21 @@ function editarSenha(){
         Swal.fire({
             title:'Insira a nova senha desejada por favor.',
             icon:'warning',
-            timer:'700',
+            timer:'1000',
             showConfirmButton: false
         })
     }else if(senhaNova1.value != senhaNova2.value){
         Swal.fire({
             title: 'As senhas não combinam.',
             icon: 'error',
-            timer:'700',
+            timer:'1000',
             showConfirmButton: false
         })
     }else{
         Swal.fire({
             title:'Nova senha cadastrada.',
             icon:'success',
-            timer:'700',
+            timer:'1000',
             showConfirmButton: false
         })
         contas[editarUser].senha = senhaNova2.value

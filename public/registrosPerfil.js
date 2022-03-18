@@ -310,13 +310,13 @@ function editarRegistroObras(id){
                 Swal.fire({
                     title: 'Data final mais recente que a data inicial',
                     icon: 'error',
-                    timer:'800'
+                    timer:'1000'
                 })
             }else{
                 obras[index].dataFinal = edit2.split('-').reverse().join('/')
             }
             obras[index].image = edit3;
             localStorage.setItem("obras", JSON.stringify(obras))
-            setTimeout(function(){window.location.reload(true)},800)
+            setTimeout(function(){window.location.reload(true)},1000)
     }})
 }
