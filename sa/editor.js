@@ -65,6 +65,13 @@ function editarEmail(){
             timer:'1000',
             showConfirmButton: false
         })
+    }else if(!emailValidation(emailNovo)){
+        Swal.fire({
+            title:'E-mail invalido.',
+            icon:'warning',
+            timer:'1000',
+            showConfirmButton: false
+        })
     }else{
         Swal.fire({
             title:'Novo e-mail cadastrado.',

@@ -63,7 +63,15 @@ function dropdown(){
 localStorage.setItem('admin',JSON.stringify(admin))
 localStorage.setItem('users', JSON.stringify(users))
 
+function emailValidation(emailDigitado){
+    var mail_format = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
+    if(emailDigitado.value.match(mail_format)){
+        return true
+    }else{
+        return false
+    }
+}
 senhaVisivel1.addEventListener('change', (event) => {
     if (event.currentTarget.checked) {
       senha1.type="text"
@@ -164,6 +172,12 @@ function cadastrar(){
     }else if(senha1.value != senha2.value){
         Swal.fire({
             title: 'Senhas não combinam >=(',
+            icon: 'error',
+            timer:'1000'
+        })
+    }else if(!emailValidation(email)){
+        Swal.fire({
+            title: 'E-mail Invalido!',
             icon: 'error',
             timer:'1000'
         })
