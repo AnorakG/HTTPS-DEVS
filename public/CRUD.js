@@ -71,13 +71,13 @@ function registrarDenuncias(){
         Swal.fire({
             title: 'Preencha todos os campos',
             icon: 'error',
-            timer:'1000'
+            timer:'5000'
         })
     }else if(logado !=="sim"){
         Swal.fire({
             title: 'É preciso estar logado para utilizar nossos serviços',
             icon: 'error',
-            timer:'1000'
+            timer:'5000'
         })
     }else{
         let conta = JSON.parse(getCookie("conta"))
@@ -87,7 +87,7 @@ function registrarDenuncias(){
         Swal.fire({
             title: 'Obrigado pela denunciar! <br> Denúncia realizada',
             icon: 'success',
-            timer:'900'
+            timer:'5000'
         })
         problema.value = '';
         endereco.value = '';
@@ -119,19 +119,19 @@ function registrarObras(){
         Swal.fire({
             title: 'Preencha todos os campos',
             icon: 'error',
-            timer:'1000'
+            timer:'5000'
         })
     }else if(logado !=="sim"){
         Swal.fire({
             title: 'É preciso estar logado para utilizar nossos serviços',
             icon: 'error',
-            timer:'1000'
+            timer:'5000'
         })
     }else if(confirmaData(dataInicial.value,dataFinal.value) == false){
         Swal.fire({
             title: 'Data final mais recente que a data inicial',
             icon: 'error',
-            timer:'1000'
+            timer:'5000'
         })
     }else{
         let conta = JSON.parse(getCookie("conta"))
@@ -141,7 +141,7 @@ function registrarObras(){
         Swal.fire({
             title: 'Obrigado pelo registro ! <br> Registro realizado',
             icon: 'success',
-            timer:'900'
+            timer:'5000'
         })
         descricao.value = '';
         enderecoObra.value = '';

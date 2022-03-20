@@ -170,31 +170,31 @@ function cadastrar() {
     Swal.fire({
       title: "Preencha todos os campos antes de se cadastrar",
       icon: "error",
-      timer: "1000",
+      timer: "5000",
     });
   } else if (users.find(confirmarNome) || admin.find(confirmarAdmin)) {
     Swal.fire({
       title: "Nome de usuário já cadastrado <br> Tente outro",
       icon: "error",
-      timer: "1000",
+      timer: "5000",
     });
   } else if (users.find(confirmarEmail)) {
     Swal.fire({
       title: "E-mail já cadastrado <br> Esqueceu sua senha?",
       icon: "question",
-      timer: "1000",
+      timer: "5000",
     });
   } else if (senha1.value != senha2.value) {
     Swal.fire({
       title: "Senhas não combinam >=(",
       icon: "error",
-      timer: "1000",
+      timer: "5000",
     });
   } else if (!emailValidation(email)) {
     Swal.fire({
       title: "E-mail Invalido!",
       icon: "error",
-      timer: "1000",
+      timer: "5000",
     });
   } else {
     users.push({
@@ -211,12 +211,12 @@ function cadastrar() {
     Swal.fire({
       title: "Parabéns por se cadastrar! <br> Cadastro realizado =",
       icon: "success",
-      timer: "1000",
+      timer: "5000",
     });
     setTimeout(function () {
       formCadastro.style.display = "none";
       formLogin.style.display = "inline";
-    }, 1000);
+    }, 5000);
   }
 }
 // As três funções abaixo confirmam os dados do cadastro do usuário.
@@ -267,7 +267,7 @@ function confirmar() {
     Swal.fire({
       title: "Cadastre-se por favor.",
       icon: "warning",
-      timer: "1000",
+      timer: "5000",
       showConfirmButton: false,
     });
   }
@@ -279,7 +279,7 @@ function confirmarSenha() {
     Swal.fire({
       title: "Você está logado.",
       icon: "success",
-      timer: "1000",
+      timer: "5000",
     });
     console.log("Senha Correta!");
     senhaUsuario.value = "";
@@ -295,7 +295,7 @@ function confirmarSenha() {
       title:
         "Senha ou usuário incorretas <br> Tente novamente ou cadastre-se por favor.",
       icon: "error",
-      timer: "1000",
+      timer: "5000",
     });
   }
 }
@@ -324,12 +324,12 @@ function logOut() {
   Swal.fire({
     title: "Logout feito com sucesso <br> volte sempre =)",
     icon: "success",
-    timer: "1000",
+    timer: "5000",
     showConfirmButton: false,
   });
   setTimeout(function () {
     window.location.href = "./index.html";
-  }, 1100);
+  }, 5100);
 }
 // Essa função da acesso aos dados pessoais do usuário.
 
@@ -414,7 +414,7 @@ function deletar() {
         title: "Conta Deletada",
         text: "Sua conta foi deletada com sucesso.",
         icon: "success",
-        timer: "1000",
+        timer: "5000",
         showConfirmButton: false,
       });
       for (var i = 0; i < cookies.length; i++) {
@@ -426,7 +426,7 @@ function deletar() {
       }
       setTimeout(function () {
         window.location.href = "./index.html";
-      }, 1100);
+      }, 5100);
     }
   });
 }
