@@ -85,7 +85,7 @@ function registrarDenuncias(){
         localStorage.setItem("denuncias", JSON.stringify(denuncias))
         console.log("Denuncia feita")
         Swal.fire({
-            title: 'Obrigado pela denunciar! <br> Denúncia realizada',
+            title: 'Obrigado pela denúncia! <br> Denúncia realizada',
             icon: 'success',
             timer:'900'
         })
