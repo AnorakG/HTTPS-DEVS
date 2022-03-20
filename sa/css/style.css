@@ -797,43 +797,60 @@ ul {
 }
 
 footer {
+  bottom: 0;
   border-top: 0.1px solid rgb(179, 179, 179);
   position: relative;
   width: 100%;
   height: auto;
   background: rgba(255, 255, 255);
   margin: 0;
-  font-family: "Zilla Slab", serif;
-  font-size: 22px;
   color: rgb(0, 0, 0);
-  padding: 2.5% 0;
+  padding: 3% 0 8% 0;
   -moz-box-shadow: 0px 0px 10px 1px rgb(0, 0, 0, 0.5);
   -webkit-box-shadow: 0px 0px 10px 1px rgb(0, 0, 0, 0.5);
   box-shadow: 0px 0px 10px 1px rgb(0, 0, 0, 0.5);
 }
+.lista-footer-container{
+  padding: 5% 0;
+}
 
 .footer-padrao {
-  border: 1px #000000 solid;
   position: relative;
-  width: 30%;
-  margin-left: 35%;
+  width: 60%;
+  margin-left: 20%;
+}
+.lista-footer{
+  display: block; 
+  padding: 0;     
+  margin: 0;       
+  width: 100%;
 }
 .lista-footer li{
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 5%;
-  justify-content: center;
-  border: 1px solid black;
-  width: 30%
+  margin-left: 6.25%;
+  width: 25%;
+  float: left;
+  text-align: center;
 }
+
 .iconsFooter{
-  width: 100%;
+  width:50%;
+}
+.iconsFooter:hover{
+  background-color: #b5faff;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .titulo-footer {
   margin: 10px 0;
   font-weight: bold;
+  text-align: center;
+  font-family: "Zilla Slab", serif;
+  font-size: 30px;
+  font-weight: bold;
 }
+
+
 
 * {
   font-family: "Zilla Slab", serif;
@@ -903,10 +920,6 @@ input[type="checkbox"]:checked + label {
   background-color: #b3b3b3;
 }
 
-
-.iconsFooter{
-  width: 10%;
-}
 
 
 @media only screen and (max-width: 1366px) and (max-height: 768px) {
@@ -1103,6 +1116,7 @@ input[type="checkbox"]:checked + label {
   .perfil {
     margin-left: 125%;
   }
+  
 }
 /*pesquisa*/
 
@@ -1472,6 +1486,15 @@ input[type="checkbox"]:checked + label {
     margin-left: 4%;
     width: 23%;
     margin-top: 4%;
+  }
+  footer{
+    padding: 2.5% 0 55% 0;
+  }
+  .lista-footer li{
+    margin: 0 0 5% 25%;
+    width: 50%;
+    float: left;
+    text-align: center;
   }
 }
 
@@ -1850,7 +1873,7 @@ input[type="checkbox"]:checked + label {
     font-family: "Zilla Slab", serif;
     font-size: 14px;
     color: rgb(0, 0, 0);
-    padding: 2.5% 0;
+    padding: 2.5% 0 55% 0;
     -moz-box-shadow: 0px 0px 10px 1px rgb(0, 0, 0, 0.5);
     -webkit-box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 50%);
     box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 50%);
