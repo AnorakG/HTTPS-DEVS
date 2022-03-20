@@ -139,7 +139,7 @@ function registrarObras(){
         localStorage.setItem("obras", JSON.stringify(obras))
         console.log("Registro feito")
         Swal.fire({
-            title: 'Obrigado pelo registro ! <br> Registro realizado',
+            title: 'Obrigado pelo registro! <br> Registro realizado',
             icon: 'success',
             timer:'5000'
         })
