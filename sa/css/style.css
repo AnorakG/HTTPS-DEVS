@@ -833,7 +833,7 @@ footer {
 }
 
 .iconsFooter{
-  width:50%;
+  width:35%;
 }
 .iconsFooter:hover{
   background-color: #b5faff;
@@ -1487,15 +1487,7 @@ input[type="checkbox"]:checked + label {
     width: 23%;
     margin-top: 4%;
   }
-  footer{
-    padding: 2.5% 0 55% 0;
-  }
-  .lista-footer li{
-    margin: 0 0 5% 25%;
-    width: 50%;
-    float: left;
-    text-align: center;
-  }
+ 
 }
 
 @media screen and (max-width: 327px) {
@@ -1586,6 +1578,9 @@ input[type="checkbox"]:checked + label {
     margin-top: 6%;
     width: 75px;
   }
+  .iconsFooter {
+    width: 45%;
+}
 }
 
 @media screen and (max-width: 561px) {
@@ -1653,6 +1648,9 @@ input[type="checkbox"]:checked + label {
     margin-top: 6%;
     width: 50px;
   }
+  .iconsFooter{
+    width: 70%;
+  }
 }
 
 @media screen and (max-width: 293px) {
@@ -1674,6 +1672,7 @@ input[type="checkbox"]:checked + label {
     margin-top: 60%;
     width: 50px;
   }
+  
 }
 
 @media screen and (max-width: 223px) {
@@ -1771,6 +1770,9 @@ input[type="checkbox"]:checked + label {
     font-weight: bold;
     color: rgb(0, 0, 0);
   }
+  .iconsFooter {
+    width: 70%;
+}
 }
 
 @media screen and (max-width: 250px) {
@@ -1863,21 +1865,7 @@ input[type="checkbox"]:checked + label {
     font-size: 13px;
     width: 70%;
   }
-  footer {
-    border-top: 0.1px solid rgb(179, 179, 179);
-    position: relative;
-    width: 100%;
-    height: auto;
-    background: rgba(255, 255, 255);
-    margin: 0;
-    font-family: "Zilla Slab", serif;
-    font-size: 14px;
-    color: rgb(0, 0, 0);
-    padding: 2.5% 0 55% 0;
-    -moz-box-shadow: 0px 0px 10px 1px rgb(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 50%);
-    box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 50%);
-  }
+  
   .container-intro {
     width: 100%;
     margin: 0;
@@ -1988,6 +1976,7 @@ input[type="checkbox"]:checked + label {
     -webkit-box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 50%);
     box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 50%);
   }
+  
 }
 
 @media only screen and (min-width: 585px) and (max-width: 600px) {
@@ -2105,6 +2094,7 @@ input[type="checkbox"]:checked + label {
     left: 84%;
     bottom: 48.6%;
   }
+  
 }
 
 @media only screen and (max-width: 515px) {
@@ -2163,6 +2153,14 @@ input[type="checkbox"]:checked + label {
     left: 84%;
     bottom: 49.7%;
   }
+  .titulo-footer {
+    margin: 10px 0;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Zilla Slab", serif;
+    font-size: 20px;
+    font-weight: bold;
+}
   .check1 input[type="checkbox"]:checked + label {
     position: absolute;
     left: 84%;
