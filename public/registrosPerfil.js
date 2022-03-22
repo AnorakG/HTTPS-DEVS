@@ -226,6 +226,7 @@ function deletarRegistro(td, id){
         console.log(index)
         denuncias.splice(index,1)
         localStorage.setItem("denuncias",JSON.stringify(denuncias))
+        setTimeout(function(){window.location.reload(true)},100)
       }})
 }
 // Essa função permite que o usuário possa deletar um unico registro de obras registradas.
@@ -247,6 +248,7 @@ function deletarRegistroObras(td, id){
         let index = obras.findIndex((elem)=> {return elem.id == id})
         obras.splice(index,1)
         localStorage.setItem("obras",JSON.stringify(obras))
+        setTimeout(function(){window.location.reload(true)},100)
       }})
 }
 // Essa função permite que o usuário possa editar os dados de um único registro de denúncia.
