@@ -261,7 +261,7 @@ function editarRegistro(id){
         '<br>'+'<label for="swal-input1">Edite a descrição do seu problema:</label>'+
         '<br>'+`<input id="swal-input1" class="swal2-input" value=${denuncias[index].problema}>`+
         '<br>'+ '<br>'+'<label for="swal-input2">Edite a imagem do seu problema:</label>'+
-        '<br>'+`<input type="url" id="swal-input2" class="swal2-input" value=${denuncias[index].image === undefined ? "" : denuncias[index].image}>`,
+        '<br>'+`<input type="text" id="swal-input2" class="swal2-input" value=${denuncias[index].image === undefined ? "" : denuncias[index].image}>`,
         showCancelButton: true,
         cancelButtonColor: '#d33',
         confirmButtonColor: '#28a745',
@@ -292,7 +292,7 @@ function editarRegistroObras(id){
         '<br>'+ '<br>'+'<label for="swal-input2">Edite a data final da sua obra:</label>'+
         '<br>'+`<input style="width: 299px;" type="date" id="swal-input2" class="swal2-input" value=${obras[index].dataFinal.split('/').reverse().join('-')}>`+
         '<br>'+ '<br>'+'<label for="swal-input3">Edite a imagem da sua obra:</label>'+
-        '<br>'+`<input type="url" id="swal-input3" class="swal2-input" value=${obras[index].image === undefined ? "" : obras[index].image}>`,
+        '<br>'+`<input type="text" id="swal-input3" class="swal2-input" value=${obras[index].image === undefined ? "" : obras[index].image}>`,
         showCancelButton: true,
         cancelButtonColor: '#d33',
         confirmButtonColor: '#28a745',
