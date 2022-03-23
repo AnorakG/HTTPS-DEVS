@@ -226,7 +226,7 @@ function deletarRegistro(td, id){
         console.log(index)
         denuncias.splice(index,1)
         localStorage.setItem("denuncias",JSON.stringify(denuncias))
-        setTimeout(function(){window.location.reload(true)},100)
+        setTimeout(function(){window.location.reload(true)},1)
       }})
 }
 // Essa função permite que o usuário possa deletar um unico registro de obras registradas.
@@ -248,7 +248,7 @@ function deletarRegistroObras(td, id){
         let index = obras.findIndex((elem)=> {return elem.id == id})
         obras.splice(index,1)
         localStorage.setItem("obras",JSON.stringify(obras))
-        setTimeout(function(){window.location.reload(true)},100)
+        setTimeout(function(){window.location.reload(true)},1)
       }})
 }
 // Essa função permite que o usuário possa editar os dados de um único registro de denúncia.
@@ -278,7 +278,7 @@ function editarRegistro(id){
             denuncias[index].problema = edit1;
             denuncias[index].imagem = edit2;
             localStorage.setItem("denuncias", JSON.stringify(denuncias))
-            setTimeout(function(){window.location.reload(true)},100)
+            setTimeout(function(){window.location.reload(true)},1)
     }})
 }
 // Essa função permite que o usuário possa editar os dados de um único registro de obra.
@@ -314,10 +314,10 @@ function editarRegistroObras(id){
                     icon: 'error',
                     timer:'5000'
                 })
-                setTimeout(function(){window.location.reload(true)},5100)
+                setTimeout(function(){window.location.reload(true)},5001)
             }else{
                 obras[index].dataFinal = edit2.split('-').reverse().join('/')
-                setTimeout(function(){window.location.reload(true)},100)
+                setTimeout(function(){window.location.reload(true)},1)
             }
             obras[index].imagem = edit3;
             localStorage.setItem("obras", JSON.stringify(obras))
