@@ -314,11 +314,13 @@ function editarRegistroObras(id){
                     icon: 'error',
                     timer:'5000'
                 })
+                setTimeout(function(){window.location.reload(true)},5100)
             }else{
                 obras[index].dataFinal = edit2.split('-').reverse().join('/')
+                setTimeout(function(){window.location.reload(true)},100)
             }
             obras[index].imagem = edit3;
             localStorage.setItem("obras", JSON.stringify(obras))
-            setTimeout(function(){window.location.reload(true)},2000)
+            
     }})
 }
