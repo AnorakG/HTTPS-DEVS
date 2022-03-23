@@ -261,7 +261,7 @@ function editarRegistro(id){
         '<br>'+'<label for="swal-input1">Edite a descrição do seu problema:</label>'+
         '<br>'+`<input id="swal-input1" class="swal2-input" value=${denuncias[index].problema}>`+
         '<br>'+ '<br>'+'<label for="swal-input2">Edite a imagem do seu problema:</label>'+
-        '<br>'+`<input type="text" id="swal-input2" class="swal2-input" value=${denuncias[index].image === undefined ? "" : denuncias[index].image}>`,
+        '<br>'+`<input type="text" id="swal-input2" class="swal2-input" value=${denuncias[index].imagem === undefined ? "" : denuncias[index].imagem}>`,
         showCancelButton: true,
         cancelButtonColor: '#d33',
         confirmButtonColor: '#28a745',
@@ -276,7 +276,7 @@ function editarRegistro(id){
         if (result.isConfirmed) {
             let index = denuncias.findIndex((elem)=> {return elem.id == id})
             denuncias[index].problema = edit1;
-            denuncias[index].image = edit2;
+            denuncias[index].imagem = edit2;
             localStorage.setItem("denuncias", JSON.stringify(denuncias))
             setTimeout(function(){window.location.reload(true)},100)
     }})
@@ -292,7 +292,7 @@ function editarRegistroObras(id){
         '<br>'+ '<br>'+'<label for="swal-input2">Edite a data final da sua obra:</label>'+
         '<br>'+`<input style="width: 299px;" type="date" id="swal-input2" class="swal2-input" value=${obras[index].dataFinal.split('/').reverse().join('-')}>`+
         '<br>'+ '<br>'+'<label for="swal-input3">Edite a imagem da sua obra:</label>'+
-        '<br>'+`<input type="text" id="swal-input3" class="swal2-input" value=${obras[index].image === undefined ? "" : obras[index].image}>`,
+        '<br>'+`<input type="text" id="swal-input3" class="swal2-input" value=${obras[index].imagem === undefined ? "" : obras[index].imagem}>`,
         showCancelButton: true,
         cancelButtonColor: '#d33',
         confirmButtonColor: '#28a745',
@@ -317,8 +317,8 @@ function editarRegistroObras(id){
             }else{
                 obras[index].dataFinal = edit2.split('-').reverse().join('/')
             }
-            obras[index].image = edit3;
+            obras[index].imagem = edit3;
             localStorage.setItem("obras", JSON.stringify(obras))
-            setTimeout(function(){window.location.reload(true)},5100)
+            setTimeout(function(){window.location.reload(true)},2000)
     }})
 }
